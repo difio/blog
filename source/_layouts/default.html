@@ -4,15 +4,10 @@
     {% include header.html %}
 
     <div id="frontpage" class="box">
-        <div id="info">
-                    {{ content | expand_urls: root_url }}
-        </div> <!-- END INFO -->
-
-        <div id="get-started">
-
-        </div>
+        {{ content | expand_urls: root_url }}
     </div> <!-- END FRONTPAGE -->
 
+    {% include after_footer.html %}
   {% include footer.html %}
 </body>
 </html>
