@@ -1,14 +1,43 @@
 {% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
 {% include head.html %}
 <body {% if page.body_id %} id="{{ page.body_id }}" {% endif %} {% if page.sidebar == false %} class="no-sidebar" {% endif %} {% if page.sidebar == 'collapse' or site.sidebar == 'collapse' %} class="collapse-sidebar sidebar-footer" {% endif %}>
-  <header role="banner">{% include header.html %}</header>
-  <nav role="navigation">{% include navigation.html %}</nav>
-  <div id="main">
-    <div id="content">
-      {{ content | expand_urls: root_url }}
-    </div>
-  </div>
-  <footer role="contentinfo">{% include footer.html %}</footer>
-  {% include after_footer.html %}
+    {% include header.html %}
+
+    <div id="frontpage" class="box">
+        <div id="info">
+            <h1><span>Monitor Updates In The Cloud</span></h1>
+
+            <div class="part">
+                <div class="title">
+                    
+    <h2>
+20 packages,
+42 versions,
+18 updates
+    </h2>
+    <p>
+You don't have to worry about updates anymore!
+Monupco will provide you with that information.
+
+To make it all happen we monitor various package sources, version control systems and
+bug trackers.
+    </p>
+                </div>
+            </div>
+
+            <div class="part odd">
+                <div class="title"  id="content">
+                    {{ content | expand_urls: root_url }}
+                </div>
+            </div>
+
+        </div> <!-- END INFO -->
+
+        <div id="get-started">
+
+        </div>
+    </div> <!-- END FRONTPAGE -->
+
+  {% include footer.html %}
 </body>
 </html>
