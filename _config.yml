@@ -2,10 +2,10 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://monupco.github.com/blog
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://monupco.com/blog
+title: monupco
+subtitle: blog
+author: Monupco Team
 simple_search: http://google.com/search
 description:
 
