@@ -14,7 +14,11 @@ comments: true
         <a class="basic-alignment right" href="{{page.next.url}}" title="next Post: {{page.next.title}}">{{page.next.title}} &raquo;</a>
       {% endif %}
 
-      {% include after_footer.html %}
+      {% unless page.sharing == false %}
+        <div style="float: left; border-bottom: #ce1126 1px dotted; margin-bottom: 15px; padding-bottom:15px;">
+            {% include post/sharing.html %}
+        </div>
+      {% endunless %}
 
       {% if site.disqus_short_name and page.comments == true %}
           <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
