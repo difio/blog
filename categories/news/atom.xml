@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[monupco]]></title>
-  <link href="http://monupco.com/blog/atom.xml" rel="self"/>
+  <title><![CDATA[Category: News | monupco]]></title>
+  <link href="http://monupco.com/blog/categories/news/atom.xml" rel="self"/>
   <link href="http://monupco.com/blog/"/>
   <updated>2012-01-30T21:23:29+02:00</updated>
   <id>http://monupco.com/blog/</id>
@@ -20,7 +20,7 @@
     <id>http://monupco.com/blog/2012/01/30/faq</id>
     <content type="html"><![CDATA[<h2>What is this</h2>
 
-<p>Monupco is a service which let&#8217;s you know what package updates are available
+<p>Monupco is a service which let's you know what package updates are available
 for your applications deployed in the cloud. We try to provide meaningful and
 accurate information whenever possible by monitoring various sources of information.</p>
 
@@ -35,7 +35,7 @@ if left unmaintained. This is why Monupco exists.</p>
 
 <p>The service will remain free of charge during Alpha and Beta versions.
 We may need to charge a small ammount afterwards.
-Don&#8217;t worry it will not be more than a few bucks.</p>
+Don't worry it will not be more than a few bucks.</p>
 
 <h2>How to install</h2>
 
@@ -47,7 +47,7 @@ our GitHub repositories at <a href="https://github.com/monupco">https://github.c
 <h2>Why do I need to approve applications</h2>
 
 <p>Applications are registered on behalf of your username only because
-we don&#8217;t want you to accidentally commit the password in your source code.
+we don't want you to accidentally commit the password in your source code.
 To ensure that you registered the application it has to be approved first.
 This is similar to the account approval process on some websites.</p>
 
