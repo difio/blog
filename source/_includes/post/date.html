@@ -7,9 +7,9 @@
 {% capture was_updated %}{{ updated | size }}{% endcapture %}
 
 {% if has_date != '0' %}
-  <div>{{ date_formatted }}</div>
+  {{ date_formatted }}
 {% endif %}
 
 {% if was_updated != '0' %}
-  <div>Updated {{ updated_formatted }}</div>
+  Updated {{ updated_formatted }}
 {% else %}{% assign updated = false %}{% endif %}
