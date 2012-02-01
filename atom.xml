@@ -4,7 +4,7 @@
   <title><![CDATA[monupco]]></title>
   <link href="http://monupco.com/blog/atom.xml" rel="self"/>
   <link href="http://monupco.com/blog/"/>
-  <updated>2012-02-01T22:42:15+02:00</updated>
+  <updated>2012-02-01T22:43:30+02:00</updated>
   <id>http://monupco.com/blog/</id>
   <author>
     <name><![CDATA[Monupco Team]]></name>
@@ -24,7 +24,10 @@
 for your applications deployed in the cloud. We try to provide meaningful and
 accurate information whenever possible by monitoring various sources of information.</p>
 
-<h2>Why should I care <!-- more --></h2>
+<h2>Why should I care </h2>
+
+<!-- more -->
+
 
 <p>In a cloud environment you care about your own code and leave updates to the vendor.
 However applications install 3rd party dependencies which are not part of the vendor platform.
