@@ -4,7 +4,7 @@
   <title><![CDATA[Category: News | monupco]]></title>
   <link href="http://monupco.com/blog/categories/news/atom.xml" rel="self"/>
   <link href="http://monupco.com/blog/"/>
-  <updated>2012-02-03T00:53:01+02:00</updated>
+  <updated>2012-02-04T19:48:13+02:00</updated>
   <id>http://monupco.com/blog/</id>
   <author>
     <name><![CDATA[Monupco Team]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Monupco 1.1 Release Announcement]]></title>
-    <link href="http://monupco.com/blog/2012/02/03/monupco-1.1-release-announcement/"/>
-    <updated>2012-02-03T00:10:00+02:00</updated>
-    <id>http://monupco.com/blog/2012/02/03/monupco-1.1-release-announcement</id>
+    <link href="http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement/"/>
+    <updated>2012-02-06T10:00:00+02:00</updated>
+    <id>http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement</id>
     <content type="html"><![CDATA[<p>Today <a href="http://monupco.com">Monupco</a> is pleased to announce the general availability
 of our updates monitoring service. Monupco provides user friendly interface to
 monitor available updates for your cloud applications and information about different
