@@ -14,7 +14,7 @@ With OpenShift this is easy and fast. Here's how:
 
         rhc-create-app -a myappdevel -t python-2.6
 
-1. Find out the git url for the production application:
+1. Find out the git URL for the production application:
 
         $ rhc-user-info
         Application Info
