@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Tips | monupco]]></title>
-  <link href="http://monupco.com/blog/categories/tips/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Monupco | monupco]]></title>
+  <link href="http://monupco.com/blog/categories/monupco/atom.xml" rel="self"/>
   <link href="http://monupco.com/blog/"/>
   <updated>2012-02-11T01:48:20+02:00</updated>
   <id>http://monupco.com/blog/</id>
@@ -125,46 +125,6 @@ hooks. In this case you may want to ping us for some help.</p></li>
 programming language. Sent us the code for review and we will add it to our GitHub channel.</p>
 
 <p>For more details you may take a look at <a href="https://github.com/monupco/monupco-openshift-express-python">https://github.com/monupco/monupco-openshift-express-python</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Spinning-up a development instance on OpenShift Express]]></title>
-    <link href="http://monupco.com/blog/2012/02/10/spinning-up-a-development-instance-on-openshift-express/"/>
-    <updated>2012-02-10T21:19:00+02:00</updated>
-    <id>http://monupco.com/blog/2012/02/10/spinning-up-a-development-instance-on-openshift-express</id>
-    <content type="html"><![CDATA[<p><a href="http://monupco.com">Monupco</a> is hosted on <a href="http://openshift.redhat.com">OpenShift</a> Express.
-During development we often need to spin-up another copy of Monupco to use for testing and development.
-With OpenShift this is easy and fast. Here's how:</p>
-
-<ol>
-<li><p>Create another application on OpenShift. This will be your development instance.</p>
-
-<pre><code> rhc-create-app -a myappdevel -t python-2.6
-</code></pre></li>
-<li><p>Find out the git URL for the production application:</p>
-
-<pre><code> $ rhc-user-info
- Application Info
- ================
- myapp
-     Framework: python-2.6
-      Creation: 2012-02-10T12:39:53-05:00
-          UUID: 723f0331e17041e8b34228f87a6cf1f5
-       Git URL: ssh://723f0331e17041e8b34228f87a6cf1f5@myapp-mydomain.rhcloud.com/~/git/myapp.git/
-    Public URL: http://myapp-mydomain.rhcloud.com/
-</code></pre></li>
-<li><p>Push the current code base from the production instance to devel instance:</p>
-
-<pre><code> cd myappdevel
- git remote add production -m master ssh://723f0331e17041e8b34228f87a6cf1f5@myapp-mydomain.rhcloud.com/~/git/myapp.git/
- git pull -s recursive -X theirs production master
- git push
-</code></pre></li>
-<li><p>Now your <code>myappdevel</code> is the same as your production instance. You will probably want to
-modify your database connection settings at this point and start adding new features.</p></li>
-</ol>
-
 ]]></content>
   </entry>
   

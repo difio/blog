@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us" xmlns:fb="https://www.facebook.com/2008/fbml" id="html-main">
 <head>
-  <title>Blog - monupco</title>
+  <title>How to write a client side tool for Monupco - monupco</title>
   
   <meta name="description" content="How to Write a Client Side Tool for Monupco Posted by Monupco Team
 @ Feb 11th, 2012 Monupco is aiming to support a broad range of PaaS and
@@ -15,7 +15,7 @@ cloud &hellip;" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   
-  <link rel="canonical" href="http://monupco.com/blog" />
+  <link rel="canonical" href="http://monupco.com/blog/2012/02/11/how-to-write-client-side-tool-for-monupco" />
   <link href="/blog/favicon.png" rel="icon" />
   <script src="/blog/javascripts/modernizr-2.0.js" type="text/javascript"></script>
   <script src="/blog/javascripts/ender.js" type="text/javascript"></script>
@@ -66,14 +66,15 @@ cloud &hellip;" />
 
     <div id="frontpage" class="box">
         <div id="info">
-  
-  
-  
-      <div class="part">
-    <div class="title">
     
         
-            <h2><a href="/blog/2012/02/11/how-to-write-client-side-tool-for-monupco/">How to Write a Client Side Tool for Monupco</a></h2>
+            <h1>How to Write a Client Side Tool for Monupco</h1>
+        
+    
+
+    <div class="part">
+    <div class="title">
+    
         
 
         
@@ -100,7 +101,7 @@ cloud &hellip;" />
     
 
     
-        <div class="entry-content"><p><a href="http://monupco.com">Monupco</a> is aiming to support a broad range of PaaS and
+            <div class="entry-content"><p><a href="http://monupco.com">Monupco</a> is aiming to support a broad range of PaaS and
 cloud vendors but that takes time. If your favorite PaaS platform is not
 already supported here&#8217;s how you can help.</p>
 
@@ -208,161 +209,59 @@ programming language. Sent us the code for review and we will add it to our GitH
 
 <p>For more details you may take a look at <a href="https://github.com/monupco/monupco-openshift-express-python">https://github.com/monupco/monupco-openshift-express-python</a>.</p>
 </div>
-        
-        
     
+
+    
+            <br />Categories: 
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/monupco/'>Monupco</a>, <a class='category' href='/blog/categories/open-source/'>Open Source</a>, <a class='category' href='/blog/categories/tips/'>Tips</a>
+  
+</span>
+
 
     
     </div>
 </div>
 
-  
-  
-      <div class="part">
-    <div class="title">
+
+    <div class="part">
+        <div class="title">
     
-        
-            <h2><a href="/blog/2012/02/10/spinning-up-a-development-instance-on-openshift-express/">Spinning-up a Development Instance on OpenShift Express</a></h2>
-        
-
-        
-            
-  
-
-<span class="byline author vcard">Posted by <span class="fn">Monupco Team</span></span>
-@
-            
-
-
-
-
-
-
-
-
-  Feb 10<span>th</span>, 2012
-
-
-
-            <br /><br />
-        
+        <a class="basic-alignment left" href="/blog/2012/02/10/spinning-up-a-development-instance-on-openshift-express/" title="Previous Post: Spinning-up a development instance on OpenShift Express">&laquo; Spinning-up a development instance on OpenShift Express</a>
     
 
     
-        <div class="entry-content"><p><a href="http://monupco.com">Monupco</a> is hosted on <a href="http://openshift.redhat.com">OpenShift</a> Express.
-During development we often need to spin-up another copy of Monupco to use for testing and development.
-With OpenShift this is easy and fast. Here&#8217;s how:</p>
-
-<ol>
-<li><p>Create another application on OpenShift. This will be your development instance.</p>
-
-<pre><code> rhc-create-app -a myappdevel -t python-2.6
-</code></pre></li>
-<li><p>Find out the git URL for the production application:</p>
-
-<pre><code> $ rhc-user-info
- Application Info
- ================
- myapp
-     Framework: python-2.6
-      Creation: 2012-02-10T12:39:53-05:00
-          UUID: 723f0331e17041e8b34228f87a6cf1f5
-       Git URL: ssh://723f0331e17041e8b34228f87a6cf1f5@myapp-mydomain.rhcloud.com/~/git/myapp.git/
-    Public URL: http://myapp-mydomain.rhcloud.com/
-</code></pre></li>
-<li><p>Push the current code base from the production instance to devel instance:</p>
-
-<pre><code> cd myappdevel
- git remote add production -m master ssh://723f0331e17041e8b34228f87a6cf1f5@myapp-mydomain.rhcloud.com/~/git/myapp.git/
- git pull -s recursive -X theirs production master
- git push
-</code></pre></li>
-<li><p>Now your <code>myappdevel</code> is the same as your production instance. You will probably want to
-modify your database connection settings at this point and start adding new features.</p></li>
-</ol>
-
-</div>
-        
-        
-    
-
-    
+        </div>
     </div>
-</div>
 
-  
-  
-      <div class="part">
-    <div class="title">
-    
-        
-            <h2><a href="/blog/2012/02/06/monupco-1.1-release-announcement/">Monupco 1.1 Release Announcement</a></h2>
-        
-
-        
-            
-  
-
-<span class="byline author vcard">Posted by <span class="fn">Monupco Team</span></span>
-@
-            
-
-
-
-
-
-
-
-
-  Feb 6<span>th</span>, 2012
-
-
-
-            <br /><br />
-        
-    
-
-    
-        <div class="entry-content"><p>Today <a href="http://monupco.com">Monupco</a> is pleased to announce the general availability
-of our updates monitoring service. Monupco provides user friendly interface to
-monitor available updates for your cloud applications and information about different
-package versions.</p>
-
-<p>This is an alpha release for early adopters. Currently we support registration of
-Python applications hosted on Red Hat&#8217;s <a href="http://openshift.redhat.com">OpenShift Express</a>
-platform. Client side tools and installation information can be found at our
-<a href="https://github.com/monupco/monupco-openshift-express-python">GitHub page</a>.</p>
-
-<p>Monupco itself is developed in the cloud, for the cloud. We&#8217;re working to support
-additional cloud vendors and more programming languages. Your feedback is valuable to us!
-We welcome your feature requests on <a href="http://twitter.com/monupco">Twitter</a> and
-<a href="https://github.com/monupco/monupco.github.com/issues/new">GitHub</a>.</p>
-
-<p>Monupco will remain free of charge until it reaches production-ready quality, when
-subscription plans will be announced. A gratis period and/or bonus credits will be made
-available to all early birds at that time.</p>
-
-<p>We provide simplified registration and log in into our management console using
-credentials from popular social networking providers.</p>
-
-<p><a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button red small"><span>Give It A Try Now</span></a></p>
-</div>
-        
-        
-    
-
-    
-    </div>
-</div>
-
-  
 </div>
 
 <div id="get-started">
     
-    <a href="/blog/archives">Blog Archives</a>
+        <div style="float: left; border-bottom: #ce1126 1px dotted; margin-bottom: 15px; padding-bottom:15px;">
+            <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://monupco.com/blog/2012/02/11/how-to-write-client-side-tool-for-monupco/" data-via="monupco" data-counturl="http://monupco.com/blog/2012/02/11/how-to-write-client-side-tool-for-monupco/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+        </div>
+    
+
+    
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
     
 </div>
+
 
     </div> <!-- END FRONTPAGE -->
 
@@ -420,7 +319,10 @@ credentials from popular social networking providers.</p>
       var disqus_shortname = 'monupco';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://monupco.com/blog/2012/02/11/how-to-write-client-side-tool-for-monupco/';
+        var disqus_url = 'http://monupco.com/blog/2012/02/11/how-to-write-client-side-tool-for-monupco/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

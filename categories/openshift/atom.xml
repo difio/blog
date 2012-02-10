@@ -4,7 +4,7 @@
   <title><![CDATA[Category: OpenShift | monupco]]></title>
   <link href="http://monupco.com/blog/categories/openshift/atom.xml" rel="self"/>
   <link href="http://monupco.com/blog/"/>
-  <updated>2012-02-10T22:10:32+02:00</updated>
+  <updated>2012-02-11T01:48:20+02:00</updated>
   <id>http://monupco.com/blog/</id>
   <author>
     <name><![CDATA[Monupco Team]]></name>
@@ -27,7 +27,7 @@ With OpenShift this is easy and fast. Here's how:</p>
 
 <pre><code> rhc-create-app -a myappdevel -t python-2.6
 </code></pre></li>
-<li><p>Find out the git url for the production application:</p>
+<li><p>Find out the git URL for the production application:</p>
 
 <pre><code> $ rhc-user-info
  Application Info
