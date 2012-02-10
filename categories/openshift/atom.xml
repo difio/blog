@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[monupco]]></title>
-  <link href="http://monupco.com/blog/atom.xml" rel="self"/>
+  <title><![CDATA[Category: OpenShift | monupco]]></title>
+  <link href="http://monupco.com/blog/categories/openshift/atom.xml" rel="self"/>
   <link href="http://monupco.com/blog/"/>
   <updated>2012-02-10T22:10:32+02:00</updated>
   <id>http://monupco.com/blog/</id>
@@ -20,7 +20,7 @@
     <id>http://monupco.com/blog/2012/02/10/spinning-up-a-development-instance-on-openshift-express</id>
     <content type="html"><![CDATA[<p><a href="http://monupco.com">Monupco</a> is hosted on <a href="http://openshift.redhat.com">OpenShift</a> Express.
 During development we often need to spin-up another copy of Monupco to use for testing and development.
-With OpenShift this is easy and fast. Here&#8217;s how:</p>
+With OpenShift this is easy and fast. Here's how:</p>
 
 <ol>
 <li><p>Create another application on OpenShift. This will be your development instance.</p>
@@ -50,37 +50,6 @@ With OpenShift this is easy and fast. Here&#8217;s how:</p>
 modify your database connection settings at this point and start adding new features.</p></li>
 </ol>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Monupco 1.1 Release Announcement]]></title>
-    <link href="http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement/"/>
-    <updated>2012-02-06T10:00:00+02:00</updated>
-    <id>http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement</id>
-    <content type="html"><![CDATA[<p>Today <a href="http://monupco.com">Monupco</a> is pleased to announce the general availability
-of our updates monitoring service. Monupco provides user friendly interface to
-monitor available updates for your cloud applications and information about different
-package versions.</p>
-
-<p>This is an alpha release for early adopters. Currently we support registration of
-Python applications hosted on Red Hat&#8217;s <a href="http://openshift.redhat.com">OpenShift Express</a>
-platform. Client side tools and installation information can be found at our
-<a href="https://github.com/monupco/monupco-openshift-express-python">GitHub page</a>.</p>
-
-<p>Monupco itself is developed in the cloud, for the cloud. We&#8217;re working to support
-additional cloud vendors and more programming languages. Your feedback is valuable to us!
-We welcome your feature requests on <a href="http://twitter.com/monupco">Twitter</a> and
-<a href="https://github.com/monupco/monupco.github.com/issues/new">GitHub</a>.</p>
-
-<p>Monupco will remain free of charge until it reaches production-ready quality, when
-subscription plans will be announced. A gratis period and/or bonus credits will be made
-available to all early birds at that time.</p>
-
-<p>We provide simplified registration and log in into our management console using
-credentials from popular social networking providers.</p>
-
-<p><a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button red small"><span>Give It A Try Now</span></a></p>
 ]]></content>
   </entry>
   
