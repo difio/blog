@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Open Source | monupco]]></title>
   <link href="http://monupco.com/blog/categories/open-source/atom.xml" rel="self"/>
   <link href="http://monupco.com/blog/"/>
-  <updated>2012-02-11T01:48:20+02:00</updated>
+  <updated>2012-02-14T23:03:05+02:00</updated>
   <id>http://monupco.com/blog/</id>
   <author>
     <name><![CDATA[Monupco Team]]></name>
@@ -34,6 +34,10 @@ a client tool for PHP PaaS use PHP, if writing for Node.JS use JavaScript, etc;<
 <li><p>All client side tools are bundled as packages so that they can install natively
 on the platform. For Python it is a package from PyPI, for PHP it will be a PEAR package,
 etc. Develop your client as a package;</p></li>
+<li><p>Naming convention for client side tools is <strong>monupco-&lt;vendor>-&lt;language></strong>. For example
+<code>monupco-openshift-express-python</code>, <code>monupco-dotcloud-nodejs</code>. If you have common code,
+for example the package management part, it can be split into separate module named
+<strong>common-&lt;language>-monupco</strong>.</p></li>
 <li><p>Client side tools are specific to vendor and programming language. This is because
 different PaaS vendors provide the information in a different way. This makes code easier
 to maintain and easier for end-users to find the proper client side tool later;</p></li>

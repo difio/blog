@@ -2,11 +2,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us" xmlns:fb="https://www.facebook.com/2008/fbml" id="html-main">
 <head>
-  <title>Monupco 1.1 Release Announcement - monupco</title>
+  <title>Monupco on OpenShift Express - monupco</title>
   
-  <meta name="description" content="Monupco 1.1 Release Announcement Posted by Monupco Team
-@ Feb 6th, 2012 Today Monupco is pleased to announce the general availability
-of our updates &hellip;" />
+  <meta name="description" content="Monupco on OpenShift Express Posted by Alexander Todorov
+@ Feb 9th, 2012 Monupco stands for Monitor Updates In The Cloud.
+As the name suggests this &hellip;" />
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -15,7 +15,7 @@ of our updates &hellip;" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   
-  <link rel="canonical" href="http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement" />
+  <link rel="canonical" href="http://monupco.com/blog/2012/02/09/monupco-on-openshift-express" />
   <link href="/blog/favicon.png" rel="icon" />
   <script src="/blog/javascripts/modernizr-2.0.js" type="text/javascript"></script>
   <script src="/blog/javascripts/ender.js" type="text/javascript"></script>
@@ -68,7 +68,7 @@ of our updates &hellip;" />
         <div id="info">
     
         
-            <h1>Monupco 1.1 Release Announcement</h1>
+            <h1>Monupco on OpenShift Express</h1>
         
     
 
@@ -81,7 +81,7 @@ of our updates &hellip;" />
             
   
 
-<span class="byline author vcard">Posted by <span class="fn">Monupco Team</span></span>
+<span class="byline author vcard">Posted by <span class="fn">Alexander Todorov</span></span>
 @
             
 
@@ -92,7 +92,7 @@ of our updates &hellip;" />
 
 
 
-  Feb 6<span>th</span>, 2012
+  Feb 9<span>th</span>, 2012
 
 
 
@@ -101,29 +101,66 @@ of our updates &hellip;" />
     
 
     
-            <div class="entry-content"><p>Today <a href="http://monupco.com">Monupco</a> is pleased to announce the general availability
-of our updates monitoring service. Monupco provides user friendly interface to
-monitor available updates for your cloud applications and information about different
-package versions.</p>
+            <div class="entry-content"><p><a href="http://monupco.com">Monupco</a> stands for Monitor Updates In The Cloud.
+As the name suggests this is a service which provides updates information
+for applications hosted in a PaaS environment. If you are a developer or
+a sysadmin knowing when and what to upgrade will make your life easier.</p>
 
-<p>This is an alpha release for early adopters. Currently we support registration of
-Python applications hosted on Red Hat&#8217;s <a href="http://openshift.redhat.com">OpenShift Express</a>
-platform. Client side tools and installation information can be found at our
-<a href="https://github.com/monupco/monupco-openshift-express-python">GitHub page</a>.</p>
+<p>Monupco will generate a human friendly description of changes between the
+installed package version and the latest one. Currently a <a href="https://github.com/monupco/monupco-openshift-express-python">client
+side tool</a> for
+Python applications on OpenShift Express is available and
+others will follow soon.</p>
 
-<p>Monupco itself is developed in the cloud, for the cloud. We&#8217;re working to support
-additional cloud vendors and more programming languages. Your feedback is valuable to us!
-We welcome your feature requests on <a href="http://twitter.com/monupco">Twitter</a> and
-<a href="https://github.com/monupco/monupco.github.com/issues/new">GitHub</a>.</p>
+<p>Monupco started with a local SQLite database which was the fastest way to get up
+and running. At present the database layer is powered by MySQL and the intention
+is to switch to NoSQL at some point. It is written in Python.</p>
 
-<p>Monupco will remain free of charge until it reaches production-ready quality, when
-subscription plans will be announced. A gratis period and/or bonus credits will be made
-available to all early birds at that time.</p>
+<p>Monupco is split into several parts:</p>
 
-<p>We provide simplified registration and log in into our management console using
-credentials from popular social networking providers.</p>
+<ul>
+<li>Management console - the interface with which users interact.
+It is hosted on <a href="http://openshift.redhat.com/">OpenShift</a> Express.</li>
+<li>Website - static HTML website which is periodically updated by a
+<a href="http://celeryproject.org/">Celery</a> task.</li>
+<li>Blog - powered by <a href="http://octopress.org">Octopress</a>. Together with
+the website this is hosted on GitHub.</li>
+</ul>
 
-<p><a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button red small"><span>Give It A Try Now</span></a></p>
+
+<p>All source code of Monupco is managed with git and &#8216;git push&#8217; is simply a
+rock star. Combining git + ssh keys made it possible to programatically commit
+and push when necessary.</p>
+
+<p>The application uses Markdown extensively. All blog and website pages
+and multi-line text entries into the database are rendered as Markdown.
+This makes entering and editing text very easy.</p>
+
+<p>While developing Monupco I didn&#8217;t want to force users to remember yet another
+username and password nor store them into the database. The solution is no passwords required!
+Instead Monupco uses popular social networks credentials and limits the information
+stored in database to the bare minimum.</p>
+
+<p>Monupco has recently <a href="http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement/">announced</a>
+its first Alpha release. The following weeks will see development for Ruby, PHP and Perl packages
+and the corresponding client side tools for these catridges on OpenShift.
+Java and Node.js are also under investigation.</p>
+
+<p>Once these popular languages and package types are supported, client side tools
+for other PaaS vendors will follow. On the radar are requests for:</p>
+
+<ul>
+<li>Heroku</li>
+<li>Engine Yard</li>
+<li>AppFog</li>
+<li>Google Apps Engine</li>
+<li>SalesForce</li>
+<li>DotCloud</li>
+</ul>
+
+
+<p>If you&#8217;re already excited please follow @monupco on <a href="https://twitter.com/monupco">Twitter</a> and
+<a href="https://github.com/monupco">GitHub</a> or <a href="https://monupco-otb.rhcloud.com/applications/mine/">get started</a> today!</p>
 </div>
     
 
@@ -132,7 +169,7 @@ credentials from popular social networking providers.</p>
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/news/'>News</a>
+    <a class='category' href='/blog/categories/openshift/'>OpenShift</a>
   
 </span>
 
@@ -145,9 +182,11 @@ credentials from popular social networking providers.</p>
     <div class="part">
         <div class="title">
     
+        <a class="basic-alignment left" href="/blog/2012/02/06/monupco-1.1-release-announcement/" title="Previous Post: Monupco 1.1 Release Announcement">&laquo; Monupco 1.1 Release Announcement</a>
+    
 
     
-        <a class="basic-alignment right" href="/blog/2012/02/09/monupco-on-openshift-express/" title="next Post: Monupco on OpenShift Express">Monupco on OpenShift Express &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2012/02/10/spinning-up-a-development-instance-on-openshift-express/" title="next Post: Spinning-up a development instance on OpenShift Express">Spinning-up a development instance on OpenShift Express &raquo;</a>
     
         </div>
     </div>
@@ -159,7 +198,7 @@ credentials from popular social networking providers.</p>
         <div style="float: left; border-bottom: #ce1126 1px dotted; margin-bottom: 15px; padding-bottom:15px;">
             <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement/" data-via="monupco" data-counturl="http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://monupco.com/blog/2012/02/09/monupco-on-openshift-express/" data-via="monupco" data-counturl="http://monupco.com/blog/2012/02/09/monupco-on-openshift-express/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -236,8 +275,8 @@ credentials from popular social networking providers.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement/';
-        var disqus_url = 'http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement/';
+        var disqus_identifier = 'http://monupco.com/blog/2012/02/09/monupco-on-openshift-express/';
+        var disqus_url = 'http://monupco.com/blog/2012/02/09/monupco-on-openshift-express/';
         var disqus_script = 'embed.js';
       
     (function () {
