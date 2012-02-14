@@ -24,6 +24,11 @@ a client tool for PHP PaaS use PHP, if writing for Node.JS use JavaScript, etc;
 on the platform. For Python it is a package from PyPI, for PHP it will be a PEAR package,
 etc. Develop your client as a package;
 
+* Naming convention for client side tools is **monupco-\<vendor\>-\<language\>**. For example
+`monupco-openshift-express-python`, `monupco-dotcloud-nodejs`. If you have common code,
+for example the package management part, it can be split into separate module named
+**common-\<language\>-monupco**.
+
 * Client side tools are specific to vendor and programming language. This is because
 different PaaS vendors provide the information in a different way. This makes code easier
 to maintain and easier for end-users to find the proper client side tool later;
