@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Open Source | monupco]]></title>
   <link href="http://monupco.com/blog/categories/open-source/atom.xml" rel="self"/>
   <link href="http://monupco.com/blog/"/>
-  <updated>2012-02-14T23:03:05+02:00</updated>
+  <updated>2012-02-15T22:14:28+02:00</updated>
   <id>http://monupco.com/blog/</id>
   <author>
     <name><![CDATA[Monupco Team]]></name>
@@ -105,6 +105,8 @@ as well. You may use an ENV variable to ignore this name and not include it in t
 <li><p>The defined structure is converted into JSON format and URL escaped;</p></li>
 <li><p>Assign the escaped JSON string to the <code>json_data</code> POST variable;</p></li>
 <li><p>Send a POST request to https://$devel-server-url/application/register/;</p></li>
+<li><p>When sending the request make sure to include a <code>User-agent</code> header matching the name and
+version of the package. If using common packages add their names/versions too.</p></li>
 <li><p>If everything went fine you will receive a 200 status code and response in JSON format:</p>
 
 <pre><code>  {
