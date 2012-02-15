@@ -105,8 +105,16 @@ as well. You may use an ENV variable to ignore this name and not include it in t
 
 * Send a POST request to https://$devel-server-url/application/register/;
 
-* When sending the request make sure to include a `User-agent` header matching the name and
-version of the package. If using common packages add their names/versions too.
+* When sending the request make sure to include a `User-agent` header. The `User-agent`
+string must follow the format:
+
+        monupco-<vendor>-<language>/<version>
+
+* If using common packages include them in the `User-agent` string as follows:
+
+        monupco-<vendor>-<language>/<version> common-<language>-monupco/<version>
+For more information about `User-aget` string format click
+[here](http://en.wikipedia.org/wiki/User_agent#Format).
 
 * If everything went fine you will receive a 200 status code and response in JSON format:
         {
