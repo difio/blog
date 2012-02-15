@@ -187,8 +187,18 @@ as well. You may use an ENV variable to ignore this name and not include it in t
 <li><p>The defined structure is converted into JSON format and URL escaped;</p></li>
 <li><p>Assign the escaped JSON string to the <code>json_data</code> POST variable;</p></li>
 <li><p>Send a POST request to https://$devel-server-url/application/register/;</p></li>
-<li><p>When sending the request make sure to include a <code>User-agent</code> header matching the name and
-version of the package. If using common packages add their names/versions too.</p></li>
+<li><p>When sending the request make sure to include a <code>User-agent</code> header. The <code>User-agent</code>
+string must follow the format:</p>
+
+<pre><code>  monupco-&lt;vendor&gt;-&lt;language&gt;/&lt;version&gt;
+</code></pre></li>
+<li><p>If using common packages include them in the <code>User-agent</code> string as follows:</p>
+
+<pre><code>  monupco-&lt;vendor&gt;-&lt;language&gt;/&lt;version&gt; common-&lt;language&gt;-monupco/&lt;version&gt;
+</code></pre>
+
+<p>For more information about <code>User-aget</code> string format click
+<a href="http://en.wikipedia.org/wiki/User_agent#Format">here</a>.</p></li>
 <li><p>If everything went fine you will receive a 200 status code and response in JSON format:</p>
 
 <pre><code>  {
