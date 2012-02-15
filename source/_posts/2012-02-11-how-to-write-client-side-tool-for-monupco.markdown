@@ -105,6 +105,9 @@ as well. You may use an ENV variable to ignore this name and not include it in t
 
 * Send a POST request to https://$devel-server-url/application/register/;
 
+* When sending the request make sure to include a `User-agent` header matching the name and
+version of the package. If using common packages add their names/versions too.
+
 * If everything went fine you will receive a 200 status code and response in JSON format:
         {
             'message' : string,
