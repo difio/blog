@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: News | monupco]]></title>
-  <link href="http://monupco.com/blog/categories/news/atom.xml" rel="self"/>
+  <title><![CDATA[Category: NodeJS | monupco]]></title>
+  <link href="http://monupco.com/blog/categories/nodejs/atom.xml" rel="self"/>
   <link href="http://monupco.com/blog/"/>
   <updated>2012-02-17T01:12:58+02:00</updated>
   <id>http://monupco.com/blog/</id>
@@ -43,37 +43,6 @@ For more information see the <a href="http://monupco.com/install">install</a> pa
 <p>In the next weeks we're looking to enable support for Ruby, PHP, Perl and Java and extend
 client side tools to more vendors. Stay <a href="https://twitter.com/monupco">tuned</a> if you don't
 want to miss the announcement.</p>
-
-<p><a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button red small"><span>Give It A Try Now</span></a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Monupco 1.1 Release Announcement]]></title>
-    <link href="http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement/"/>
-    <updated>2012-02-06T10:00:00+02:00</updated>
-    <id>http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement</id>
-    <content type="html"><![CDATA[<p>Today <a href="http://monupco.com">Monupco</a> is pleased to announce the general availability
-of our updates monitoring service. Monupco provides user friendly interface to
-monitor available updates for your cloud applications and information about different
-package versions.</p>
-
-<p>This is an alpha release for early adopters. Currently we support registration of
-Python applications hosted on Red Hat's <a href="http://openshift.redhat.com">OpenShift Express</a>
-platform. Client side tools and installation information can be found at our
-<a href="https://github.com/monupco/monupco-openshift-express-python">GitHub page</a>.</p>
-
-<p>Monupco itself is developed in the cloud, for the cloud. We're working to support
-additional cloud vendors and more programming languages. Your feedback is valuable to us!
-We welcome your feature requests on <a href="http://twitter.com/monupco">Twitter</a> and
-<a href="https://github.com/monupco/monupco.github.com/issues/new">GitHub</a>.</p>
-
-<p>Monupco will remain free of charge until it reaches production-ready quality, when
-subscription plans will be announced. A gratis period and/or bonus credits will be made
-available to all early birds at that time.</p>
-
-<p>We provide simplified registration and log in into our management console using
-credentials from popular social networking providers.</p>
 
 <p><a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button red small"><span>Give It A Try Now</span></a></p>
 ]]></content>
