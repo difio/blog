@@ -2,11 +2,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us" xmlns:fb="https://www.facebook.com/2008/fbml" id="html-main">
 <head>
-  <title>Monupco 1.1 Release Announcement - monupco</title>
+  <title>How to update dependencies on OpenShift - monupco</title>
   
-  <meta name="description" content="Monupco 1.1 Release Announcement Posted by Monupco Team
-@ Feb 6th, 2012 Today Monupco is pleased to announce the general availability
-of our updates &hellip;" />
+  <meta name="description" content="How to Update Dependencies on OpenShift Posted by Alexander Todorov
+@ Feb 18th, 2012 If you are already running some cool application on OpenShift &hellip;" />
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -15,7 +14,7 @@ of our updates &hellip;" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   
-  <link rel="canonical" href="http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement" />
+  <link rel="canonical" href="http://monupco.com/blog/2012/02/18/how-to-update-dependencies-on-openshift" />
   <link href="/blog/favicon.png" rel="icon" />
   <script src="/blog/javascripts/modernizr-2.0.js" type="text/javascript"></script>
   <script src="/blog/javascripts/ender.js" type="text/javascript"></script>
@@ -68,7 +67,7 @@ of our updates &hellip;" />
         <div id="info">
     
         
-            <h1>Monupco 1.1 Release Announcement</h1>
+            <h1>How to Update Dependencies on OpenShift</h1>
         
     
 
@@ -81,7 +80,7 @@ of our updates &hellip;" />
             
   
 
-<span class="byline author vcard">Posted by <span class="fn">Monupco Team</span></span>
+<span class="byline author vcard">Posted by <span class="fn">Alexander Todorov</span></span>
 @
             
 
@@ -92,7 +91,7 @@ of our updates &hellip;" />
 
 
 
-  Feb 6<span>th</span>, 2012
+  Feb 18<span>th</span>, 2012
 
 
 
@@ -101,29 +100,100 @@ of our updates &hellip;" />
     
 
     
-            <div class="entry-content"><p>Today <a href="http://monupco.com">Monupco</a> is pleased to announce the general availability
-of our updates monitoring service. Monupco provides user friendly interface to
-monitor available updates for your cloud applications and information about different
-package versions.</p>
+            <div class="entry-content"><p>If you are already running some cool application on <a href="http://openshift.redhat.com">OpenShift</a>
+it could be the case that you have to update some of the packages installed as dependencies.
+Here is an example for an application using the python-2.6 cartridge.</p>
 
-<p>This is an alpha release for early adopters. Currently we support registration of
-Python applications hosted on Red Hat&#8217;s <a href="http://openshift.redhat.com">OpenShift Express</a>
-platform. Client side tools and installation information can be found at our
-<a href="https://github.com/monupco/monupco-openshift-express-python">GitHub page</a>.</p>
+<h2>Pull latest upstream packages</h2>
 
-<p>Monupco itself is developed in the cloud, for the cloud. We&#8217;re working to support
-additional cloud vendors and more programming languages. Your feedback is valuable to us!
-We welcome your feature requests on <a href="http://twitter.com/monupco">Twitter</a> and
-<a href="https://github.com/monupco/monupco.github.com/issues/new">GitHub</a>.</p>
+<p>The most simple method is to update everything to the latest upstream versions.</p>
 
-<p>Monupco will remain free of charge until it reaches production-ready quality, when
-subscription plans will be announced. A gratis period and/or bonus credits will be made
-available to all early birds at that time.</p>
+<ol>
+<li><p>Backup! Backup! Backup!</p>
 
-<p>We provide simplified registration and log in into our management console using
-credentials from popular social networking providers.</p>
+<pre><code> rhc-snapshot -a mycoolapp
+ mv mycoolapp.tar.gz mycoolapp-backup-before-update.tar.gz
+</code></pre></li>
+<li><p>If you haven&#8217;t specified any particular version in <code>setup.py</code> it will
+look like this:</p>
 
-<p><a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button red small"><span>Give It A Try Now</span></a></p>
+<pre><code>  ...
+  install_requires=[
+                  'monupco-openshift-express-python',
+                  'MySQL-python',
+                  'Markdown',
+                 ],
+  ...
+</code></pre></li>
+<li><p>To update simply push to OpenShift instructing it to rebuild your virtualenv:</p>
+
+<pre><code> cd mycoolapp/
+ touch .openshift/markers/force_clean_build
+ git add .openshift/markers/force_clean_build
+ git commit -m "update to latest upstream"
+ git push
+</code></pre></li>
+</ol>
+
+
+<p>Voila! The environment hosting your application is rebuilt from scratch.</p>
+
+<h2>Keeping some packages unchanged</h2>
+
+<p>Suppose that before the update you have <code>Markdown-2.0.1</code> and you want to keep it!
+This is easily solved by adding versioned dependency to <code>setup.py</code></p>
+
+<pre><code>    -       'Markdown',
+    +       'Markdown==2.0.1',
+</code></pre>
+
+<p>If you do that OpenShift will install the same <code>Markdown</code> version when rebuilding your
+application. Everything else will use the latest available versions.</p>
+
+<p><strong>Note:</strong> after the update it&#8217;s recommended that you remove the
+<code>.openshift/markers/force_clean_build</code> file. This will speed up the push/build process
+and will not surprise you with unwanted changes.</p>
+
+<h2>Update only selected packages</h2>
+
+<p>Unless your application is really simple or you have tested the updates, I suspect that
+you want to update only selected packages. This can be done without rebuilding the whole
+virtualenv. Use versioned dependencies in <code>setup.py</code> :</p>
+
+<pre><code>    -       'Markdown==2.0.1',
+    -       'django-countries',
+    +       'Markdown&gt;=2.1',
+    +       'django-countries&gt;=1.1.2',
+</code></pre>
+
+<p>No need for <code>force_clean_build</code> this time. Just</p>
+
+<pre><code>    git commit &amp;&amp; git push
+</code></pre>
+
+<p>At the time of writing my application was using <code>Markdown-2.0.1</code> and <code>django-countries-1.0.5</code>.
+Then it updated to <code>Markdown-2.1.1</code> and <code>django-countires-1.1.2</code> which also happened to be
+the latest versions.</p>
+
+<p><strong>Note:</strong> this will not work without <code>force_clean_build</code></p>
+
+<pre><code>    -       'django-countries==1.0.5',
+    +       'django-countries',
+</code></pre>
+
+<h2>Warning</h2>
+
+<p>OpenShift uses a local mirror of <a href="http://pypi.python.org">Python Package Index</a>.
+It seems to be updated every 24 hours or so. Have this in mind if you want to update
+to a package that was just released. It will not work!</p>
+
+<hr />
+
+<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Monupco&#8217;s founder and lead developer!</p>
+
+<p>For an insight of available updates to you OpenShift applications give
+Monupco a <a href="https://monupco-otb.rhcloud.com/applications/mine/">try</a>!
+It keeps generating new <a href="http://monupco.com/advisories/">advisories</a> every day!</p>
 </div>
     
 
@@ -132,7 +202,7 @@ credentials from popular social networking providers.</p>
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/news/'>News</a>
+    <a class='category' href='/blog/categories/openshift/'>OpenShift</a>, <a class='category' href='/blog/categories/tips/'>Tips</a>
   
 </span>
 
@@ -148,7 +218,7 @@ credentials from popular social networking providers.</p>
     
         <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement/" data-via="monupco" data-counturl="http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://monupco.com/blog/2012/02/18/how-to-update-dependencies-on-openshift/" data-via="monupco" data-counturl="http://monupco.com/blog/2012/02/18/how-to-update-dependencies-on-openshift/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -161,9 +231,9 @@ credentials from popular social networking providers.</p>
     
 
     
-
+        <a style="float: left;" href="/blog/2012/02/17/monupco-1.2-release-announcement/" title="Previous Post: Monupco 1.2 Release Announcement">&laquo; Monupco 1.2 Release Announcement</a>
     
-        <a style="float: right;" href="/blog/2012/02/09/monupco-on-openshift-express/" title="next Post: Monupco on OpenShift Express">Monupco on OpenShift Express &raquo;</a>
+
     
   </div>
 
@@ -231,8 +301,8 @@ credentials from popular social networking providers.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement/';
-        var disqus_url = 'http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement/';
+        var disqus_identifier = 'http://monupco.com/blog/2012/02/18/how-to-update-dependencies-on-openshift/';
+        var disqus_url = 'http://monupco.com/blog/2012/02/18/how-to-update-dependencies-on-openshift/';
         var disqus_script = 'embed.js';
       
     (function () {

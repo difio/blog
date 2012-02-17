@@ -2,32 +2,36 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement/</loc>
-        <lastmod>2012-02-11T01:45:24+02:00</lastmod>
+        <lastmod>2012-02-18T01:43:58+02:00</lastmod>
     </url>
     <url>
         <loc>http://monupco.com/blog/2012/02/09/monupco-on-openshift-express/</loc>
-        <lastmod>2012-02-09T22:21:56+02:00</lastmod>
+        <lastmod>2012-02-18T01:43:58+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://monupco.com/blog/2012/02/10/spinning-up-a-development-instance-on-openshift-express/
         </loc>
-        <lastmod>2012-02-11T01:45:46+02:00</lastmod>
+        <lastmod>2012-02-18T01:43:58+02:00</lastmod>
     </url>
     <url>
         <loc>http://monupco.com/blog/2012/02/11/how-to-write-client-side-tool-for-monupco/</loc>
-        <lastmod>2012-02-15T23:11:26+02:00</lastmod>
+        <lastmod>2012-02-18T01:43:58+02:00</lastmod>
     </url>
     <url>
         <loc>http://monupco.com/blog/2012/02/17/monupco-1.2-release-announcement/</loc>
-        <lastmod>2012-02-17T01:02:30+02:00</lastmod>
+        <lastmod>2012-02-18T01:43:58+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://monupco.com/blog/2012/02/18/how-to-update-dependencies-on-openshift/</loc>
+        <lastmod>2012-02-18T01:43:58+02:00</lastmod>
     </url>
     <url>
         <loc>http://monupco.com/blog/archives/</loc>
-        <lastmod>2012-02-17T01:02:30+02:00</lastmod>
+        <lastmod>2012-02-18T01:28:21+02:00</lastmod>
     </url>
     <url>
         <loc>http://monupco.com/blog/</loc>
-        <lastmod>2012-02-17T01:02:30+02:00</lastmod>
+        <lastmod>2012-02-18T01:28:21+02:00</lastmod>
     </url>
 </urlset>
