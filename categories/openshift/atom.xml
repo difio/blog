@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: OpenShift | monupco]]></title>
+  <title><![CDATA[Category: OpenShift | Monupco]]></title>
   <link href="http://monupco.com/blog/categories/openshift/atom.xml" rel="self"/>
   <link href="http://monupco.com/blog/"/>
-  <updated>2012-02-18T01:46:19+02:00</updated>
+  <updated>2012-02-19T02:22:01+02:00</updated>
   <id>http://monupco.com/blog/</id>
   <author>
     <name><![CDATA[Monupco Team]]></name>
