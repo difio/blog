@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to write a client side tool for Monupco"
+title: "How to write a registration agent for Monupco"
 date: 2012-02-11 00:32
 comments: true
 categories: ["Monupco", "Tips", "Open Source"]
@@ -10,7 +10,7 @@ categories: ["Monupco", "Tips", "Open Source"]
 cloud vendors but that takes time. If your favorite PaaS platform is not
 already supported here's how you can help.
 
-The client side tool is very simple and serves only a single purpose -
+The registration agent is very simple and serves only a single purpose -
 to build a list of installed software and send it to the server.
 
 Some general considerations first:
@@ -18,25 +18,25 @@ Some general considerations first:
 * Your code should be open source! Preferably licensed under the MIT or BSD license;
 
 * Whenever possible use the native programming language for the platform - if writing
-a client tool for PHP PaaS use PHP, if writing for Node.JS use JavaScript, etc;
+an agent for PHP PaaS use PHP, if writing for Node.JS use JavaScript, etc;
 
-* All client side tools are bundled as packages so that they can install natively
+* All registration agents are bundled as packages so that they can install natively
 on the platform. For Python it is a package from PyPI, for PHP it will be a PEAR package,
-etc. Develop your client as a package;
+etc. Develop your agent as a package;
 
-* Naming convention for client side tools is **monupco-\<vendor\>-\<language\>**. For example
+* Naming convention for registration agent is **monupco-\<vendor\>-\<language\>**. For example
 `monupco-openshift-express-python`, `monupco-dotcloud-nodejs`. If you have common code,
 for example the package management part, it can be split into separate module named
 **common-\<language\>-monupco**.
 
-* Client side tools are specific to vendor and programming language. This is because
+* Registration agents are specific to vendor and programming language. This is because
 different PaaS vendors provide the information in a different way. This makes code easier
-to maintain and easier for end-users to find the proper client side tool later;
+to maintain and easier for end-users to find the proper registration agent later;
 
 * Vendor ID and package type ID numbers are unique. It is important to use the correct IDs.
 They allow proper identification of applications and packages stored in the database.
 Different types of data also require different processing. Tell us for which vendor/language
-you would like to contribute a client side tool and we will reserve the IDs for you;
+you would like to contribute a registration agent and we will reserve the IDs for you;
 
 * We will also setup a development server so you can safely test the application
 registration/update process. Just let us know you need one.
@@ -64,7 +64,7 @@ Fields are defined as follow:
 the same user_id will be visible only to that user. You can view your UserID
 [here](https://monupco-otb.rhcloud.com/profiles/mine/). It is important that this value is not
 hard-coded but read from ENV variable or a text file. The user will configure the proper
-value when installing the client side tool into their application;
+value when installing the registration agent into their application;
 
 * app_name - string - the name of the application. This is used to identify the application in the
 web interface. The value is usually available from ENV variable;
@@ -129,12 +129,12 @@ For more information about `User-aget` string format click
 
 * Add a README file with instructions how to install. Pay attention to end-user configuration
 settings and proper execution of the tool. The best place to place a call to
-the client side tool is a post_deploy/post_install hook. Some cloud platforms do not offer
+the registration script is a post_deploy/post_install hook. Some cloud platforms do not offer
 hooks. In this case you may want to ping us for some help.
 
 
 
-Congratulations! You have just written a client side tool for your favorite PaaS and
+Congratulations! You have just written a registration agent for your favorite PaaS and
 programming language. Sent us the code for review and we will add it to our GitHub channel.
 
 
