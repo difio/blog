@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us" xmlns:fb="https://www.facebook.com/2008/fbml" id="html-main">
 <head>
-  <title>Blog Archive - Monupco</title>
+  <title>How to get to the OpenShift shell - Monupco</title>
   
   
 
@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   
-  <link rel="canonical" href="http://monupco.com/blog/archives" />
+  <link rel="canonical" href="http://monupco.com/blog/2012/03/09/how-to-get-to-the-openshift-shell" />
   <link href="/blog/favicon.png" rel="icon" />
   <script src="/blog/javascripts/modernizr-2.0.js" type="text/javascript"></script>
   <script src="/blog/javascripts/ender.js" type="text/javascript"></script>
@@ -20,7 +20,7 @@
   <link href="/blog/atom.xml" rel="alternate" title="Monupco" type="application/atom+xml" />
   <!-- OpenGraph -->
 <meta property="og:image" content="http://monupco.com/static/images/logo_mo.png" />
-<meta property="og:title" content="Blog Archive" />
+<meta property="og:title" content="How to get to the OpenShift shell" />
 <meta property="og:site_name" content="Monupco" />
 
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css' />
@@ -66,100 +66,141 @@
 
     <div id="frontpage" class="box">
         <div id="info">
-  
-    <h1><span>Blog Archive</span></h1>
     
-  
+        
+            <h1>How to Get to the OpenShift Shell</h1>
+        
+    
 
-  <div id="blog-archives">
-
-  
-<div class="part">
+    <div class="part">
     <div class="title">
-        <h2><a href="/blog/2012/03/09/how-to-get-to-the-openshift-shell/">How to get to the OpenShift shell</a></h2>
-        <span class='month'>Mar</span> <span class='day'>09</span> <span class='year'>2012</span>
+    
         
-            <span class="categories">Categories: <a class='category' href='/blog/categories/openshift/'>OpenShift</a>, <a class='category' href='/blog/categories/tips/'>Tips</a></span>
+
         
-   </div>
-</div>
-
-
+            
   
-<div class="part">
-    <div class="title">
-        <h2><a href="/blog/2012/02/18/how-to-update-dependencies-on-openshift/">How to update dependencies on OpenShift</a></h2>
-        <span class='month'>Feb</span> <span class='day'>18</span> <span class='year'>2012</span>
+
+<span class="byline author vcard">Posted by <span class="fn">Alexander Todorov</span></span>
+@
+            
+
+
+
+
+
+
+
+
+  Mar 9<span>th</span>, 2012
+
+
+
+            <br /><br />
         
-            <span class="categories">Categories: <a class='category' href='/blog/categories/openshift/'>OpenShift</a>, <a class='category' href='/blog/categories/tips/'>Tips</a></span>
-        
-   </div>
+    
+
+    
+            <div class="entry-content"><p>I wanted to examine the Perl environment on OpenShift and got tired of making snapshots,
+unzipping the archive and poking through the files. I wanted a shell. Here&#8217;s how to get one.</p>
+
+<ol>
+<li><p>Get the application info first</p>
+
+<pre><code> $ rhc-domain-info 
+ Password: 
+ Application Info
+ ================
+ myapp
+     Framework: perl-5.10
+      Creation: 2012-03-08T13:34:46-04:00
+          UUID: 8946b976ad284cf5b2401caf736186bd
+       Git URL: ssh://8946b976ad284cf5b2401caf736186bd@myapp-mydomain.rhcloud.com/~/git/myapp.git/
+    Public URL: http://myapp-mydomain.rhcloud.com/
+
+  Embedded: 
+       None
+</code></pre></li>
+<li><p>The Git URL has your username and host</p></li>
+<li><p>Now just ssh into the application</p>
+
+<pre><code> $ ssh 8946b976ad284cf5b2401caf736186bd@myapp-mydomain.rhcloud.com
+
+     Welcome to OpenShift shell
+
+     This shell will assist you in managing OpenShift applications.
+
+     !!! IMPORTANT !!! IMPORTANT !!! IMPORTANT !!!
+     Shell access is quite powerful and it is possible for you to
+     accidentally damage your application.  Proceed with care!
+     If worse comes to worst, destroy your application with 'rhc app destroy'
+     and recreate it
+     !!! IMPORTANT !!! IMPORTANT !!! IMPORTANT !!!
+
+     Type "help" for more info.
+
+ [myapp-mydomain.rhcloud.com ~]\&gt; 
+</code></pre></li>
+</ol>
+
+
+<p><strong>Voila!</strong></p>
+
+<hr />
+
+<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Monupco&#8217;s founder and lead developer!</p>
+
+<p>For an insight of available updates to you OpenShift applications give
+Monupco a <a href="https://monupco-otb.rhcloud.com/applications/mine/">try</a>!</p>
 </div>
+    
 
+    
+            <br />Categories: 
 
+<span class="categories">
   
-<div class="part">
-    <div class="title">
-        <h2><a href="/blog/2012/02/17/monupco-1.2-release-announcement/">Monupco 1.2 Release Announcement</a></h2>
-        <span class='month'>Feb</span> <span class='day'>17</span> <span class='year'>2012</span>
-        
-            <span class="categories">Categories: <a class='category' href='/blog/categories/news/'>News</a>, <a class='category' href='/blog/categories/nodejs/'>NodeJS</a>, <a class='category' href='/blog/categories/dotcloud/'>dotCloud</a></span>
-        
-   </div>
-</div>
-
-
+    <a class='category' href='/blog/categories/openshift/'>OpenShift</a>, <a class='category' href='/blog/categories/tips/'>Tips</a>
   
-<div class="part">
-    <div class="title">
-        <h2><a href="/blog/2012/02/11/how-to-write-registration-agent-for-monupco/">How to write a registration agent for Monupco</a></h2>
-        <span class='month'>Feb</span> <span class='day'>11</span> <span class='year'>2012</span>
-        
-            <span class="categories">Categories: <a class='category' href='/blog/categories/monupco/'>Monupco</a>, <a class='category' href='/blog/categories/open-source/'>Open Source</a>, <a class='category' href='/blog/categories/tips/'>Tips</a></span>
-        
-   </div>
+</span>
+
+
+    
+    </div>
 </div>
 
+</div>
 
+<div id="get-started">
+  <div style="display: block; border-bottom: #ce1126 1px dotted; margin-bottom: 15px; padding-bottom:25px;">
+    
+        <div class="sharing">
   
-<div class="part">
-    <div class="title">
-        <h2><a href="/blog/2012/02/10/spinning-up-a-development-instance-on-openshift-express/">Spinning-up a development instance on OpenShift Express</a></h2>
-        <span class='month'>Feb</span> <span class='day'>10</span> <span class='year'>2012</span>
-        
-            <span class="categories">Categories: <a class='category' href='/blog/categories/openshift/'>OpenShift</a>, <a class='category' href='/blog/categories/tips/'>Tips</a></span>
-        
-   </div>
-</div>
-
-
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://monupco.com/blog/2012/03/09/how-to-get-to-the-openshift-shell/" data-via="monupco" data-counturl="http://monupco.com/blog/2012/03/09/how-to-get-to-the-openshift-shell/" >Tweet</a>
   
-<div class="part">
-    <div class="title">
-        <h2><a href="/blog/2012/02/09/monupco-on-openshift-express/">Monupco on OpenShift Express</a></h2>
-        <span class='month'>Feb</span> <span class='day'>09</span> <span class='year'>2012</span>
-        
-            <span class="categories">Categories: <a class='category' href='/blog/categories/openshift/'>OpenShift</a></span>
-        
-   </div>
-</div>
-
-
   
-<div class="part">
-    <div class="title">
-        <h2><a href="/blog/2012/02/06/monupco-1.1-release-announcement/">Monupco 1.1 Release Announcement</a></h2>
-        <span class='month'>Feb</span> <span class='day'>06</span> <span class='year'>2012</span>
-        
-            <span class="categories">Categories: <a class='category' href='/blog/categories/news/'>News</a></span>
-        
-   </div>
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
 </div>
 
+    
 
+    
+        <a style="float: left;" href="/blog/2012/02/18/how-to-update-dependencies-on-openshift/" title="Previous Post: How to update dependencies on OpenShift">&laquo; How to update dependencies on OpenShift</a>
+    
+
+    
+  </div>
+
+    
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    
 </div>
 
-</div> <!-- END INFO -->
 
     </div> <!-- END FRONTPAGE -->
 
@@ -217,7 +258,10 @@
       var disqus_shortname = 'monupco';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://monupco.com/blog/2012/03/09/how-to-get-to-the-openshift-shell/';
+        var disqus_url = 'http://monupco.com/blog/2012/03/09/how-to-get-to-the-openshift-shell/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

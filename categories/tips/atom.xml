@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tips | Monupco]]></title>
   <link href="http://monupco.com/blog/categories/tips/atom.xml" rel="self"/>
   <link href="http://monupco.com/blog/"/>
-  <updated>2012-02-28T00:13:45+02:00</updated>
+  <updated>2012-03-09T21:58:25+02:00</updated>
   <id>http://monupco.com/blog/</id>
   <author>
     <name><![CDATA[Monupco Team]]></name>
@@ -12,6 +12,65 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to get to the OpenShift shell]]></title>
+    <link href="http://monupco.com/blog/2012/03/09/how-to-get-to-the-openshift-shell/"/>
+    <updated>2012-03-09T21:43:00+02:00</updated>
+    <id>http://monupco.com/blog/2012/03/09/how-to-get-to-the-openshift-shell</id>
+    <content type="html"><![CDATA[<p>I wanted to examine the Perl environment on OpenShift and got tired of making snapshots,
+unzipping the archive and poking through the files. I wanted a shell. Here's how to get one.</p>
+
+<ol>
+<li><p>Get the application info first</p>
+
+<pre><code> $ rhc-domain-info 
+ Password: 
+ Application Info
+ ================
+ myapp
+     Framework: perl-5.10
+      Creation: 2012-03-08T13:34:46-04:00
+          UUID: 8946b976ad284cf5b2401caf736186bd
+       Git URL: ssh://8946b976ad284cf5b2401caf736186bd@myapp-mydomain.rhcloud.com/~/git/myapp.git/
+    Public URL: http://myapp-mydomain.rhcloud.com/
+
+  Embedded: 
+       None
+</code></pre></li>
+<li><p>The Git URL has your username and host</p></li>
+<li><p>Now just ssh into the application</p>
+
+<pre><code> $ ssh 8946b976ad284cf5b2401caf736186bd@myapp-mydomain.rhcloud.com
+
+     Welcome to OpenShift shell
+
+     This shell will assist you in managing OpenShift applications.
+
+     !!! IMPORTANT !!! IMPORTANT !!! IMPORTANT !!!
+     Shell access is quite powerful and it is possible for you to
+     accidentally damage your application.  Proceed with care!
+     If worse comes to worst, destroy your application with 'rhc app destroy'
+     and recreate it
+     !!! IMPORTANT !!! IMPORTANT !!! IMPORTANT !!!
+
+     Type "help" for more info.
+
+ [myapp-mydomain.rhcloud.com ~]\&gt; 
+</code></pre></li>
+</ol>
+
+
+<p><strong>Voila!</strong></p>
+
+<hr />
+
+<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Monupco's founder and lead developer!</p>
+
+<p>For an insight of available updates to you OpenShift applications give
+Monupco a <a href="https://monupco-otb.rhcloud.com/applications/mine/">try</a>!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to update dependencies on OpenShift]]></title>
