@@ -1,0 +1,36 @@
+---
+layout: post
+title: "Monupco 1.3 Release Announcement"
+date: 2012-04-02 10:17
+comments: true
+categories: ["News", "dotCloud", "OpenShift", "Perl"]
+---
+
+Today [Monupco](http://monupco.com) is pleased to announce version 1.3
+of our updates monitoring service. Monupco provides user friendly interface to
+monitor available updates for your cloud applications and information about different
+package versions.
+
+This release adds support for Perl packages from [CPAN](http://search.cpan.org/).
+Request Tracker issue tracking systems on <http://rt.cpan.org> and <http://rt.perl.org>
+are also supported.
+
+Perl support comes with registration agents for [dotCloud](http://dotcloud.com) and
+[OpenShift](http://openshift.redhat.com). See the
+[how to install page](http://monupco.com/install/) for more information.
+
+
+Our web interface faced some changes too:
+
+* Details about changes is no longer processed as Markdown. It is presented as
+pre-formatted plain text. This is to prevent some characters (like underscores) getting
+lost due to Markdown conversion;
+* Update pages now integrate with [Disqus](http://disqus.com). You can use the comments form
+to provide general feedback and comments and to alert our team in case the information
+is incorrect.
+
+
+Monupco has already produced detailed information for 950+ [updates](https://monupco-otb.rhcloud.com/updates/).
+
+<a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button red small"><span>Give It A Try</span></a>
+or [follow us](https://twitter.com/monupco) on Twitter for more news.
