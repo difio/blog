@@ -32,4 +32,4 @@ We provide simplified registration and log in into our management console using
 credentials from popular social networking providers.
 
 
-<a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button red small"><span>Give It A Try Now</span></a>
+<a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try Now</a>

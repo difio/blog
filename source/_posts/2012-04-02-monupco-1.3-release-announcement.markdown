@@ -32,5 +32,5 @@ is incorrect.
 
 Monupco has already produced detailed information for 950+ [updates](https://monupco-otb.rhcloud.com/updates/).
 
-<a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button red small"><span>Give It A Try</span></a>
+<a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try</a>
 or [follow us](https://twitter.com/monupco) on Twitter for more news.

@@ -30,4 +30,4 @@ client side tools to more vendors. Stay [tuned](https://twitter.com/monupco) if 
 want to miss the announcement.
 
 
-<a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button red small"><span>Give It A Try Now</span></a>
+<a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try Now</a>
