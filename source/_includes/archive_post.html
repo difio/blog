@@ -1,10 +1,6 @@
 {% capture category %}{{ post.categories | size }}{% endcapture %}
-<div class="part">
-    <div class="title">
         <h2><a href="{{ root_url }}{{ post.url }}">{{post.title}}</a></h2>
         {{ post.date | date: "<span class='month'>%b</span> <span class='day'>%d</span> <span class='year'>%Y</span>"}}
         {% if category != '0' %}
             <span class="categories">Categories: {{ post.categories | category_links }}</span>
         {% endif %}
-   </div>
-</div>

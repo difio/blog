@@ -1,5 +1,12 @@
 <div id="header">
-    <h1><a href="{{ root_url }}/" class="logo">monupco</a><sub>{{ site.subtitle }}</sub></h1>
+        <div class="toplevel">
+            {% include navigation.html %}
+        </div>
+</div> <!-- END HEADER -->
 
-    {% include navigation.html %}
-</div>
+
+    <div id="subheader">
+        <div class="toplevel">
+            <h1><a href="{{ root_url }}/" class="logo">monupco</a><sub>{{ site.subtitle }}</sub></h1>
+        </div>
+    </div> <!-- END subheader -->

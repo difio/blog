@@ -2,11 +2,9 @@
 layout: default
 ---
 
-<div id="info">
   {% if page.title %}
     <h1><span>{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</span></h1>
     {% if page.date %}<p class="meta">{% include post/date.html %}{{ time }}</p>{% endif %}
   {% endif %}
 
   {{ content }}
-</div> <!-- END INFO -->

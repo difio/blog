@@ -4,18 +4,16 @@ single: true
 comments: true
 ---
 
-<div id="info">
     {% unless page.no_header %}
         {% unless index %}
-            <h1>{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
+            <h2>{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h2>
         {% endunless %}
     {% endunless %}
 
     {% include article.html %}
-</div>
 
-<div id="get-started">
-  <div style="display: block; border-bottom: #ce1126 1px dotted; margin-bottom: 15px; padding-bottom:25px;">
+<div id="paging">
+  <div style="display: block; border-bottom: #415469 1px dotted; margin-bottom: 15px; padding-bottom:25px;">
     {% unless page.sharing == false %}
         {% include post/sharing.html %}
     {% endunless %}
@@ -33,4 +31,3 @@ comments: true
         <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
     {% endif %}
 </div>
-
