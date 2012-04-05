@@ -4,7 +4,7 @@
   <title><![CDATA[Category: NodeJS | Monupco]]></title>
   <link href="http://monupco.com/blog/categories/nodejs/atom.xml" rel="self"/>
   <link href="http://monupco.com/blog/"/>
-  <updated>2012-04-02T12:28:56+03:00</updated>
+  <updated>2012-04-06T01:11:54+03:00</updated>
   <id>http://monupco.com/blog/</id>
   <author>
     <name><![CDATA[Monupco Team]]></name>
@@ -44,7 +44,7 @@ For more information see the <a href="http://monupco.com/install">install</a> pa
 client side tools to more vendors. Stay <a href="https://twitter.com/monupco">tuned</a> if you don't
 want to miss the announcement.</p>
 
-<p><a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button red small"><span>Give It A Try Now</span></a></p>
+<p><a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try Now</a></p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Perl | Monupco]]></title>
   <link href="http://monupco.com/blog/categories/perl/atom.xml" rel="self"/>
   <link href="http://monupco.com/blog/"/>
-  <updated>2012-04-02T12:28:56+03:00</updated>
+  <updated>2012-04-06T01:11:54+03:00</updated>
   <id>http://monupco.com/blog/</id>
   <author>
     <name><![CDATA[Monupco Team]]></name>
@@ -45,7 +45,7 @@ is incorrect.</li>
 
 <p>Monupco has already produced detailed information for 950+ <a href="https://monupco-otb.rhcloud.com/updates/">updates</a>.</p>
 
-<p><a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button red small"><span>Give It A Try</span></a>
+<p><a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try</a>
 or <a href="https://twitter.com/monupco">follow us</a> on Twitter for more news.</p>
 ]]></content>
   </entry>
