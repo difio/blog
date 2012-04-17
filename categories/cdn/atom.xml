@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: CDN | Monupco]]></title>
+  <link href="http://monupco.com/blog/categories/cdn/atom.xml" rel="self"/>
+  <link href="http://monupco.com/blog/"/>
+  <updated>2012-04-17T18:50:41+03:00</updated>
+  <id>http://monupco.com/blog/</id>
+  <author>
+    <name><![CDATA[Monupco Team]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Using OpenShift as Amazon CloudFront origin server]]></title>
+    <link href="http://monupco.com/blog/2012/04/17/using-openshift-as-amazon-cloudfront-origin-server/"/>
+    <updated>2012-04-17T17:30:00+03:00</updated>
+    <id>http://monupco.com/blog/2012/04/17/using-openshift-as-amazon-cloudfront-origin-server</id>
+    <content type="html"><![CDATA[<p>It's been several months after the start of <a href="http://monupco.com"><em>Monupco</em></a> and we started
+migrating various parts of the platform to CDN. The first to go are static 01 like
+CSS, JavaScript, images and such. In this article I will show you how to get started with
+<em>Amazon CloudFront</em> and <em>OpenShift</em>. It is very easy once you understand how it works.</p>
+
+<h2>Why CloudFront and OpenShift</h2>
+
+<p><em>Amazon CloudFront</em> is cheap and easy to setup with virtually no maintenance.
+The most important feature 04 that it can fetch content from any public website.
+Integrating it together with <em>OpenShift</em> gives some nice benefits:</p>
+
+<ul>
+<li>All static assets are managed with Git and stored in the same place where the application
+code and HTML is - easy to develop and deploy;</li>
+<li>No need for external service to host the static files;</li>
+<li><em>CloudFront</em> will be serving the files so network load on <em>OpenShift</em> is minimal;</li>
+<li>Easy to manage versioned URLs because HTML and static assets are in the same repo - more on this later;</li>
+</ul>
+
+
+<h2>Object expiration</h2>
+
+<p><em>CloudFront</em> will cache your objects for a certain period and then expire them. Frequently
+used objects are expired less often. Depending on the content you may want to update the cache
+more or less frequently. In my case CSS and JavaScript files change rarely so I wanted to tell
+CloudFront to not expire the files quickly. I did this by telling <em>Apache</em> to send a custom value for
+the Expires header.</p>
+
+<pre><code>    $ curl http://d71ktrt2emu2j.cloudfront.net/static/v1/css/style.css -D headers.txt
+    $ cat headers.txt 
+    HTTP/1.0 200 OK
+    Date: Mon, 16 Apr 2012 19:02:16 GMT
+    Server: Apache/2.2.15 (Red Hat)
+    Last-Modified: Mon, 16 Apr 2012 19:00:33 GMT
+    ETag: "120577-1b2d-4bdd06fc6f640"
+    Accept-Ranges: bytes
+    Content-Length: 6957
+    Cache-Control: max-age=31536000
+    Expires: Tue, 16 Apr 2013 19:02:16 GMT
+    Content-Type: text/css
+    Strict-Transport-Security: max-age=15768000, includeSubDomains
+    Age: 73090
+    X-Cache: Hit from cloudfront
+    X-Amz-Cf-Id: X558vcEOsQkVQn5V9fbrWNTdo543v8VStxdb7LXIcUWAIbLKuIvp-w==,e8Dipk5FSNej3e0Y7c5ro-9mmn7OK8kWfbaRGwi1ww8ihwVzSab24A==
+    Via: 1.0 d6343f267c91f2f0e78ef0a7d0b7921d.cloudfront.net (CloudFront)
+    Connection: close
+</code></pre>
+
+<p>All headers before Strict-Transport-Security come from the origin server.</p>
+
+<h2>Versioning</h2>
+
+<p>Sometimes however you need to update the files and force <em>CloudFront</em> to update the content.
+The recommended way to do this is to use URL versioning and update the path to the files
+which changed. This will force <em>CloudFront</em> to cache and serve the content under the new path
+while keeping the old content available until it expires. This way your visitors will not be
+viewing your site with the new CSS and old JavaScript.</p>
+
+<p>There are many ways to do this and there are some nice frameworks as well. For Python there is <em>webassets</em>.
+I don't have many static files so I opted for no additional dependencies. Instead I will be updating the
+versions by hand.</p>
+
+<p>What comes to mind is using <em>mod_rewrite</em> to redirect the versioned URLs back to non versioned ones.
+However there's a catch. If you do this <em>CloudFront</em> will cache the redirect itself, not the content.
+The next time visitors hit <em>CloudFront</em> they will receive the cached redirect and follow it back to your
+origin server, which is defeating the purpose of having CDN.</p>
+
+<p>To do it properly you have to rewrite the URLs but still return a 200 response code and the
+content which needs to be cached. This is done with <em>mod_proxy</em>:</p>
+
+<pre><code>    RewriteEngine on
+    RewriteRule ^VERSION-(\d+)/(.*)$ http://%{ENV:OPENSHIFT_INTERNAL_IP}:%{ENV:OPENSHIFT_INTERNAL_PORT}/static/$2 [P,L]
+</code></pre>
+
+<p>This .htaccess trick doesn't work on <em>OpenShift</em> though. <em>mod_proxy</em> is not enabled at the moment.
+See <a href="https://bugzilla.redhat.com/show_bug.cgi?id=812389">bug 812389</a> for more info.</p>
+
+<p>Luckily I was able to use symlinks to point to the content. Here's how it looks:</p>
+
+<pre><code>    $ pwd
+    /home/atodorov/monupco/wsgi/static
+
+    $ cat .htaccess
+    ExpiresActive On
+    ExpiresDefault "access plus 1 year"
+
+    $ ls -l
+    drwxrwxr-x. 6 atodorov atodorov 4096 16 Apr 21,31 o
+    lrwxrwxrwx. 1 atodorov atodorov    1 16 Apr 21,47 v1 -&gt; o
+
+    settings.py:
+    STATIC_URL = '//d71ktrt2emu2j.cloudfront.net/static/v1/'
+
+    HTML template:
+    &lt;link type="text/css" rel="stylesheet" media="screen" href="{{ STATIC_URL }}css/style.css" /&gt;
+</code></pre>
+
+<h2>How to implement it</h2>
+
+<p>First you need to split all CSS and JavaScript from your HTML if you haven't done so already.</p>
+
+<p>Then place everything under your git repo so that <em>OpenShift</em> will serve the files. For Python applications
+place the files under wsgi/static/ directory in your git repo.</p>
+
+<p>Point all of your HTML templates to the static location on <em>OpenShift</em> and test if everything works as expected.
+This is best done if you're using some sort of template language and store the location
+in a single variable which you can change later.
+<em>Monupco</em> uses <em>Django</em> and the <em>STATIC_URL</em> variable of course.</p>
+
+<p>Create your <em>CloudFront</em> distribution - don't use <em>Amazon S3</em>, instead configure a custom origin server. Write down
+your <em>CloudFront</em> URL. It will be something like <strong>1234xyz.cludfront.net</strong>.</p>
+
+<p>Every time a request hits <em>CloudFront</em> it will check if the object is present in the cache. If not present
+<em>CloudFront</em> will fetch the object from the origin server and populate the cache. Then the object is sent
+to the user.</p>
+
+<p>Update your templates to point to the new cloudfront.net URL and redeploy your website!</p>
+
+<hr />
+
+<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Monupco's founder and lead developer!</p>
+
+<p>For an insight of available updates to you OpenShift applications give
+Monupco a <a href="https://monupco-otb.rhcloud.com/applications/mine/">try</a>!</p>
+]]></content>
+  </entry>
+  
+</feed>
