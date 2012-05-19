@@ -1,0 +1,370 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us" xmlns:fb="https://www.facebook.com/2008/fbml" id="html-main">
+<head>
+  <title>Cross-domain AJAX served from CDN - Monupco</title>
+  
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  
+  <link rel="canonical" href="http://monupco.com/blog/2012/05/19/cross-domain-ajax-served-from-cdn" />
+  <link href="/blog/favicon.png" rel="icon" />
+  <script src="/blog/javascripts/modernizr-2.0.js" type="text/javascript"></script>
+  <script src="/blog/javascripts/ender.js" type="text/javascript"></script>
+  <script src="/blog/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/blog/atom.xml" rel="alternate" title="Monupco" type="application/atom+xml" />
+  <!-- OpenGraph -->
+<meta property="og:image" content="//d71ktrt2emu2j.cloudfront.net/static/v1/images/logo_mo.png" />
+<meta property="og:title" content="Cross-domain AJAX served from CDN" />
+<meta property="og:site_name" content="Monupco" />
+
+<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css' />
+<link type="text/css" rel="stylesheet" media="screen" href="//d71ktrt2emu2j.cloudfront.net/static/v1/css/style.css" />
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-28789374-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+    <div id="header">
+        <div class="toplevel">
+                    <ul class="global">
+          <li style="margin: 5px;"><a href="/blog/archives">Archives</a></li>
+<!--
+          <li><a href="/blog/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+-->
+            <li style="margin: 5px;">&nbsp;&nbsp;</li>
+            <li style="margin: 5px;">Login with</li>
+            <li><a href="https://monupco-otb.rhcloud.com/login/twitter/"><img src="//d71ktrt2emu2j.cloudfront.net/static/v1/images/login/twitter.png" alt="Twitter" title="Twitter" /></a></li>
+            <li><a href="https://monupco-otb.rhcloud.com/login/github/"><img src="//d71ktrt2emu2j.cloudfront.net/static/v1/images/login/github.png" alt="Github" title="Github" /></a></li>
+            <li><a href="https://monupco-otb.rhcloud.com/login/facebook/"><img src="//d71ktrt2emu2j.cloudfront.net/static/v1/images/login/facebook.png" alt="Facebook" title="Facebook" /></a></li>
+            <li><a href="https://monupco-otb.rhcloud.com/login/google-oauth2/"><img src="//d71ktrt2emu2j.cloudfront.net/static/v1/images/login/google-oauth2.png" alt="Google-Oauth2" title="Google-Oauth2" /></a></li>
+            <li><a href="https://monupco-otb.rhcloud.com/login/linkedin/"><img src="//d71ktrt2emu2j.cloudfront.net/static/v1/images/login/linkedin.png" alt="Linkedin" title="Linkedin" /></a></li>
+        </ul>
+
+
+        </div>
+</div> <!-- END HEADER -->
+
+
+    <div id="subheader">
+        <div class="toplevel">
+            <h1><a href="/blog/" class="logo">monupco</a><sub>blog</sub></h1>
+        </div>
+    </div> <!-- END subheader -->
+
+
+
+    <div id="content">
+        <div class="toplevel">
+            <div style="float: left; width: 100%">
+                    
+        
+            <h2>Cross-domain AJAX Served From CDN</h2>
+        
+    
+
+        
+        
+
+        
+            
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Alexander Todorov</span></span>
+@
+            
+
+
+
+
+
+
+
+
+  May 19<span>th</span>, 2012
+
+
+
+            <br /><br />
+        
+    
+
+    
+            <div class="entry-content"><p>This week Amazon <a href="http://aws.typepad.com/aws/2012/05/amazon-cloudfront-support-for-dynamic-content.html">announced</a>
+support for dynamic content in their CDN solution <a href="http://aws.amazon.com/cloudfront/"><em>Amazon CloudFront</em></a>.
+The announce coincided with my efforts to migrate more pieces of <em>Monupco</em>&#8217;s <a href="http://monupco.com">website</a> to <em>CloudFront</em>.</p>
+
+<p>In this article I will not talk about hosting static files on CDN. This is easy and I&#8217;ve already written
+about it <a href="/blog/2012/04/17/using-openshift-as-amazon-cloudfront-origin-server/">here</a>. I will show how to
+cache AJAX(JSONP actually) responses and serve them directly from <em>Amazon CloudFront</em>.</p>
+
+<h2>Background</h2>
+
+<p>For those if you who may not be familiar (are there any) CDN stands for
+<a href="https://en.wikipedia.org/wiki/Content_delivery_network">Content Delivery Network</a>. In short
+this employs numerous servers with identical content. The requests from the browser are served
+from the location which gives best performance for the user. This is used by all major websites
+to speed-up static content like images, video, CSS and JavaScript files.</p>
+
+<p>AJAX means <a href="https://en.wikipedia.org/wiki/Ajax_%28programming%29">Asynchronous JavaScript and XML</a>.
+This is what Google uses to create dynamic user interface which doesn&#8217;t require to reload the page.</p>
+
+<h2>Architecture</h2>
+
+<p><em>Monupco</em> has two web interfaces. The primary one is a static HTML website
+which employs JavaScript for the dynamic areas. It is hosted on the monupco.com domain.
+The other one is powered by Django and provides the same interface plus the
+<a href="https://monupco-otb.rhcloud.com/applications/mine/">applications dashboard</a> and several API functions
+which don&#8217;t have a visible user interface. This is under the *.rhcloud.com domain b/c it is hosted on
+<a href="http://openshift.redhat.com"><em>OpenShift</em></a>.</p>
+
+<p>The present state of the website is the result of rapid development using conventional methods -
+HTML templates and server-side processing. This is migrating to modern web technology like static HTML
+and JavaScript while the server side will remain pure API service.</p>
+
+<p>For this migration to happen I need the HTML pages at monupco.com to execute JavaScript and load information
+which comes from the rhcloud.com domain. Unfortunately this is not easily doable with AJAX because
+of the <a href="https://en.wikipedia.org/wiki/Same_origin_policy">Same origin policy</a> in browsers.</p>
+
+<p>I&#8217;m using the <a href="http://dojotoolkit.org/"><em>Dojo Toolkit</em></a> JavaScript framework which has a solution.
+It&#8217;s called <a href="https://en.wikipedia.org/wiki/JSONP">JSONP</a>. Here&#8217;s how it works:</p>
+
+<pre><code>    monupco.com -- JSONP request --&gt; abc.rhcloud.com --v
+        ^                                              |
+        |                                              |
+    JavaScript processing                              |
+        |                                              |
+        +------------------ JSONP response ------------+
+</code></pre>
+
+<p>This is pretty standard configuration for a web service.</p>
+
+<h2>Going to the clouds</h2>
+
+<p>The way <em>Dojo</em> implements JSONP is through the
+<a href="http://dojotoolkit.org/reference-guide/1.7/dojo/io/script.html">dojo.io.script</a> module.
+It works by appending a query string parameter of the form <em>?callback=funcName</em> which the server uses
+to generate the JSONP response. This callback name is dynamically generated by <em>Dojo</em> based on the order
+in which your call to <em>dojo.io.script</em> is executed.</p>
+
+<p>Until recently <em>Amazon CloudFront</em> ignored all query string parameters when requesting the content from
+the origin server. Without the query string it was not possible to generate the JSONP response.
+Luckily Amazon resolved the issue only one day after I asked about it on their forums.</p>
+
+<p>Now <em>Amazon CloudFront</em> will use the URL path and the query string parameters to identify the objects in cache.
+To enable this edit the CloudFront distribution <em>behavior(s)</em> and set <em>Forward Query Strings</em> to Yes.</p>
+
+<p>When a visitor of the website requests the data <em>Amazon CloudFront</em> will use exactly the same url path and query strings
+to fetch the content from the origin server. All that I had to do is switch the domain of the JSONP service
+to point to the cloudfront.net domain. It became like this:</p>
+
+<pre><code>                                                        | Everything on this side is handled by Amazon.
+                                                        | No code required!
+                                                        |
+    monupco.com -- JSONP request --&gt; xyz.cloudfront.net -- JSONP request if cache miss --&gt; abc.rhcloud.com --v
+        ^                              |                ^                                                    |
+        |                              |                |                                                    |
+    JavaScript processing              |                +---------- JSONP response --------------------------+
+        |                              |
+        +---- cached JSONP response ---+
+</code></pre>
+
+<p>As you can see the website structure and code didn&#8217;t change at all. All that changed was a single domain name.</p>
+
+<h2>Controlling the cache</h2>
+
+<p><em>Amazon CloudFront</em> will keep the contents in cache based on the origin headers if present or the manual configuration
+from the AWS Console. To work around frequent requests to the origin server it is considered best practice to set the
+Expires header to a value far in the future, like 1 year.
+However if the content changes you need some way to tell <em>CloudFront</em> about it. The most commonly used method is through
+using different URLs to access the same content. This will cause <em>CloudFront</em> to cache the content under the new location
+while keeping the old content until it expires.</p>
+
+<p><em>Dojo</em> makes this very easy:</p>
+
+<pre><code>    require(["dojo/io/script"],
+        function(script) {
+                script.get({
+                    url: "https://xyz.cloudfront.net/api/json/updates/1234",
+                    callbackParamName: "callback",
+                    content: {t: timeStamp},
+                    load: function(jsonData) {
+                        ....
+                    },
+    ....
+</code></pre>
+
+<p>The <em>content</em> property allows additional key/value pairs to be sent in the query string. The
+<em>timeStamp</em> parameter serves only to control <em>Amazon CloudFront</em> cache. It&#8217;s not processed server side.</p>
+
+<p>On the server-side we have:</p>
+
+<pre><code>    response['Cache-Control'] = 'max-age=31536000'
+    response['Expires'] = (datetime.now()+timedelta(seconds=31536000)).strftime('%a, %d %b %Y %H:%M:%S GMT')
+</code></pre>
+
+<h2>Benefits</h2>
+
+<p>There were two immediate benefits:</p>
+
+<ul>
+<li>Reduced page load time. Combined with serving static files from CDN this greatly improves the user experience;</li>
+<li>Reduced server load. Content is requested only once if it is missing from the cache and then served from CloudFront.
+The server isn&#8217;t so busy serving content so it can be used to do more computations or simply reduce the bill.</li>
+</ul>
+
+
+<p>The presented method works well for <em>Monupco</em> because of two things:</p>
+
+<ul>
+<li>The content which <em>Monupco</em> serves usually doesn&#8217;t change at all once made public. In rare occasions, for example an error
+has been published, we have to regenerate new content and publish it under the same URL.</li>
+<li>Before content is made public it is inspected for errors and this also preseeds the cache.</li>
+</ul>
+
+
+<hr />
+
+<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Monupco&#8217;s founder and lead developer!</p>
+
+<p>For an insight of available updates to your open source components give
+Monupco a <a href="https://monupco-otb.rhcloud.com/applications/mine/">try</a>!</p>
+</div>
+    
+
+    
+            <br />Categories: 
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ajax/'>AJAX</a>, <a class='category' href='/blog/categories/amazon/'>Amazon</a>, <a class='category' href='/blog/categories/cdn/'>CDN</a>, <a class='category' href='/blog/categories/cloudfront/'>CloudFront</a>, <a class='category' href='/blog/categories/jsonp/'>JSONP</a>
+  
+</span>
+
+
+    
+
+
+<div id="paging">
+  <div style="display: block; border-bottom: #415469 1px dotted; margin-bottom: 15px; padding-bottom:25px;">
+    
+        <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://monupco.com/blog/2012/05/19/cross-domain-ajax-served-from-cdn/" data-via="monupco" data-counturl="http://monupco.com/blog/2012/05/19/cross-domain-ajax-served-from-cdn/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+
+    
+        <a style="float: left;" href="/blog/2012/05/03/monupco-1.4-release-announcement/" title="Previous Post: Monupco 1.4 Release Announcement">&laquo; Monupco 1.4 Release Announcement</a>
+    
+
+    
+  </div>
+
+    
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    
+</div>
+
+            </div>
+        </div>
+
+    </div> <!-- END FRONTPAGE -->
+
+      <div id="footer">
+        <div class="toplevel">
+            <ul>
+                <li><a href="http://monupco.com/about/">About</a></li>
+                <li><a href="http://monupco.com/faq/">Help</a></li>
+                <li><a href="mailto:info[at]monupco.com">Contact</a></li>
+                <li><a href="http://twitter.com/monupco">@monupco</a></li>
+                <li><a href="https://github.com/monupco/monupco.github.com/issues/new">File a bug</a></li>
+            </ul>
+            <div style="float: right;">&copy; 2011-2012 monupco</div>
+        </div>
+    </div>
+
+
+  
+<div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'monupco';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://monupco.com/blog/2012/05/19/cross-domain-ajax-served-from-cdn/';
+        var disqus_url = 'http://monupco.com/blog/2012/05/19/cross-domain-ajax-served-from-cdn/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+</body>
+</html>

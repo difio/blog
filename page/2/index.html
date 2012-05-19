@@ -80,6 +80,104 @@
                 
                     
         
+            <h2><a href="/blog/2012/02/09/monupco-on-openshift-express/">Monupco on OpenShift Express</a></h2>
+        
+
+        
+            
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Alexander Todorov</span></span>
+@
+            
+
+
+
+
+
+
+
+
+  Feb 9<span>th</span>, 2012
+
+
+
+            <br /><br />
+        
+    
+
+    
+        <div class="entry-content"><p><a href="http://monupco.com">Monupco</a> stands for Monitor Updates In The Cloud.
+As the name suggests this is a service which provides updates information
+for applications hosted in a PaaS environment. If you are a developer or
+a sysadmin knowing when and what to upgrade will make your life easier.</p>
+
+<p>Monupco will generate a human friendly description of changes between the
+installed package version and the latest one. Currently a <a href="https://github.com/monupco/monupco-openshift-express-python">client
+side tool</a> for
+Python applications on OpenShift Express is available and
+others will follow soon.</p>
+
+<p>Monupco started with a local SQLite database which was the fastest way to get up
+and running. At present the database layer is powered by MySQL and the intention
+is to switch to NoSQL at some point. It is written in Python.</p>
+
+<p>Monupco is split into several parts:</p>
+
+<ul>
+<li>Management console - the interface with which users interact.
+It is hosted on <a href="http://openshift.redhat.com/">OpenShift</a> Express.</li>
+<li>Website - static HTML website which is periodically updated by a
+<a href="http://celeryproject.org/">Celery</a> task.</li>
+<li>Blog - powered by <a href="http://octopress.org">Octopress</a>. Together with
+the website this is hosted on GitHub.</li>
+</ul>
+
+
+<p>All source code of Monupco is managed with git and &#8216;git push&#8217; is simply a
+rock star. Combining git + ssh keys made it possible to programatically commit
+and push when necessary.</p>
+
+<p>The application uses Markdown extensively. All blog and website pages
+and multi-line text entries into the database are rendered as Markdown.
+This makes entering and editing text very easy.</p>
+
+<p>While developing Monupco I didn&#8217;t want to force users to remember yet another
+username and password nor store them into the database. The solution is no passwords required!
+Instead Monupco uses popular social networks credentials and limits the information
+stored in database to the bare minimum.</p>
+
+<p>Monupco has recently <a href="http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement/">announced</a>
+its first Alpha release. The following weeks will see development for Ruby, PHP and Perl packages
+and the corresponding client side tools for these catridges on OpenShift.
+Java and Node.js are also under investigation.</p>
+
+<p>Once these popular languages and package types are supported, client side tools
+for other PaaS vendors will follow. On the radar are requests for:</p>
+
+<ul>
+<li>Heroku</li>
+<li>Engine Yard</li>
+<li>AppFog</li>
+<li>Google Apps Engine</li>
+<li>SalesForce</li>
+<li>DotCloud</li>
+</ul>
+
+
+<p>If you&#8217;re already excited please follow @monupco on <a href="https://twitter.com/monupco">Twitter</a> and
+<a href="https://github.com/monupco">GitHub</a> or <a href="https://monupco-otb.rhcloud.com/applications/mine/">get started</a> today!</p>
+</div>
+        
+        
+    
+
+    
+
+            
+                
+                    
+        
             <h2><a href="/blog/2012/02/06/monupco-1.1-release-announcement/">Monupco 1.1 Release Announcement</a></h2>
         
 
