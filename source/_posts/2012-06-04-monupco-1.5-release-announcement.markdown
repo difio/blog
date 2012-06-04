@@ -1,0 +1,40 @@
+---
+layout: post
+title: "Monupco 1.5 Release Announcement"
+date: 2012-06-04 13:24
+comments: true
+categories: ["News", "dotCloud", "OpenShift", "PHP", "PEAR"]
+---
+
+Today [Monupco](http://monupco.com) is pleased to announce version 1.5
+of our updates monitoring service. Monupco provides insight of available
+updates for open source components. It lets you inspect changes and take
+informed decision when or what to upgrade. This improves software life cycle
+planning and minimizes possible regressions and downtime.
+
+
+This release adds support for [PHP PEAR](http://pear.php.net/) packages and
+new registration agents for [dotCloud](http://dotcloud.com) and
+[OpenShift](http://openshift.redhat.com) PHP applications. See
+[how to register applications](http://monupco.com/register/) page for more information.
+Currently only packages from <http://pear.php.net> channel are supported.
+We're working on enabling additional channels like [PECL](http://pecl.php.net)
+and self hosted PEAR channels.
+
+In addition to popular package index directories there are many projects which
+are distributed directly and not via package index. We've made a first step towards
+supporting such projects. This release adds support for projects which are
+distributed directly from [GitHub](http://github.com). At the moment support is limited
+to projects which use tags.
+
+Our web site now supports search functionality via Google custom search.
+
+
+In the next releases we're going to add registration agents for more cloud/PaaS vendors
+and enable manual import of packages for those who do not work in the clouds. Our team
+is working on a number of website improvements to make it faster and easier to use.
+In addition to that we're also working on enabling e-mail and SMS notifications so
+stay tuned!
+
+<a href="https://monupco-otb.rhcloud.com/applications/mine/">Give it a try</a>
+or [follow us](https://twitter.com/monupco) on Twitter for more news.
