@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Perl | Monupco]]></title>
   <link href="http://monupco.com/blog/categories/perl/atom.xml" rel="self"/>
   <link href="http://monupco.com/blog/"/>
-  <updated>2012-05-19T18:34:15+03:00</updated>
+  <updated>2012-06-04T13:44:27+03:00</updated>
   <id>http://monupco.com/blog/</id>
   <author>
     <name><![CDATA[Monupco Team]]></name>
@@ -29,7 +29,7 @@ are also supported.</p>
 
 <p>Perl support comes with registration agents for <a href="http://dotcloud.com">dotCloud</a> and
 <a href="http://openshift.redhat.com">OpenShift</a>. See the
-<a href="http://monupco.com/install/">how to install page</a> for more information.</p>
+<a href="http://monupco.com/register/">how to register applications</a> page for more information.</p>
 
 <p>Our web interface faced some changes too:</p>
 

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: PEAR | Monupco]]></title>
+  <link href="http://monupco.com/blog/categories/pear/atom.xml" rel="self"/>
+  <link href="http://monupco.com/blog/"/>
+  <updated>2012-06-04T13:44:27+03:00</updated>
+  <id>http://monupco.com/blog/</id>
+  <author>
+    <name><![CDATA[Monupco Team]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Monupco 1.5 Release Announcement]]></title>
+    <link href="http://monupco.com/blog/2012/06/04/monupco-1.5-release-announcement/"/>
+    <updated>2012-06-04T13:24:00+03:00</updated>
+    <id>http://monupco.com/blog/2012/06/04/monupco-1.5-release-announcement</id>
+    <content type="html"><![CDATA[<p>Today <a href="http://monupco.com">Monupco</a> is pleased to announce version 1.5
+of our updates monitoring service. Monupco provides insight of available
+updates for open source components. It lets you inspect changes and take
+informed decision when or what to upgrade. This improves software life cycle
+planning and minimizes possible regressions and downtime.</p>
+
+<p>This release adds support for <a href="http://pear.php.net/">PHP PEAR</a> packages and
+new registration agents for <a href="http://dotcloud.com">dotCloud</a> and
+<a href="http://openshift.redhat.com">OpenShift</a> PHP applications. See
+<a href="http://monupco.com/register/">how to register applications</a> page for more information.
+Currently only packages from <a href="http://pear.php.net">http://pear.php.net</a> channel are supported.
+We're working on enabling additional channels like <a href="http://pecl.php.net">PECL</a>
+and self hosted PEAR channels.</p>
+
+<p>In addition to popular package index directories there are many projects which
+are distributed directly and not via package index. We've made a first step towards
+supporting such projects. This release adds support for projects which are
+distributed directly from <a href="http://github.com">GitHub</a>. At the moment support is limited
+to projects which use tags.</p>
+
+<p>Our web site now supports search functionality via Google custom search.</p>
+
+<p>In the next releases we're going to add registration agents for more cloud/PaaS vendors
+and enable manual import of packages for those who do not work in the clouds. Our team
+is working on a number of website improvements to make it faster and easier to use.
+In addition to that we're also working on enabling e-mail and SMS notifications so
+stay tuned!</p>
+
+<p><a href="https://monupco-otb.rhcloud.com/applications/mine/">Give it a try</a>
+or <a href="https://twitter.com/monupco">follow us</a> on Twitter for more news.</p>
+]]></content>
+  </entry>
+  
+</feed>

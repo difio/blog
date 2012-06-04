@@ -80,6 +80,74 @@
                 
                     
         
+            <h2><a href="/blog/2012/06/04/monupco-1.5-release-announcement/">Monupco 1.5 Release Announcement</a></h2>
+        
+
+        
+            
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Monupco Team</span></span>
+@
+            
+
+
+
+
+
+
+
+
+  Jun 4<span>th</span>, 2012
+
+
+
+            <br /><br />
+        
+    
+
+    
+        <div class="entry-content"><p>Today <a href="http://monupco.com">Monupco</a> is pleased to announce version 1.5
+of our updates monitoring service. Monupco provides insight of available
+updates for open source components. It lets you inspect changes and take
+informed decision when or what to upgrade. This improves software life cycle
+planning and minimizes possible regressions and downtime.</p>
+
+<p>This release adds support for <a href="http://pear.php.net/">PHP PEAR</a> packages and
+new registration agents for <a href="http://dotcloud.com">dotCloud</a> and
+<a href="http://openshift.redhat.com">OpenShift</a> PHP applications. See
+<a href="http://monupco.com/register/">how to register applications</a> page for more information.
+Currently only packages from <a href="http://pear.php.net">http://pear.php.net</a> channel are supported.
+We&#8217;re working on enabling additional channels like <a href="http://pecl.php.net">PECL</a>
+and self hosted PEAR channels.</p>
+
+<p>In addition to popular package index directories there are many projects which
+are distributed directly and not via package index. We&#8217;ve made a first step towards
+supporting such projects. This release adds support for projects which are
+distributed directly from <a href="http://github.com">GitHub</a>. At the moment support is limited
+to projects which use tags.</p>
+
+<p>Our web site now supports search functionality via Google custom search.</p>
+
+<p>In the next releases we&#8217;re going to add registration agents for more cloud/PaaS vendors
+and enable manual import of packages for those who do not work in the clouds. Our team
+is working on a number of website improvements to make it faster and easier to use.
+In addition to that we&#8217;re also working on enabling e-mail and SMS notifications so
+stay tuned!</p>
+
+<p><a href="https://monupco-otb.rhcloud.com/applications/mine/">Give it a try</a>
+or <a href="https://twitter.com/monupco">follow us</a> on Twitter for more news.</p>
+</div>
+        
+        
+    
+
+    
+
+            
+                
+                    
+        
             <h2><a href="/blog/2012/05/19/cross-domain-ajax-served-from-cdn/">Cross-domain AJAX Served From CDN</a></h2>
         
 
@@ -292,7 +360,7 @@ package versions.</p>
 <p>This release adds support for <a href="http://rubygems.org/">RubyGems</a> and
 new registration agents for <a href="http://dotcloud.com">dotCloud</a> and
 <a href="http://openshift.redhat.com">OpenShift</a> Ruby applications. See
-<a href="http://monupco.com/install/">how to install</a> page for more information.</p>
+<a href="http://monupco.com/register/">how to register applications</a> page for more information.</p>
 
 <p>There have been lots of bug fixes and improvements behind the scenes.
 Since the <a href="/blog/blog/2012/04/02/monupco-1.3-release-announcement/">1.3 release</a>
@@ -522,7 +590,7 @@ are also supported.</p>
 
 <p>Perl support comes with registration agents for <a href="http://dotcloud.com">dotCloud</a> and
 <a href="http://openshift.redhat.com">OpenShift</a>. See the
-<a href="http://monupco.com/install/">how to install page</a> for more information.</p>
+<a href="http://monupco.com/register/">how to register applications</a> page for more information.</p>
 
 <p>Our web interface faced some changes too:</p>
 
@@ -1144,76 +1212,6 @@ hooks. In this case you may want to ping us for some help.</p></li>
 programming language. Sent us the code for review and we will add it to our GitHub channel.</p>
 
 <p>For more details you may take a look at <a href="https://github.com/monupco/monupco-openshift-express-python">https://github.com/monupco/monupco-openshift-express-python</a>.</p>
-</div>
-        
-        
-    
-
-    
-
-            
-                
-                    
-        
-            <h2><a href="/blog/2012/02/10/spinning-up-a-development-instance-on-openshift-express/">Spinning-up a Development Instance on OpenShift Express</a></h2>
-        
-
-        
-            
-  
-
-<span class="byline author vcard">Posted by <span class="fn">Monupco Team</span></span>
-@
-            
-
-
-
-
-
-
-
-
-  Feb 10<span>th</span>, 2012
-
-
-
-            <br /><br />
-        
-    
-
-    
-        <div class="entry-content"><p><a href="http://monupco.com">Monupco</a> is hosted on <a href="http://openshift.redhat.com">OpenShift</a> Express.
-During development we often need to spin-up another copy of Monupco to use for testing and development.
-With OpenShift this is easy and fast. Here&#8217;s how:</p>
-
-<ol>
-<li><p>Create another application on OpenShift. This will be your development instance.</p>
-
-<pre><code> rhc-create-app -a myappdevel -t python-2.6
-</code></pre></li>
-<li><p>Find out the git URL for the production application:</p>
-
-<pre><code> $ rhc-user-info
- Application Info
- ================
- myapp
-     Framework: python-2.6
-      Creation: 2012-02-10T12:39:53-05:00
-          UUID: 723f0331e17041e8b34228f87a6cf1f5
-       Git URL: ssh://723f0331e17041e8b34228f87a6cf1f5@myapp-mydomain.rhcloud.com/~/git/myapp.git/
-    Public URL: http://myapp-mydomain.rhcloud.com/
-</code></pre></li>
-<li><p>Push the current code base from the production instance to devel instance:</p>
-
-<pre><code> cd myappdevel
- git remote add production -m master ssh://723f0331e17041e8b34228f87a6cf1f5@myapp-mydomain.rhcloud.com/~/git/myapp.git/
- git pull -s recursive -X theirs production master
- git push
-</code></pre></li>
-<li><p>Now your <code>myappdevel</code> is the same as your production instance. You will probably want to
-modify your database connection settings at this point and start adding new features.</p></li>
-</ol>
-
 </div>
         
         

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby | Monupco]]></title>
   <link href="http://monupco.com/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://monupco.com/blog/"/>
-  <updated>2012-05-19T18:34:15+03:00</updated>
+  <updated>2012-06-04T13:44:27+03:00</updated>
   <id>http://monupco.com/blog/</id>
   <author>
     <name><![CDATA[Monupco Team]]></name>
@@ -26,7 +26,7 @@ package versions.</p>
 <p>This release adds support for <a href="http://rubygems.org/">RubyGems</a> and
 new registration agents for <a href="http://dotcloud.com">dotCloud</a> and
 <a href="http://openshift.redhat.com">OpenShift</a> Ruby applications. See
-<a href="http://monupco.com/install/">how to install</a> page for more information.</p>
+<a href="http://monupco.com/register/">how to register applications</a> page for more information.</p>
 
 <p>There have been lots of bug fixes and improvements behind the scenes.
 Since the <a href="/blog/2012/04/02/monupco-1.3-release-announcement/">1.3 release</a>
