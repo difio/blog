@@ -17,7 +17,7 @@ are also supported.
 
 Perl support comes with registration agents for [dotCloud](http://dotcloud.com) and
 [OpenShift](http://openshift.redhat.com). See the
-[how to install page](http://monupco.com/install/) for more information.
+[how to register applications](http://monupco.com/register/) page for more information.
 
 
 Our web interface faced some changes too:
