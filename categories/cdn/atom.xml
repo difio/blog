@@ -4,7 +4,7 @@
   <title><![CDATA[Category: CDN | Monupco]]></title>
   <link href="http://monupco.com/blog/categories/cdn/atom.xml" rel="self"/>
   <link href="http://monupco.com/blog/"/>
-  <updated>2012-06-20T21:22:01+03:00</updated>
+  <updated>2012-06-21T01:26:27+03:00</updated>
   <id>http://monupco.com/blog/</id>
   <author>
     <name><![CDATA[Monupco Team]]></name>
@@ -20,7 +20,7 @@
     <id>http://monupco.com/blog/2012/05/19/cross-domain-ajax-served-from-cdn</id>
     <content type="html"><![CDATA[<p>This week Amazon <a href="http://aws.typepad.com/aws/2012/05/amazon-cloudfront-support-for-dynamic-content.html">announced</a>
 support for dynamic content in their CDN solution <a href="http://aws.amazon.com/cloudfront/"><em>Amazon CloudFront</em></a>.
-The announce coincided with my efforts to migrate more pieces of <em>Monupco</em>'s <a href="http://monupco.com">website</a> to <em>CloudFront</em>.</p>
+The announce coincided with my efforts to migrate more pieces of <em>Monupco</em>'s <a href="http://www.monupco.com">website</a> to <em>CloudFront</em>.</p>
 
 <p>In this article I will not talk about hosting static files on CDN. This is easy and I've already written
 about it <a href="/2012/04/17/using-openshift-as-amazon-cloudfront-origin-server/">here</a>. I will show how to
@@ -165,7 +165,7 @@ Monupco a <a href="https://monupco-otb.rhcloud.com/applications/mine/">try</a>!<
     <link href="http://monupco.com/blog/2012/04/17/using-openshift-as-amazon-cloudfront-origin-server/"/>
     <updated>2012-04-17T17:30:00+03:00</updated>
     <id>http://monupco.com/blog/2012/04/17/using-openshift-as-amazon-cloudfront-origin-server</id>
-    <content type="html"><![CDATA[<p>It's been several months after the start of <a href="http://monupco.com"><em>Monupco</em></a> and we started
+    <content type="html"><![CDATA[<p>It's been several months after the start of <a href="http://www.monupco.com"><em>Monupco</em></a> and we started
 migrating various parts of the platform to CDN. The first to go are static 01 like
 CSS, JavaScript, images and such. In this article I will show you how to get started with
 <em>Amazon CloudFront</em> and <em>OpenShift</em>. It is very easy once you understand how it works.</p>

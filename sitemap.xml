@@ -2,29 +2,29 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement/</loc>
-        <lastmod>2012-04-06T01:04:16+03:00</lastmod>
+        <lastmod>2012-06-21T01:18:42+03:00</lastmod>
     </url>
     <url>
         <loc>http://monupco.com/blog/2012/02/09/monupco-on-openshift-express/</loc>
-        <lastmod>2012-04-06T01:04:16+03:00</lastmod>
+        <lastmod>2012-06-21T01:19:26+03:00</lastmod>
     </url>
     <url>
         <loc>
             http://monupco.com/blog/2012/02/10/spinning-up-a-development-instance-on-openshift-express/
         </loc>
-        <lastmod>2012-04-06T01:04:16+03:00</lastmod>
+        <lastmod>2012-06-21T01:20:02+03:00</lastmod>
     </url>
     <url>
         <loc>http://monupco.com/blog/2012/02/11/how-to-write-registration-agent-for-monupco/</loc>
-        <lastmod>2012-04-06T01:04:16+03:00</lastmod>
+        <lastmod>2012-06-21T01:21:54+03:00</lastmod>
     </url>
     <url>
         <loc>http://monupco.com/blog/2012/02/17/monupco-1.2-release-announcement/</loc>
-        <lastmod>2012-04-06T01:04:16+03:00</lastmod>
+        <lastmod>2012-06-21T01:20:55+03:00</lastmod>
     </url>
     <url>
         <loc>http://monupco.com/blog/2012/02/18/how-to-update-dependencies-on-openshift/</loc>
-        <lastmod>2012-04-06T01:04:16+03:00</lastmod>
+        <lastmod>2012-06-21T01:21:31+03:00</lastmod>
     </url>
     <url>
         <loc>http://monupco.com/blog/2012/03/09/how-to-get-to-the-openshift-shell/</loc>
@@ -32,36 +32,36 @@
     </url>
     <url>
         <loc>http://monupco.com/blog/2012/03/14/openshift-cron-takes-over-celerybeat/</loc>
-        <lastmod>2012-04-06T01:04:16+03:00</lastmod>
+        <lastmod>2012-06-21T01:22:10+03:00</lastmod>
     </url>
     <url>
         <loc>http://monupco.com/blog/2012/04/02/monupco-1.3-release-announcement/</loc>
-        <lastmod>2012-06-04T13:35:09+03:00</lastmod>
+        <lastmod>2012-06-21T01:22:34+03:00</lastmod>
     </url>
     <url>
         <loc>
             http://monupco.com/blog/2012/04/17/using-openshift-as-amazon-cloudfront-origin-server/
         </loc>
-        <lastmod>2012-04-17T18:49:27+03:00</lastmod>
+        <lastmod>2012-06-21T01:22:51+03:00</lastmod>
     </url>
     <url>
         <loc>http://monupco.com/blog/2012/05/03/monupco-1.4-release-announcement/</loc>
-        <lastmod>2012-06-04T13:35:34+03:00</lastmod>
+        <lastmod>2012-06-21T01:19:04+03:00</lastmod>
     </url>
     <url>
         <loc>http://monupco.com/blog/2012/05/19/cross-domain-ajax-served-from-cdn/</loc>
-        <lastmod>2012-05-19T18:33:47+03:00</lastmod>
+        <lastmod>2012-06-21T01:23:13+03:00</lastmod>
     </url>
     <url>
         <loc>http://monupco.com/blog/2012/06/04/monupco-1.5-release-announcement/</loc>
-        <lastmod>2012-06-04T13:43:28+03:00</lastmod>
+        <lastmod>2012-06-21T01:18:21+03:00</lastmod>
     </url>
     <url>
         <loc>http://monupco.com/blog/</loc>
-        <lastmod>2012-06-04T13:43:28+03:00</lastmod>
+        <lastmod>2012-06-21T01:23:13+03:00</lastmod>
     </url>
     <url>
         <loc>http://monupco.com/blog/archives/</loc>
-        <lastmod>2012-06-04T13:43:28+03:00</lastmod>
+        <lastmod>2012-06-21T01:23:13+03:00</lastmod>
     </url>
 </urlset>

@@ -4,7 +4,7 @@
   <title><![CDATA[Monupco]]></title>
   <link href="http://monupco.com/blog/atom.xml" rel="self"/>
   <link href="http://monupco.com/blog/"/>
-  <updated>2012-06-20T21:22:01+03:00</updated>
+  <updated>2012-06-21T01:26:27+03:00</updated>
   <id>http://monupco.com/blog/</id>
   <author>
     <name><![CDATA[Monupco Team]]></name>
@@ -18,7 +18,7 @@
     <link href="http://monupco.com/blog/2012/06/04/monupco-1.5-release-announcement/"/>
     <updated>2012-06-04T13:24:00+03:00</updated>
     <id>http://monupco.com/blog/2012/06/04/monupco-1.5-release-announcement</id>
-    <content type="html"><![CDATA[<p>Today <a href="http://monupco.com">Monupco</a> is pleased to announce version 1.5
+    <content type="html"><![CDATA[<p>Today <a href="http://www.monupco.com">Monupco</a> is pleased to announce version 1.5
 of our updates monitoring service. Monupco provides insight of available
 updates for open source components. It lets you inspect changes and take
 informed decision when or what to upgrade. This improves software life cycle
@@ -27,7 +27,7 @@ planning and minimizes possible regressions and downtime.</p>
 <p>This release adds support for <a href="http://pear.php.net/">PHP PEAR</a> packages and
 new registration agents for <a href="http://dotcloud.com">dotCloud</a> and
 <a href="http://openshift.redhat.com">OpenShift</a> PHP applications. See
-<a href="http://monupco.com/register/">how to register applications</a> page for more information.
+<a href="http://www.monupco.com/register/">how to register applications</a> page for more information.
 Currently only packages from <a href="http://pear.php.net">http://pear.php.net</a> channel are supported.
 We&#8217;re working on enabling additional channels like <a href="http://pecl.php.net">PECL</a>
 and self hosted PEAR channels.</p>
@@ -58,7 +58,7 @@ or <a href="https://twitter.com/monupco">follow us</a> on Twitter for more news.
     <id>http://monupco.com/blog/2012/05/19/cross-domain-ajax-served-from-cdn</id>
     <content type="html"><![CDATA[<p>This week Amazon <a href="http://aws.typepad.com/aws/2012/05/amazon-cloudfront-support-for-dynamic-content.html">announced</a>
 support for dynamic content in their CDN solution <a href="http://aws.amazon.com/cloudfront/"><em>Amazon CloudFront</em></a>.
-The announce coincided with my efforts to migrate more pieces of <em>Monupco</em>&#8217;s <a href="http://monupco.com">website</a> to <em>CloudFront</em>.</p>
+The announce coincided with my efforts to migrate more pieces of <em>Monupco</em>&#8217;s <a href="http://www.monupco.com">website</a> to <em>CloudFront</em>.</p>
 
 <p>In this article I will not talk about hosting static files on CDN. This is easy and I&#8217;ve already written
 about it <a href="http://monupco.com/blog/2012/04/17/using-openshift-as-amazon-cloudfront-origin-server/">here</a>. I will show how to
@@ -203,7 +203,7 @@ Monupco a <a href="https://monupco-otb.rhcloud.com/applications/mine/">try</a>!<
     <link href="http://monupco.com/blog/2012/05/03/monupco-1.4-release-announcement/"/>
     <updated>2012-05-03T12:00:00+03:00</updated>
     <id>http://monupco.com/blog/2012/05/03/monupco-1.4-release-announcement</id>
-    <content type="html"><![CDATA[<p>Today <a href="http://monupco.com">Monupco</a> is pleased to announce version 1.4
+    <content type="html"><![CDATA[<p>Today <a href="http://www.monupco.com">Monupco</a> is pleased to announce version 1.4
 of our updates monitoring service. Monupco provides user friendly interface to
 available updates for your cloud applications and information about different
 package versions.</p>
@@ -211,7 +211,7 @@ package versions.</p>
 <p>This release adds support for <a href="http://rubygems.org/">RubyGems</a> and
 new registration agents for <a href="http://dotcloud.com">dotCloud</a> and
 <a href="http://openshift.redhat.com">OpenShift</a> Ruby applications. See
-<a href="http://monupco.com/register/">how to register applications</a> page for more information.</p>
+<a href="http://www.monupco.com/register/">how to register applications</a> page for more information.</p>
 
 <p>There have been lots of bug fixes and improvements behind the scenes.
 Since the <a href="http://monupco.com/blog/blog/2012/04/02/monupco-1.3-release-announcement/">1.3 release</a>
@@ -238,7 +238,7 @@ or <a href="https://twitter.com/monupco">follow us</a> on Twitter for more news.
     <link href="http://monupco.com/blog/2012/04/17/using-openshift-as-amazon-cloudfront-origin-server/"/>
     <updated>2012-04-17T17:30:00+03:00</updated>
     <id>http://monupco.com/blog/2012/04/17/using-openshift-as-amazon-cloudfront-origin-server</id>
-    <content type="html"><![CDATA[<p>It&#8217;s been several months after the start of <a href="http://monupco.com"><em>Monupco</em></a> and we started
+    <content type="html"><![CDATA[<p>It&#8217;s been several months after the start of <a href="http://www.monupco.com"><em>Monupco</em></a> and we started
 migrating various parts of the platform to CDN. The first to go are static 01 like
 CSS, JavaScript, images and such. In this article I will show you how to get started with
 <em>Amazon CloudFront</em> and <em>OpenShift</em>. It is very easy once you understand how it works.</p>
@@ -370,7 +370,7 @@ Monupco a <a href="https://monupco-otb.rhcloud.com/applications/mine/">try</a>!<
     <link href="http://monupco.com/blog/2012/04/02/monupco-1.3-release-announcement/"/>
     <updated>2012-04-02T10:17:00+03:00</updated>
     <id>http://monupco.com/blog/2012/04/02/monupco-1.3-release-announcement</id>
-    <content type="html"><![CDATA[<p>Today <a href="http://monupco.com">Monupco</a> is pleased to announce version 1.3
+    <content type="html"><![CDATA[<p>Today <a href="http://www.monupco.com">Monupco</a> is pleased to announce version 1.3
 of our updates monitoring service. Monupco provides user friendly interface to
 monitor available updates for your cloud applications and information about different
 package versions.</p>
@@ -381,7 +381,7 @@ are also supported.</p>
 
 <p>Perl support comes with registration agents for <a href="http://dotcloud.com">dotCloud</a> and
 <a href="http://openshift.redhat.com">OpenShift</a>. See the
-<a href="http://monupco.com/register/">how to register applications</a> page for more information.</p>
+<a href="http://www.monupco.com/register/">how to register applications</a> page for more information.</p>
 
 <p>Our web interface faced some changes too:</p>
 
@@ -410,7 +410,7 @@ or <a href="https://twitter.com/monupco">follow us</a> on Twitter for more news.
     <content type="html"><![CDATA[<p><a href="http://celeryproject.org/"><em>Celery</em></a> is an asynchronous task queue/job queue
 based on distributed message passing. You can define tasks as Python functions,
 execute them in the background and in a periodic fashion.
-<a href="http://monupco.com"><em>Monupco</em></a> uses <em>Celery</em> for virtually everything.
+<a href="http://www.monupco.com"><em>Monupco</em></a> uses <em>Celery</em> for virtually everything.
 Some of the tasks are scheduled after some event takes place (like user pressed a button)
 or scheduled periodically.</p>
 
@@ -686,7 +686,7 @@ to a package that was just released. It will not work!</p>
 
 <p>For an insight of available updates to you OpenShift applications give
 Monupco a <a href="https://monupco-otb.rhcloud.com/applications/mine/">try</a>!
-It keeps generating new <a href="http://monupco.com/advisories/">advisories</a> every day!</p>
+It keeps generating new <a href="http://www.monupco.com">updates</a> every day!</p>
 ]]></content>
   </entry>
   
@@ -695,18 +695,18 @@ It keeps generating new <a href="http://monupco.com/advisories/">advisories</a> 
     <link href="http://monupco.com/blog/2012/02/17/monupco-1.2-release-announcement/"/>
     <updated>2012-02-17T00:34:00+02:00</updated>
     <id>http://monupco.com/blog/2012/02/17/monupco-1.2-release-announcement</id>
-    <content type="html"><![CDATA[<p>Today <a href="http://monupco.com">Monupco</a> is pleased to announce version 1.2
+    <content type="html"><![CDATA[<p>Today <a href="http://www.monupco.com">Monupco</a> is pleased to announce version 1.2
 of our updates monitoring service. Monupco provides user friendly interface to
 monitor available updates for your cloud applications and information about different
 package versions.</p>
 
 <p>This release adds support for <a href="http://npmjs.org">NodeJS</a> packages. We&#8217;ve
 aready imported 1000 of the most dependent upon packages and started to process updates.
-Monupco has already produced detailed information for 60+ <a href="http://monupco.com/advisories/">advisories</a>.</p>
+Monupco has already produced detailed information for 60+ updates.</p>
 
 <p>Client side registration tool for NodeJS applications hosted at <a href="http://dotcloud.com">dotCloud</a> has
 been added as well. It is contributed and maintained by <a href="http://github.com/zaro">Svetlozar Argirov</a>.
-For more information see the <a href="http://monupco.com/install">install</a> page.</p>
+For more information see the <a href="http://www.monupco.com/register/">register</a> page.</p>
 
 <p>Small improvements to the web interface were made:</p>
 
@@ -730,7 +730,7 @@ want to miss the announcement.</p>
     <link href="http://monupco.com/blog/2012/02/11/how-to-write-registration-agent-for-monupco/"/>
     <updated>2012-02-11T00:32:00+02:00</updated>
     <id>http://monupco.com/blog/2012/02/11/how-to-write-registration-agent-for-monupco</id>
-    <content type="html"><![CDATA[<p><a href="http://monupco.com">Monupco</a> is aiming to support a broad range of PaaS and
+    <content type="html"><![CDATA[<p><a href="http://www.monupco.com">Monupco</a> is aiming to support a broad range of PaaS and
 cloud vendors but that takes time. If your favorite PaaS platform is not
 already supported here&#8217;s how you can help.</p>
 
@@ -861,7 +861,7 @@ programming language. Sent us the code for review and we will add it to our GitH
     <link href="http://monupco.com/blog/2012/02/10/spinning-up-a-development-instance-on-openshift-express/"/>
     <updated>2012-02-10T21:19:00+02:00</updated>
     <id>http://monupco.com/blog/2012/02/10/spinning-up-a-development-instance-on-openshift-express</id>
-    <content type="html"><![CDATA[<p><a href="http://monupco.com">Monupco</a> is hosted on <a href="http://openshift.redhat.com">OpenShift</a> Express.
+    <content type="html"><![CDATA[<p><a href="http://www.monupco.com">Monupco</a> is hosted on <a href="http://openshift.redhat.com">OpenShift</a> Express.
 During development we often need to spin-up another copy of Monupco to use for testing and development.
 With OpenShift this is easy and fast. Here&#8217;s how:</p>
 
@@ -901,7 +901,7 @@ modify your database connection settings at this point and start adding new feat
     <link href="http://monupco.com/blog/2012/02/09/monupco-on-openshift-express/"/>
     <updated>2012-02-09T18:48:00+02:00</updated>
     <id>http://monupco.com/blog/2012/02/09/monupco-on-openshift-express</id>
-    <content type="html"><![CDATA[<p><a href="http://monupco.com">Monupco</a> stands for Monitor Updates In The Cloud.
+    <content type="html"><![CDATA[<p><a href="http://www.monupco.com">Monupco</a> stands for Monitor Updates In The Cloud.
 As the name suggests this is a service which provides updates information
 for applications hosted in a PaaS environment. If you are a developer or
 a sysadmin knowing when and what to upgrade will make your life easier.</p>
@@ -969,7 +969,7 @@ for other PaaS vendors will follow. On the radar are requests for:</p>
     <link href="http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement/"/>
     <updated>2012-02-06T10:00:00+02:00</updated>
     <id>http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement</id>
-    <content type="html"><![CDATA[<p>Today <a href="http://monupco.com">Monupco</a> is pleased to announce the general availability
+    <content type="html"><![CDATA[<p>Today <a href="http://www.monupco.com">Monupco</a> is pleased to announce the general availability
 of our updates monitoring service. Monupco provides user friendly interface to
 monitor available updates for your cloud applications and information about different
 package versions.</p>

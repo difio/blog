@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Open Source | Monupco]]></title>
   <link href="http://monupco.com/blog/categories/open-source/atom.xml" rel="self"/>
   <link href="http://monupco.com/blog/"/>
-  <updated>2012-06-20T21:22:01+03:00</updated>
+  <updated>2012-06-21T01:26:27+03:00</updated>
   <id>http://monupco.com/blog/</id>
   <author>
     <name><![CDATA[Monupco Team]]></name>
@@ -18,7 +18,7 @@
     <link href="http://monupco.com/blog/2012/02/11/how-to-write-registration-agent-for-monupco/"/>
     <updated>2012-02-11T00:32:00+02:00</updated>
     <id>http://monupco.com/blog/2012/02/11/how-to-write-registration-agent-for-monupco</id>
-    <content type="html"><![CDATA[<p><a href="http://monupco.com">Monupco</a> is aiming to support a broad range of PaaS and
+    <content type="html"><![CDATA[<p><a href="http://www.monupco.com">Monupco</a> is aiming to support a broad range of PaaS and
 cloud vendors but that takes time. If your favorite PaaS platform is not
 already supported here's how you can help.</p>
 

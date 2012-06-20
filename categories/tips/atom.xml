@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tips | Monupco]]></title>
   <link href="http://monupco.com/blog/categories/tips/atom.xml" rel="self"/>
   <link href="http://monupco.com/blog/"/>
-  <updated>2012-06-20T21:22:01+03:00</updated>
+  <updated>2012-06-21T01:26:27+03:00</updated>
   <id>http://monupco.com/blog/</id>
   <author>
     <name><![CDATA[Monupco Team]]></name>
@@ -21,7 +21,7 @@
     <content type="html"><![CDATA[<p><a href="http://celeryproject.org/"><em>Celery</em></a> is an asynchronous task queue/job queue
 based on distributed message passing. You can define tasks as Python functions,
 execute them in the background and in a periodic fashion.
-<a href="http://monupco.com"><em>Monupco</em></a> uses <em>Celery</em> for virtually everything.
+<a href="http://www.monupco.com"><em>Monupco</em></a> uses <em>Celery</em> for virtually everything.
 Some of the tasks are scheduled after some event takes place (like user pressed a button)
 or scheduled periodically.</p>
 
@@ -297,7 +297,7 @@ to a package that was just released. It will not work!</p>
 
 <p>For an insight of available updates to you OpenShift applications give
 Monupco a <a href="https://monupco-otb.rhcloud.com/applications/mine/">try</a>!
-It keeps generating new <a href="http://monupco.com/advisories/">advisories</a> every day!</p>
+It keeps generating new <a href="http://www.monupco.com">updates</a> every day!</p>
 ]]></content>
   </entry>
   
@@ -306,7 +306,7 @@ It keeps generating new <a href="http://monupco.com/advisories/">advisories</a> 
     <link href="http://monupco.com/blog/2012/02/11/how-to-write-registration-agent-for-monupco/"/>
     <updated>2012-02-11T00:32:00+02:00</updated>
     <id>http://monupco.com/blog/2012/02/11/how-to-write-registration-agent-for-monupco</id>
-    <content type="html"><![CDATA[<p><a href="http://monupco.com">Monupco</a> is aiming to support a broad range of PaaS and
+    <content type="html"><![CDATA[<p><a href="http://www.monupco.com">Monupco</a> is aiming to support a broad range of PaaS and
 cloud vendors but that takes time. If your favorite PaaS platform is not
 already supported here's how you can help.</p>
 
@@ -437,7 +437,7 @@ programming language. Sent us the code for review and we will add it to our GitH
     <link href="http://monupco.com/blog/2012/02/10/spinning-up-a-development-instance-on-openshift-express/"/>
     <updated>2012-02-10T21:19:00+02:00</updated>
     <id>http://monupco.com/blog/2012/02/10/spinning-up-a-development-instance-on-openshift-express</id>
-    <content type="html"><![CDATA[<p><a href="http://monupco.com">Monupco</a> is hosted on <a href="http://openshift.redhat.com">OpenShift</a> Express.
+    <content type="html"><![CDATA[<p><a href="http://www.monupco.com">Monupco</a> is hosted on <a href="http://openshift.redhat.com">OpenShift</a> Express.
 During development we often need to spin-up another copy of Monupco to use for testing and development.
 With OpenShift this is easy and fast. Here's how:</p>
 
