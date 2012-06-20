@@ -9,7 +9,7 @@ categories: ['Amazon', 'CloudFront', 'CDN', 'AJAX', 'JSONP']
 
 This week Amazon [announced](http://aws.typepad.com/aws/2012/05/amazon-cloudfront-support-for-dynamic-content.html)
 support for dynamic content in their CDN solution [*Amazon CloudFront*](http://aws.amazon.com/cloudfront/).
-The announce coincided with my efforts to migrate more pieces of *Monupco*'s [website](http://monupco.com) to *CloudFront*.
+The announce coincided with my efforts to migrate more pieces of *Monupco*'s [website](http://www.monupco.com) to *CloudFront*.
 
 In this article I will not talk about hosting static files on CDN. This is easy and I've already written
 about it [here](/2012/04/17/using-openshift-as-amazon-cloudfront-origin-server/). I will show how to

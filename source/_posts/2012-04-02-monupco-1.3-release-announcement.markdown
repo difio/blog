@@ -6,7 +6,7 @@ comments: true
 categories: ["News", "dotCloud", "OpenShift", "Perl"]
 ---
 
-Today [Monupco](http://monupco.com) is pleased to announce version 1.3
+Today [Monupco](http://www.monupco.com) is pleased to announce version 1.3
 of our updates monitoring service. Monupco provides user friendly interface to
 monitor available updates for your cloud applications and information about different
 package versions.
@@ -17,7 +17,7 @@ are also supported.
 
 Perl support comes with registration agents for [dotCloud](http://dotcloud.com) and
 [OpenShift](http://openshift.redhat.com). See the
-[how to register applications](http://monupco.com/register/) page for more information.
+[how to register applications](http://www.monupco.com/register/) page for more information.
 
 
 Our web interface faced some changes too:

@@ -7,7 +7,7 @@ author: Alexander Todorov
 categories: ['OpenShift', 'Amazon', 'CDN']
 ---
 
-It's been several months after the start of [*Monupco*](http://monupco.com) and we started
+It's been several months after the start of [*Monupco*](http://www.monupco.com) and we started
 migrating various parts of the platform to CDN. The first to go are static 01 like
 CSS, JavaScript, images and such. In this article I will show you how to get started with 
 *Amazon CloudFront* and *OpenShift*. It is very easy once you understand how it works.

@@ -6,7 +6,7 @@ comments: true
 categories: News
 ---
 
-Today [Monupco](http://monupco.com) is pleased to announce the general availability
+Today [Monupco](http://www.monupco.com) is pleased to announce the general availability
 of our updates monitoring service. Monupco provides user friendly interface to
 monitor available updates for your cloud applications and information about different
 package versions.

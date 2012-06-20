@@ -102,5 +102,5 @@ to a package that was just released. It will not work!
 
 For an insight of available updates to you OpenShift applications give
 Monupco a [try](https://monupco-otb.rhcloud.com/applications/mine/)!
-It keeps generating new [advisories](http://monupco.com/advisories/) every day!
+It keeps generating new [updates](http://www.monupco.com) every day!
 

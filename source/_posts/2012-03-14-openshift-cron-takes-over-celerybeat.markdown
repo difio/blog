@@ -10,7 +10,7 @@ categories: ["Tips", "OpenShift", "Celery"]
 [*Celery*](http://celeryproject.org/) is an asynchronous task queue/job queue
 based on distributed message passing. You can define tasks as Python functions,
 execute them in the background and in a periodic fashion.
-[*Monupco*](http://monupco.com) uses *Celery* for virtually everything.
+[*Monupco*](http://www.monupco.com) uses *Celery* for virtually everything.
 Some of the tasks are scheduled after some event takes place (like user pressed a button)
 or scheduled periodically.
 

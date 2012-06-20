@@ -6,18 +6,18 @@ comments: true
 categories: ["News", "dotCloud", "NodeJS"]
 ---
 
-Today [Monupco](http://monupco.com) is pleased to announce version 1.2
+Today [Monupco](http://www.monupco.com) is pleased to announce version 1.2
 of our updates monitoring service. Monupco provides user friendly interface to
 monitor available updates for your cloud applications and information about different
 package versions.
 
 This release adds support for [NodeJS](http://npmjs.org) packages. We've
 aready imported 1000 of the most dependent upon packages and started to process updates.
-Monupco has already produced detailed information for 60+ [advisories](http://monupco.com/advisories/).
+Monupco has already produced detailed information for 60+ updates.
 
 Client side registration tool for NodeJS applications hosted at [dotCloud](http://dotcloud.com) has
 been added as well. It is contributed and maintained by [Svetlozar Argirov](http://github.com/zaro).
-For more information see the [install](http://monupco.com/install) page.
+For more information see the [register](http://www.monupco.com/register/) page.
 
 Small improvements to the web interface were made:
 

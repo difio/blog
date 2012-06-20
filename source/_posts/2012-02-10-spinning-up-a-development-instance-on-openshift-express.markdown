@@ -6,7 +6,7 @@ comments: true
 categories: ["Tips", "OpenShift"]
 ---
 
-[Monupco](http://monupco.com) is hosted on [OpenShift](http://openshift.redhat.com) Express.
+[Monupco](http://www.monupco.com) is hosted on [OpenShift](http://openshift.redhat.com) Express.
 During development we often need to spin-up another copy of Monupco to use for testing and development.
 With OpenShift this is easy and fast. Here's how:
 

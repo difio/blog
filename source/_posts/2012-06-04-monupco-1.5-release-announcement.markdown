@@ -6,7 +6,7 @@ comments: true
 categories: ["News", "dotCloud", "OpenShift", "PHP", "PEAR"]
 ---
 
-Today [Monupco](http://monupco.com) is pleased to announce version 1.5
+Today [Monupco](http://www.monupco.com) is pleased to announce version 1.5
 of our updates monitoring service. Monupco provides insight of available
 updates for open source components. It lets you inspect changes and take
 informed decision when or what to upgrade. This improves software life cycle
@@ -16,7 +16,7 @@ planning and minimizes possible regressions and downtime.
 This release adds support for [PHP PEAR](http://pear.php.net/) packages and
 new registration agents for [dotCloud](http://dotcloud.com) and
 [OpenShift](http://openshift.redhat.com) PHP applications. See
-[how to register applications](http://monupco.com/register/) page for more information.
+[how to register applications](http://www.monupco.com/register/) page for more information.
 Currently only packages from <http://pear.php.net> channel are supported.
 We're working on enabling additional channels like [PECL](http://pecl.php.net)
 and self hosted PEAR channels.
