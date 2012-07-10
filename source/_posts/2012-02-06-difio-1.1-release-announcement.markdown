@@ -1,0 +1,35 @@
+---
+layout: post
+title: "Monupco 1.1 Release Announcement"
+date: 2012-02-06 10:00
+comments: true
+categories: News
+---
+
+Today [Monupco](http://www.monupco.com) is pleased to announce the general availability
+of our updates monitoring service. Monupco provides user friendly interface to
+monitor available updates for your cloud applications and information about different
+package versions.
+
+
+This is an alpha release for early adopters. Currently we support registration of
+Python applications hosted on Red Hat's [OpenShift Express](http://openshift.redhat.com)
+platform. Client side tools and installation information can be found at our
+[GitHub page](https://github.com/monupco/monupco-openshift-express-python).
+
+
+Monupco itself is developed in the cloud, for the cloud. We're working to support
+additional cloud vendors and more programming languages. Your feedback is valuable to us!
+We welcome your feature requests on [Twitter](http://twitter.com/monupco) and
+[GitHub](https://github.com/monupco/monupco.github.com/issues/new).
+
+
+Monupco will remain free of charge until it reaches production-ready quality, when
+subscription plans will be announced. A gratis period and/or bonus credits will be made
+available to all early birds at that time.
+
+We provide simplified registration and log in into our management console using
+credentials from popular social networking providers.
+
+
+<a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try Now</a>
