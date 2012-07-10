@@ -4,7 +4,7 @@
   <title><![CDATA[Category: NodeJS | Difio]]></title>
   <link href="http://dif.io/blog/categories/nodejs/atom.xml" rel="self"/>
   <link href="http://dif.io/blog/"/>
-  <updated>2012-07-10T23:56:33+03:00</updated>
+  <updated>2012-07-11T00:39:54+03:00</updated>
   <id>http://dif.io/blog/</id>
   <author>
     <name><![CDATA[Difio Team]]></name>
@@ -41,7 +41,7 @@ For more information see the <a href="http://www.dif.io/register/">register</a> 
 
 
 <p>In the next weeks we're looking to enable support for Ruby, PHP, Perl and Java and extend
-client side tools to more vendors. Stay <a href="https://twitter.com/difio">tuned</a> if you don't
+client side tools to more vendors. Stay <a href="https://twitter.com/DifioNews">tuned</a> if you don't
 want to miss the announcement.</p>
 
 <p><a href="https://difio-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try Now</a></p>

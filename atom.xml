@@ -4,7 +4,7 @@
   <title><![CDATA[Difio]]></title>
   <link href="http://dif.io/blog/atom.xml" rel="self"/>
   <link href="http://dif.io/blog/"/>
-  <updated>2012-07-10T23:56:33+03:00</updated>
+  <updated>2012-07-11T00:39:54+03:00</updated>
   <id>http://dif.io/blog/</id>
   <author>
     <name><![CDATA[Difio Team]]></name>
@@ -47,7 +47,7 @@ In addition to that we&#8217;re also working on enabling e-mail and SMS notifica
 stay tuned!</p>
 
 <p><a href="https://difio-otb.rhcloud.com/applications/mine/">Give it a try</a>
-or <a href="https://twitter.com/difio">follow us</a> on Twitter for more news.</p>
+or <a href="https://twitter.com/DifioNews">follow us</a> on Twitter for more news.</p>
 ]]></content>
   </entry>
   
@@ -229,7 +229,7 @@ Difio has already produced detailed information for 1600+
 
 
 <p><a href="https://difio-otb.rhcloud.com/applications/mine/">Give it a try</a>
-or <a href="https://twitter.com/difio">follow us</a> on Twitter for more news.</p>
+or <a href="https://twitter.com/DifioNews">follow us</a> on Twitter for more news.</p>
 ]]></content>
   </entry>
   
@@ -398,7 +398,7 @@ is incorrect.</li>
 <p>Difio has already produced detailed information for 950+ <a href="https://difio-otb.rhcloud.com/updates/">updates</a>.</p>
 
 <p><a href="https://difio-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try</a>
-or <a href="https://twitter.com/difio">follow us</a> on Twitter for more news.</p>
+or <a href="https://twitter.com/DifioNews">follow us</a> on Twitter for more news.</p>
 ]]></content>
   </entry>
   
@@ -718,7 +718,7 @@ For more information see the <a href="http://www.dif.io/register/">register</a> 
 
 
 <p>In the next weeks we&#8217;re looking to enable support for Ruby, PHP, Perl and Java and extend
-client side tools to more vendors. Stay <a href="https://twitter.com/difio">tuned</a> if you don&#8217;t
+client side tools to more vendors. Stay <a href="https://twitter.com/DifioNews">tuned</a> if you don&#8217;t
 want to miss the announcement.</p>
 
 <p><a href="https://difio-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try Now</a></p>
@@ -959,7 +959,7 @@ for other PaaS vendors will follow. On the radar are requests for:</p>
 </ul>
 
 
-<p>If you&#8217;re already excited please follow @difio on <a href="https://twitter.com/difio">Twitter</a> and
+<p>If you&#8217;re already excited please follow @DifioNews on <a href="https://twitter.com/DifioNews">Twitter</a> and
 <a href="https://github.com/difio">GitHub</a> or <a href="https://difio-otb.rhcloud.com/applications/mine/">get started</a> today!</p>
 ]]></content>
   </entry>
@@ -981,7 +981,7 @@ platform. Client side tools and installation information can be found at our
 
 <p>Difio itself is developed in the cloud, for the cloud. We&#8217;re working to support
 additional cloud vendors and more programming languages. Your feedback is valuable to us!
-We welcome your feature requests on <a href="http://twitter.com/difio">Twitter</a> and
+We welcome your feature requests on <a href="http://twitter.com/DifioNews">Twitter</a> and
 <a href="https://github.com/difio/bugs/issues/new">GitHub</a>.</p>
 
 <p>Difio will remain free of charge until it reaches production-ready quality, when
