@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Monupco 1.5 Release Announcement"
+title: "Difio 1.5 Release Announcement"
 date: 2012-06-04 13:24
 comments: true
 categories: ["News", "dotCloud", "OpenShift", "PHP", "PEAR"]
 ---
 
-Today [Monupco](http://www.monupco.com) is pleased to announce version 1.5
-of our updates monitoring service. Monupco provides insight of available
+Today [Difio](http://www.dif.io) is pleased to announce version 1.5
+of our updates monitoring service. Difio provides insight of available
 updates for open source components. It lets you inspect changes and take
 informed decision when or what to upgrade. This improves software life cycle
 planning and minimizes possible regressions and downtime.
@@ -16,7 +16,7 @@ planning and minimizes possible regressions and downtime.
 This release adds support for [PHP PEAR](http://pear.php.net/) packages and
 new registration agents for [dotCloud](http://dotcloud.com) and
 [OpenShift](http://openshift.redhat.com) PHP applications. See
-[how to register applications](http://www.monupco.com/register/) page for more information.
+[how to register applications](http://www.dif.io/register/) page for more information.
 Currently only packages from <http://pear.php.net> channel are supported.
 We're working on enabling additional channels like [PECL](http://pecl.php.net)
 and self hosted PEAR channels.
@@ -36,5 +36,5 @@ is working on a number of website improvements to make it faster and easier to u
 In addition to that we're also working on enabling e-mail and SMS notifications so
 stay tuned!
 
-<a href="https://monupco-otb.rhcloud.com/applications/mine/">Give it a try</a>
-or [follow us](https://twitter.com/monupco) on Twitter for more news.
+<a href="https://difio-otb.rhcloud.com/applications/mine/">Give it a try</a>
+or [follow us](https://twitter.com/difio) on Twitter for more news.

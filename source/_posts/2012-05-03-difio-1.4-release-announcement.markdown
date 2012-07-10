@@ -1,32 +1,32 @@
 ---
 layout: post
-title: "Monupco 1.4 Release Announcement"
+title: "Difio 1.4 Release Announcement"
 date: 2012-05-03 12:00
 comments: true
 categories: ["News", "dotCloud", "OpenShift", "Ruby"]
 ---
 
-Today [Monupco](http://www.monupco.com) is pleased to announce version 1.4
-of our updates monitoring service. Monupco provides user friendly interface to
+Today [Difio](http://www.dif.io) is pleased to announce version 1.4
+of our updates monitoring service. Difio provides user friendly interface to
 available updates for your cloud applications and information about different
 package versions.
 
 This release adds support for [RubyGems](http://rubygems.org/) and
 new registration agents for [dotCloud](http://dotcloud.com) and
 [OpenShift](http://openshift.redhat.com) Ruby applications. See
-[how to register applications](http://www.monupco.com/register/) page for more information.
+[how to register applications](http://www.dif.io/register/) page for more information.
 
 There have been lots of bug fixes and improvements behind the scenes.
-Since the [1.3 release](/blog/2012/04/02/monupco-1.3-release-announcement/)
+Since the [1.3 release](/blog/2012/04/02/difio-1.3-release-announcement/)
 we have significantly increased the number of updates processed by the service.
 Currently new package versions are detected and published every day.
-Monupco has already produced detailed information for 1600+
-[updates](https://monupco-otb.rhcloud.com/updates/).
+Difio has already produced detailed information for 1600+
+[updates](https://difio-otb.rhcloud.com/updates/).
 
 There were some changes to our web site to provide faster page load times:
 
 * Static files are now served from *Amazon CloudFront*;
 * Individual update pages use *JSONP* to dynamically load the content.
 
-<a href="https://monupco-otb.rhcloud.com/applications/mine/">Give it a try</a>
-or [follow us](https://twitter.com/monupco) on Twitter for more news.
+<a href="https://difio-otb.rhcloud.com/applications/mine/">Give it a try</a>
+or [follow us](https://twitter.com/difio) on Twitter for more news.

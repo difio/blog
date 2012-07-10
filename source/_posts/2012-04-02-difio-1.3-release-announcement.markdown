@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Monupco 1.3 Release Announcement"
+title: "Difio 1.3 Release Announcement"
 date: 2012-04-02 10:17
 comments: true
 categories: ["News", "dotCloud", "OpenShift", "Perl"]
 ---
 
-Today [Monupco](http://www.monupco.com) is pleased to announce version 1.3
-of our updates monitoring service. Monupco provides user friendly interface to
+Today [Difio](http://www.dif.io) is pleased to announce version 1.3
+of our updates monitoring service. Difio provides user friendly interface to
 monitor available updates for your cloud applications and information about different
 package versions.
 
@@ -17,7 +17,7 @@ are also supported.
 
 Perl support comes with registration agents for [dotCloud](http://dotcloud.com) and
 [OpenShift](http://openshift.redhat.com). See the
-[how to register applications](http://www.monupco.com/register/) page for more information.
+[how to register applications](http://www.dif.io/register/) page for more information.
 
 
 Our web interface faced some changes too:
@@ -30,7 +30,7 @@ to provide general feedback and comments and to alert our team in case the infor
 is incorrect.
 
 
-Monupco has already produced detailed information for 950+ [updates](https://monupco-otb.rhcloud.com/updates/).
+Difio has already produced detailed information for 950+ [updates](https://difio-otb.rhcloud.com/updates/).
 
-<a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try</a>
-or [follow us](https://twitter.com/monupco) on Twitter for more news.
+<a href="https://difio-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try</a>
+or [follow us](https://twitter.com/difio) on Twitter for more news.

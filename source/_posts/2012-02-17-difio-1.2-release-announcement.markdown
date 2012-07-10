@@ -1,23 +1,23 @@
 ---
 layout: post
-title: "Monupco 1.2 Release Announcement"
+title: "Difio 1.2 Release Announcement"
 date: 2012-02-17 00:34
 comments: true
 categories: ["News", "dotCloud", "NodeJS"]
 ---
 
-Today [Monupco](http://www.monupco.com) is pleased to announce version 1.2
-of our updates monitoring service. Monupco provides user friendly interface to
+Today [Difio](http://www.dif.io) is pleased to announce version 1.2
+of our updates monitoring service. Difio provides user friendly interface to
 monitor available updates for your cloud applications and information about different
 package versions.
 
 This release adds support for [NodeJS](http://npmjs.org) packages. We've
 aready imported 1000 of the most dependent upon packages and started to process updates.
-Monupco has already produced detailed information for 60+ updates.
+Difio has already produced detailed information for 60+ updates.
 
 Client side registration tool for NodeJS applications hosted at [dotCloud](http://dotcloud.com) has
 been added as well. It is contributed and maintained by [Svetlozar Argirov](http://github.com/zaro).
-For more information see the [register](http://www.monupco.com/register/) page.
+For more information see the [register](http://www.dif.io/register/) page.
 
 Small improvements to the web interface were made:
 
@@ -26,8 +26,8 @@ Small improvements to the web interface were made:
 * Added buttons to filter applications by status.
 
 In the next weeks we're looking to enable support for Ruby, PHP, Perl and Java and extend
-client side tools to more vendors. Stay [tuned](https://twitter.com/monupco) if you don't
+client side tools to more vendors. Stay [tuned](https://twitter.com/difio) if you don't
 want to miss the announcement.
 
 
-<a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try Now</a>
+<a href="https://difio-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try Now</a>

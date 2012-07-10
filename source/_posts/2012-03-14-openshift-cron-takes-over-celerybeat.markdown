@@ -10,7 +10,7 @@ categories: ["Tips", "OpenShift", "Celery"]
 [*Celery*](http://celeryproject.org/) is an asynchronous task queue/job queue
 based on distributed message passing. You can define tasks as Python functions,
 execute them in the background and in a periodic fashion.
-[*Monupco*](http://www.monupco.com) uses *Celery* for virtually everything.
+[*Difio*](http://www.dif.io) uses *Celery* for virtually everything.
 Some of the tasks are scheduled after some event takes place (like user pressed a button)
 or scheduled periodically.
 
@@ -22,18 +22,18 @@ which allows periodic tasks to be added to the scheduler.
 Why change
 ----------
 
-*Monupco* has relied on *celerybeat* for a couple of months. Back then, when *Monupco* launched,
+*Difio* has relied on *celerybeat* for a couple of months. Back then, when *Difio* launched,
 there was no cron support for OpenShift so running *celerybeat* sounded reasonable.
 It used to run on a dedicated virtual server and for most of the time that was fine. 
 
-There were a number of issues which *Monupco* faced during its first months:
+There were a number of issues which *Difio* faced during its first months:
 
 * *celerybeat* would sometime die due to no free memory on the virtual instance.
 When that happened no new tasks were scheduled and data was left unprocessed.
 Let alone that higher memory instance and the processing power which comes with it
 cost extra money.
 
-* *Monupco* is split into several components which need to have the same code base
+* *Difio* is split into several components which need to have the same code base
 locally - the most important are database settings and the periodic tasks
 code. At least in one occasion *celerybeat* failed to start because of a buggy 
 task code. The offending code was fixed in the application server on OpenShift but
@@ -59,7 +59,7 @@ It's been some time since OpenShift
 [introduced](https://www.redhat.com/openshift/community/blogs/getting-started-with-cron-jobs-on-openshift)
 the cron cartridge and I decided to give it a try.
 
-The first thing I did is to write a simple script which can execute any task from the monupco.tasks module
+The first thing I did is to write a simple script which can execute any task from the difio.tasks module
 by piping it to the Django shell (a Python shell actually).
 
     $ cat run_celery_task 
@@ -91,7 +91,7 @@ by piping it to the Django shell (a Python shell actually).
         REPO_DIR=$(dirname $0)"/../../.."
     fi
     
-    echo "import monupco.tasks; monupco.tasks.$TASK_NAME.delay()" | $REPO_DIR/wsgi/monupco/manage.py shell
+    echo "import difio.tasks; difio.tasks.$TASK_NAME.delay()" | $REPO_DIR/wsgi/difio/manage.py shell
 
 
 
@@ -111,7 +111,7 @@ This is how it looks like on the file system:
 
 After having done these preparations I only had to embed the cron cartridge and git push to OpenShift:
 
-    rhc-ctl-app -a monupco -e add-cron-1.4 && git push
+    rhc-ctl-app -a difio -e add-cron-1.4 && git push
 
 
 What's next
@@ -120,17 +120,17 @@ What's next
 At present OpenShift can schedule your jobs every minute, hour, day, week or month and does so using the
 *run-parts* script. You can't schedule a script to execute at 4:30 every Monday or every 45 minutes for example.
 See [rhbz #803485](https://bugzilla.redhat.com/show_bug.cgi?id=803485) if you want to follow the
-progress. Luckily *Monupco* doesn't use this sort of job scheduling for the moment.
+progress. Luckily *Difio* doesn't use this sort of job scheduling for the moment.
 
 
-*Monupco* is scheduling periodic tasks from OpenShift cron for a few days already. 
+*Difio* is scheduling periodic tasks from OpenShift cron for a few days already. 
 It seems to work reliably and with no issues. One less component to maintain and worry about.
 More time to write code.
 
 
 ---------------------------------------------------------------------------------
 
-[*Alexander Todorov*](http://about.me/atodorov) is Monupco's founder and lead developer!
+[*Alexander Todorov*](http://about.me/atodorov) is Difio's founder and lead developer!
 
 For an insight of available updates to you OpenShift applications give
-Monupco a [try](https://monupco-otb.rhcloud.com/applications/mine/)!
+Difio a [try](https://difio-otb.rhcloud.com/applications/mine/)!

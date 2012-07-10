@@ -9,7 +9,7 @@ categories: ['Amazon', 'CloudFront', 'CDN', 'AJAX', 'JSONP']
 
 This week Amazon [announced](http://aws.typepad.com/aws/2012/05/amazon-cloudfront-support-for-dynamic-content.html)
 support for dynamic content in their CDN solution [*Amazon CloudFront*](http://aws.amazon.com/cloudfront/).
-The announce coincided with my efforts to migrate more pieces of *Monupco*'s [website](http://www.monupco.com) to *CloudFront*.
+The announce coincided with my efforts to migrate more pieces of *Difio*'s [website](http://www.dif.io) to *CloudFront*.
 
 In this article I will not talk about hosting static files on CDN. This is easy and I've already written
 about it [here](/2012/04/17/using-openshift-as-amazon-cloudfront-origin-server/). I will show how to
@@ -30,10 +30,10 @@ This is what Google uses to create dynamic user interface which doesn't require 
 Architecture
 ------------
 
-*Monupco* has two web interfaces. The primary one is a static HTML website
-which employs JavaScript for the dynamic areas. It is hosted on the monupco.com domain.
+*Difio* has two web interfaces. The primary one is a static HTML website
+which employs JavaScript for the dynamic areas. It is hosted on the dif.io domain.
 The other one is powered by Django and provides the same interface plus the
-[applications dashboard](https://monupco-otb.rhcloud.com/applications/mine/) and several API functions
+[applications dashboard](https://difio-otb.rhcloud.com/applications/mine/) and several API functions
 which don't have a visible user interface. This is under the *.rhcloud.com domain b/c it is hosted on
 [*OpenShift*](http://openshift.redhat.com).
 
@@ -41,7 +41,7 @@ The present state of the website is the result of rapid development using conven
 HTML templates and server-side processing. This is migrating to modern web technology like static HTML
 and JavaScript while the server side will remain pure API service.
 
-For this migration to happen I need the HTML pages at monupco.com to execute JavaScript and load information
+For this migration to happen I need the HTML pages at dif.io to execute JavaScript and load information
 which comes from the rhcloud.com domain. Unfortunately this is not easily doable with AJAX because
 of the [Same origin policy](https://en.wikipedia.org/wiki/Same_origin_policy) in browsers.
 
@@ -49,7 +49,7 @@ I'm using the [*Dojo Toolkit*](http://dojotoolkit.org/) JavaScript framework whi
 It's called [JSONP](https://en.wikipedia.org/wiki/JSONP). Here's how it works:
 
 
-        monupco.com -- JSONP request --> abc.rhcloud.com --v
+         dif.io ------ JSONP request --> abc.rhcloud.com --v
             ^                                              |
             |                                              |
         JavaScript processing                              |
@@ -81,7 +81,7 @@ to point to the cloudfront.net domain. It became like this:
                                                             | Everything on this side is handled by Amazon.
                                                             | No code required!
                                                             |
-        monupco.com -- JSONP request --> xyz.cloudfront.net -- JSONP request if cache miss --> abc.rhcloud.com --v
+         dif.io ------ JSONP request --> xyz.cloudfront.net -- JSONP request if cache miss --> abc.rhcloud.com --v
             ^                              |                ^                                                    |
             |                              |                |                                                    |
         JavaScript processing              |                +---------- JSONP response --------------------------+
@@ -132,15 +132,15 @@ There were two immediate benefits:
 * Reduced server load. Content is requested only once if it is missing from the cache and then served from CloudFront.
 The server isn't so busy serving content so it can be used to do more computations or simply reduce the bill.
 
-The presented method works well for *Monupco* because of two things:
+The presented method works well for *Difio* because of two things:
 
-* The content which *Monupco* serves usually doesn't change at all once made public. In rare occasions, for example an error
+* The content which *Difio* serves usually doesn't change at all once made public. In rare occasions, for example an error
 has been published, we have to regenerate new content and publish it under the same URL.
 * Before content is made public it is inspected for errors and this also preseeds the cache.
 
 ---------------------------------------------------------------------------------
 
-[*Alexander Todorov*](http://about.me/atodorov) is Monupco's founder and lead developer!
+[*Alexander Todorov*](http://about.me/atodorov) is Difio's founder and lead developer!
 
 For an insight of available updates to your open source components give
-Monupco a [try](https://monupco-otb.rhcloud.com/applications/mine/)!
+Difio a [try](https://difio-otb.rhcloud.com/applications/mine/)!

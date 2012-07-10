@@ -6,8 +6,8 @@ comments: true
 categories: ["Tips", "OpenShift"]
 ---
 
-[Monupco](http://www.monupco.com) is hosted on [OpenShift](http://openshift.redhat.com) Express.
-During development we often need to spin-up another copy of Monupco to use for testing and development.
+[Difio](http://www.dif.io) is hosted on [OpenShift](http://openshift.redhat.com).
+During development we often need to spin-up another copy of Difio to use for testing and development.
 With OpenShift this is easy and fast. Here's how:
 
 1. Create another application on OpenShift. This will be your development instance.

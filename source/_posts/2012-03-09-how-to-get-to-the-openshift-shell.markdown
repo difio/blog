@@ -51,7 +51,7 @@ unzipping the archive and poking through the files. I wanted a shell. Here's how
 
 ---------------------------------------------------------------------------------
 
-[*Alexander Todorov*](http://about.me/atodorov) is Monupco's founder and lead developer!
+[*Alexander Todorov*](http://about.me/atodorov) is Difio's founder and lead developer!
 
 For an insight of available updates to you OpenShift applications give
-Monupco a [try](https://monupco-otb.rhcloud.com/applications/mine/)!
+Difio a [try](https://difio-otb.rhcloud.com/applications/mine/)!

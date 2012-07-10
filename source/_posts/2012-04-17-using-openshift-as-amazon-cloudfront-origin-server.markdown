@@ -7,7 +7,7 @@ author: Alexander Todorov
 categories: ['OpenShift', 'Amazon', 'CDN']
 ---
 
-It's been several months after the start of [*Monupco*](http://www.monupco.com) and we started
+It's been several months after the start of [*Difio*](http://www.dif.io) and we started
 migrating various parts of the platform to CDN. The first to go are static 01 like
 CSS, JavaScript, images and such. In this article I will show you how to get started with 
 *Amazon CloudFront* and *OpenShift*. It is very easy once you understand how it works.
@@ -92,7 +92,7 @@ Luckily I was able to use symlinks to point to the content. Here's how it looks:
 
 
         $ pwd
-        /home/atodorov/monupco/wsgi/static
+        /home/atodorov/difio/wsgi/static
 
         $ cat .htaccess
         ExpiresActive On
@@ -121,7 +121,7 @@ place the files under wsgi/static/ directory in your git repo.
 Point all of your HTML templates to the static location on *OpenShift* and test if everything works as expected. 
 This is best done if you're using some sort of template language and store the location
 in a single variable which you can change later.
-*Monupco* uses *Django* and the *STATIC_URL* variable of course.
+*Difio* uses *Django* and the *STATIC_URL* variable of course.
 
 
 Create your *CloudFront* distribution - don't use *Amazon S3*, instead configure a custom origin server. Write down
@@ -137,7 +137,7 @@ Update your templates to point to the new cloudfront.net URL and redeploy your w
 
 ---------------------------------------------------------------------------------
 
-[*Alexander Todorov*](http://about.me/atodorov) is Monupco's founder and lead developer!
+[*Alexander Todorov*](http://about.me/atodorov) is Difio's founder and lead developer!
 
 For an insight of available updates to you OpenShift applications give
-Monupco a [try](https://monupco-otb.rhcloud.com/applications/mine/)!
+Difio a [try](https://difio-otb.rhcloud.com/applications/mine/)!

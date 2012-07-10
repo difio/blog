@@ -27,7 +27,7 @@ look like this:
 
         ...
         install_requires=[
-                        'monupco-openshift-express-python',
+                        'difio-openshift-python',
                         'MySQL-python',
                         'Markdown',
                        ],
@@ -98,9 +98,9 @@ to a package that was just released. It will not work!
 
 ---------------------------------------------------------------------------------
 
-[*Alexander Todorov*](http://about.me/atodorov) is Monupco's founder and lead developer!
+[*Alexander Todorov*](http://about.me/atodorov) is Difio's founder and lead developer!
 
 For an insight of available updates to you OpenShift applications give
-Monupco a [try](https://monupco-otb.rhcloud.com/applications/mine/)!
-It keeps generating new [updates](http://www.monupco.com) every day!
+Difio a [try](https://difio-otb.rhcloud.com/applications/mine/)!
+It keeps generating new [updates](http://www.dif.io) every day!
 
