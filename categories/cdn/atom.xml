@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: CDN | Monupco]]></title>
-  <link href="http://monupco.com/blog/categories/cdn/atom.xml" rel="self"/>
-  <link href="http://monupco.com/blog/"/>
-  <updated>2012-07-10T14:14:28+03:00</updated>
-  <id>http://monupco.com/blog/</id>
+  <title><![CDATA[Category: CDN | Difio]]></title>
+  <link href="http://dif.io/blog/categories/cdn/atom.xml" rel="self"/>
+  <link href="http://dif.io/blog/"/>
+  <updated>2012-07-10T14:53:32+03:00</updated>
+  <id>http://dif.io/blog/</id>
   <author>
-    <name><![CDATA[Monupco Team]]></name>
+    <name><![CDATA[Difio Team]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,12 +15,12 @@
   
   <entry>
     <title type="html"><![CDATA[Cross-domain AJAX served from CDN]]></title>
-    <link href="http://monupco.com/blog/2012/05/19/cross-domain-ajax-served-from-cdn/"/>
+    <link href="http://dif.io/blog/2012/05/19/cross-domain-ajax-served-from-cdn/"/>
     <updated>2012-05-19T16:58:00+03:00</updated>
-    <id>http://monupco.com/blog/2012/05/19/cross-domain-ajax-served-from-cdn</id>
+    <id>http://dif.io/blog/2012/05/19/cross-domain-ajax-served-from-cdn</id>
     <content type="html"><![CDATA[<p>This week Amazon <a href="http://aws.typepad.com/aws/2012/05/amazon-cloudfront-support-for-dynamic-content.html">announced</a>
 support for dynamic content in their CDN solution <a href="http://aws.amazon.com/cloudfront/"><em>Amazon CloudFront</em></a>.
-The announce coincided with my efforts to migrate more pieces of <em>Monupco</em>'s <a href="http://www.monupco.com">website</a> to <em>CloudFront</em>.</p>
+The announce coincided with my efforts to migrate more pieces of <em>Difio</em>'s <a href="http://www.dif.io">website</a> to <em>CloudFront</em>.</p>
 
 <p>In this article I will not talk about hosting static files on CDN. This is easy and I've already written
 about it <a href="/2012/04/17/using-openshift-as-amazon-cloudfront-origin-server/">here</a>. I will show how to
@@ -39,10 +39,10 @@ This is what Google uses to create dynamic user interface which doesn't require 
 
 <h2>Architecture</h2>
 
-<p><em>Monupco</em> has two web interfaces. The primary one is a static HTML website
-which employs JavaScript for the dynamic areas. It is hosted on the monupco.com domain.
+<p><em>Difio</em> has two web interfaces. The primary one is a static HTML website
+which employs JavaScript for the dynamic areas. It is hosted on the dif.io domain.
 The other one is powered by Django and provides the same interface plus the
-<a href="https://monupco-otb.rhcloud.com/applications/mine/">applications dashboard</a> and several API functions
+<a href="https://difio-otb.rhcloud.com/applications/mine/">applications dashboard</a> and several API functions
 which don't have a visible user interface. This is under the *.rhcloud.com domain b/c it is hosted on
 <a href="http://openshift.redhat.com"><em>OpenShift</em></a>.</p>
 
@@ -50,14 +50,14 @@ which don't have a visible user interface. This is under the *.rhcloud.com domai
 HTML templates and server-side processing. This is migrating to modern web technology like static HTML
 and JavaScript while the server side will remain pure API service.</p>
 
-<p>For this migration to happen I need the HTML pages at monupco.com to execute JavaScript and load information
+<p>For this migration to happen I need the HTML pages at dif.io to execute JavaScript and load information
 which comes from the rhcloud.com domain. Unfortunately this is not easily doable with AJAX because
 of the <a href="https://en.wikipedia.org/wiki/Same_origin_policy">Same origin policy</a> in browsers.</p>
 
 <p>I'm using the <a href="http://dojotoolkit.org/"><em>Dojo Toolkit</em></a> JavaScript framework which has a solution.
 It's called <a href="https://en.wikipedia.org/wiki/JSONP">JSONP</a>. Here's how it works:</p>
 
-<pre><code>    monupco.com -- JSONP request --&gt; abc.rhcloud.com --v
+<pre><code>     dif.io ------ JSONP request --&gt; abc.rhcloud.com --v
         ^                                              |
         |                                              |
     JavaScript processing                              |
@@ -89,7 +89,7 @@ to point to the cloudfront.net domain. It became like this:</p>
 <pre><code>                                                        | Everything on this side is handled by Amazon.
                                                         | No code required!
                                                         |
-    monupco.com -- JSONP request --&gt; xyz.cloudfront.net -- JSONP request if cache miss --&gt; abc.rhcloud.com --v
+     dif.io ------ JSONP request --&gt; xyz.cloudfront.net -- JSONP request if cache miss --&gt; abc.rhcloud.com --v
         ^                              |                ^                                                    |
         |                              |                |                                                    |
     JavaScript processing              |                +---------- JSONP response --------------------------+
@@ -142,10 +142,10 @@ The server isn't so busy serving content so it can be used to do more computatio
 </ul>
 
 
-<p>The presented method works well for <em>Monupco</em> because of two things:</p>
+<p>The presented method works well for <em>Difio</em> because of two things:</p>
 
 <ul>
-<li>The content which <em>Monupco</em> serves usually doesn't change at all once made public. In rare occasions, for example an error
+<li>The content which <em>Difio</em> serves usually doesn't change at all once made public. In rare occasions, for example an error
 has been published, we have to regenerate new content and publish it under the same URL.</li>
 <li>Before content is made public it is inspected for errors and this also preseeds the cache.</li>
 </ul>
@@ -153,19 +153,19 @@ has been published, we have to regenerate new content and publish it under the s
 
 <hr />
 
-<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Monupco's founder and lead developer!</p>
+<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Difio's founder and lead developer!</p>
 
 <p>For an insight of available updates to your open source components give
-Monupco a <a href="https://monupco-otb.rhcloud.com/applications/mine/">try</a>!</p>
+Difio a <a href="https://difio-otb.rhcloud.com/applications/mine/">try</a>!</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Using OpenShift as Amazon CloudFront origin server]]></title>
-    <link href="http://monupco.com/blog/2012/04/17/using-openshift-as-amazon-cloudfront-origin-server/"/>
+    <link href="http://dif.io/blog/2012/04/17/using-openshift-as-amazon-cloudfront-origin-server/"/>
     <updated>2012-04-17T17:30:00+03:00</updated>
-    <id>http://monupco.com/blog/2012/04/17/using-openshift-as-amazon-cloudfront-origin-server</id>
-    <content type="html"><![CDATA[<p>It's been several months after the start of <a href="http://www.monupco.com"><em>Monupco</em></a> and we started
+    <id>http://dif.io/blog/2012/04/17/using-openshift-as-amazon-cloudfront-origin-server</id>
+    <content type="html"><![CDATA[<p>It's been several months after the start of <a href="http://www.dif.io"><em>Difio</em></a> and we started
 migrating various parts of the platform to CDN. The first to go are static 01 like
 CSS, JavaScript, images and such. In this article I will show you how to get started with
 <em>Amazon CloudFront</em> and <em>OpenShift</em>. It is very easy once you understand how it works.</p>
@@ -245,7 +245,7 @@ See <a href="https://bugzilla.redhat.com/show_bug.cgi?id=812389">bug 812389</a> 
 <p>Luckily I was able to use symlinks to point to the content. Here's how it looks:</p>
 
 <pre><code>    $ pwd
-    /home/atodorov/monupco/wsgi/static
+    /home/atodorov/difio/wsgi/static
 
     $ cat .htaccess
     ExpiresActive On
@@ -272,7 +272,7 @@ place the files under wsgi/static/ directory in your git repo.</p>
 <p>Point all of your HTML templates to the static location on <em>OpenShift</em> and test if everything works as expected.
 This is best done if you're using some sort of template language and store the location
 in a single variable which you can change later.
-<em>Monupco</em> uses <em>Django</em> and the <em>STATIC_URL</em> variable of course.</p>
+<em>Difio</em> uses <em>Django</em> and the <em>STATIC_URL</em> variable of course.</p>
 
 <p>Create your <em>CloudFront</em> distribution - don't use <em>Amazon S3</em>, instead configure a custom origin server. Write down
 your <em>CloudFront</em> URL. It will be something like <strong>1234xyz.cludfront.net</strong>.</p>
@@ -285,10 +285,10 @@ to the user.</p>
 
 <hr />
 
-<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Monupco's founder and lead developer!</p>
+<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Difio's founder and lead developer!</p>
 
 <p>For an insight of available updates to you OpenShift applications give
-Monupco a <a href="https://monupco-otb.rhcloud.com/applications/mine/">try</a>!</p>
+Difio a <a href="https://difio-otb.rhcloud.com/applications/mine/">try</a>!</p>
 ]]></content>
   </entry>
   

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Tips | Monupco]]></title>
-  <link href="http://monupco.com/blog/categories/tips/atom.xml" rel="self"/>
-  <link href="http://monupco.com/blog/"/>
-  <updated>2012-07-10T14:14:28+03:00</updated>
-  <id>http://monupco.com/blog/</id>
+  <title><![CDATA[Category: Tips | Difio]]></title>
+  <link href="http://dif.io/blog/categories/tips/atom.xml" rel="self"/>
+  <link href="http://dif.io/blog/"/>
+  <updated>2012-07-10T14:53:32+03:00</updated>
+  <id>http://dif.io/blog/</id>
   <author>
-    <name><![CDATA[Monupco Team]]></name>
+    <name><![CDATA[Difio Team]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,13 +15,13 @@
   
   <entry>
     <title type="html"><![CDATA[OpenShift Cron Takes Over Celerybeat]]></title>
-    <link href="http://monupco.com/blog/2012/03/14/openshift-cron-takes-over-celerybeat/"/>
+    <link href="http://dif.io/blog/2012/03/14/openshift-cron-takes-over-celerybeat/"/>
     <updated>2012-03-14T20:48:00+02:00</updated>
-    <id>http://monupco.com/blog/2012/03/14/openshift-cron-takes-over-celerybeat</id>
+    <id>http://dif.io/blog/2012/03/14/openshift-cron-takes-over-celerybeat</id>
     <content type="html"><![CDATA[<p><a href="http://celeryproject.org/"><em>Celery</em></a> is an asynchronous task queue/job queue
 based on distributed message passing. You can define tasks as Python functions,
 execute them in the background and in a periodic fashion.
-<a href="http://www.monupco.com"><em>Monupco</em></a> uses <em>Celery</em> for virtually everything.
+<a href="http://www.dif.io"><em>Difio</em></a> uses <em>Celery</em> for virtually everything.
 Some of the tasks are scheduled after some event takes place (like user pressed a button)
 or scheduled periodically.</p>
 
@@ -31,18 +31,18 @@ which allows periodic tasks to be added to the scheduler.</p>
 
 <h2>Why change</h2>
 
-<p><em>Monupco</em> has relied on <em>celerybeat</em> for a couple of months. Back then, when <em>Monupco</em> launched,
+<p><em>Difio</em> has relied on <em>celerybeat</em> for a couple of months. Back then, when <em>Difio</em> launched,
 there was no cron support for OpenShift so running <em>celerybeat</em> sounded reasonable.
 It used to run on a dedicated virtual server and for most of the time that was fine.</p>
 
-<p>There were a number of issues which <em>Monupco</em> faced during its first months:</p>
+<p>There were a number of issues which <em>Difio</em> faced during its first months:</p>
 
 <ul>
 <li><p><em>celerybeat</em> would sometime die due to no free memory on the virtual instance.
 When that happened no new tasks were scheduled and data was left unprocessed.
 Let alone that higher memory instance and the processing power which comes with it
 cost extra money.</p></li>
-<li><p><em>Monupco</em> is split into several components which need to have the same code base
+<li><p><em>Difio</em> is split into several components which need to have the same code base
 locally - the most important are database settings and the periodic tasks
 code. At least in one occasion <em>celerybeat</em> failed to start because of a buggy
 task code. The offending code was fixed in the application server on OpenShift but
@@ -66,7 +66,7 @@ write, commit and push work-flow.</p></li>
 <a href="https://www.redhat.com/openshift/community/blogs/getting-started-with-cron-jobs-on-openshift">introduced</a>
 the cron cartridge and I decided to give it a try.</p>
 
-<p>The first thing I did is to write a simple script which can execute any task from the monupco.tasks module
+<p>The first thing I did is to write a simple script which can execute any task from the difio.tasks module
 by piping it to the Django shell (a Python shell actually).</p>
 
 <pre><code>$ cat run_celery_task 
@@ -98,7 +98,7 @@ else
     REPO_DIR=$(dirname $0)"/../../.."
 fi
 
-echo "import monupco.tasks; monupco.tasks.$TASK_NAME.delay()" | $REPO_DIR/wsgi/monupco/manage.py shell
+echo "import difio.tasks; difio.tasks.$TASK_NAME.delay()" | $REPO_DIR/wsgi/difio/manage.py shell
 </code></pre>
 
 <p>This is a multicall script which allows symlinks with different names to point to it.
@@ -117,7 +117,7 @@ another_task -&gt; ../tasks/run_celery_task
 
 <p>After having done these preparations I only had to embed the cron cartridge and git push to OpenShift:</p>
 
-<pre><code>rhc-ctl-app -a monupco -e add-cron-1.4 &amp;&amp; git push
+<pre><code>rhc-ctl-app -a difio -e add-cron-1.4 &amp;&amp; git push
 </code></pre>
 
 <h2>What's next</h2>
@@ -125,26 +125,26 @@ another_task -&gt; ../tasks/run_celery_task
 <p>At present OpenShift can schedule your jobs every minute, hour, day, week or month and does so using the
 <em>run-parts</em> script. You can't schedule a script to execute at 4:30 every Monday or every 45 minutes for example.
 See <a href="https://bugzilla.redhat.com/show_bug.cgi?id=803485">rhbz #803485</a> if you want to follow the
-progress. Luckily <em>Monupco</em> doesn't use this sort of job scheduling for the moment.</p>
+progress. Luckily <em>Difio</em> doesn't use this sort of job scheduling for the moment.</p>
 
-<p><em>Monupco</em> is scheduling periodic tasks from OpenShift cron for a few days already.
+<p><em>Difio</em> is scheduling periodic tasks from OpenShift cron for a few days already.
 It seems to work reliably and with no issues. One less component to maintain and worry about.
 More time to write code.</p>
 
 <hr />
 
-<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Monupco's founder and lead developer!</p>
+<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Difio's founder and lead developer!</p>
 
 <p>For an insight of available updates to you OpenShift applications give
-Monupco a <a href="https://monupco-otb.rhcloud.com/applications/mine/">try</a>!</p>
+Difio a <a href="https://difio-otb.rhcloud.com/applications/mine/">try</a>!</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[How to get to the OpenShift shell]]></title>
-    <link href="http://monupco.com/blog/2012/03/09/how-to-get-to-the-openshift-shell/"/>
+    <link href="http://dif.io/blog/2012/03/09/how-to-get-to-the-openshift-shell/"/>
     <updated>2012-03-09T21:43:00+02:00</updated>
-    <id>http://monupco.com/blog/2012/03/09/how-to-get-to-the-openshift-shell</id>
+    <id>http://dif.io/blog/2012/03/09/how-to-get-to-the-openshift-shell</id>
     <content type="html"><![CDATA[<p>I wanted to examine the Perl environment on OpenShift and got tired of making snapshots,
 unzipping the archive and poking through the files. I wanted a shell. Here's how to get one.</p>
 
@@ -192,18 +192,18 @@ unzipping the archive and poking through the files. I wanted a shell. Here's how
 
 <hr />
 
-<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Monupco's founder and lead developer!</p>
+<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Difio's founder and lead developer!</p>
 
 <p>For an insight of available updates to you OpenShift applications give
-Monupco a <a href="https://monupco-otb.rhcloud.com/applications/mine/">try</a>!</p>
+Difio a <a href="https://difio-otb.rhcloud.com/applications/mine/">try</a>!</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[How to update dependencies on OpenShift]]></title>
-    <link href="http://monupco.com/blog/2012/02/18/how-to-update-dependencies-on-openshift/"/>
+    <link href="http://dif.io/blog/2012/02/18/how-to-update-dependencies-on-openshift/"/>
     <updated>2012-02-18T01:00:00+02:00</updated>
-    <id>http://monupco.com/blog/2012/02/18/how-to-update-dependencies-on-openshift</id>
+    <id>http://dif.io/blog/2012/02/18/how-to-update-dependencies-on-openshift</id>
     <content type="html"><![CDATA[<p>If you are already running some cool application on <a href="http://openshift.redhat.com">OpenShift</a>
 it could be the case that you have to update some of the packages installed as dependencies.
 Here is an example for an application using the python-2.6 cartridge.</p>
@@ -223,7 +223,7 @@ look like this:</p>
 
 <pre><code>  ...
   install_requires=[
-                  'monupco-openshift-express-python',
+                  'difio-openshift-python',
                   'MySQL-python',
                   'Markdown',
                  ],
@@ -293,20 +293,20 @@ to a package that was just released. It will not work!</p>
 
 <hr />
 
-<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Monupco's founder and lead developer!</p>
+<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Difio's founder and lead developer!</p>
 
 <p>For an insight of available updates to you OpenShift applications give
-Monupco a <a href="https://monupco-otb.rhcloud.com/applications/mine/">try</a>!
-It keeps generating new <a href="http://www.monupco.com">updates</a> every day!</p>
+Difio a <a href="https://difio-otb.rhcloud.com/applications/mine/">try</a>!
+It keeps generating new <a href="http://www.dif.io">updates</a> every day!</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to write a registration agent for Monupco]]></title>
-    <link href="http://monupco.com/blog/2012/02/11/how-to-write-registration-agent-for-monupco/"/>
+    <title type="html"><![CDATA[How to write a registration agent for Difio]]></title>
+    <link href="http://dif.io/blog/2012/02/11/how-to-write-registration-agent-for-difio/"/>
     <updated>2012-02-11T00:32:00+02:00</updated>
-    <id>http://monupco.com/blog/2012/02/11/how-to-write-registration-agent-for-monupco</id>
-    <content type="html"><![CDATA[<p><a href="http://www.monupco.com">Monupco</a> is aiming to support a broad range of PaaS and
+    <id>http://dif.io/blog/2012/02/11/how-to-write-registration-agent-for-difio</id>
+    <content type="html"><![CDATA[<p><a href="http://www.dif.io">Difio</a> is aiming to support a broad range of PaaS and
 cloud vendors but that takes time. If your favorite PaaS platform is not
 already supported here's how you can help.</p>
 
@@ -322,10 +322,10 @@ an agent for PHP PaaS use PHP, if writing for Node.JS use JavaScript, etc;</p></
 <li><p>All registration agents are bundled as packages so that they can install natively
 on the platform. For Python it is a package from PyPI, for PHP it will be a PEAR package,
 etc. Develop your agent as a package;</p></li>
-<li><p>Naming convention for registration agent is <strong>monupco-&lt;vendor>-&lt;language></strong>. For example
-<code>monupco-openshift-express-python</code>, <code>monupco-dotcloud-nodejs</code>. If you have common code,
+<li><p>Naming convention for registration agent is <strong>difio-&lt;vendor>-&lt;language></strong>. For example
+<code>difio-openshift-python</code>, <code>difio-dotcloud-nodejs</code>. If you have common code,
 for example the package management part, it can be split into separate module named
-<strong>common-&lt;language>-monupco</strong>.</p></li>
+<strong>common-&lt;language>-difio</strong>.</p></li>
 <li><p>Registration agents are specific to vendor and programming language. This is because
 different PaaS vendors provide the information in a different way. This makes code easier
 to maintain and easier for end-users to find the proper registration agent later;</p></li>
@@ -360,9 +360,9 @@ registration/update process. Just let us know you need one.</p></li>
 <p>Fields are defined as follow:</p>
 
 <ul>
-<li><p>user_id - integer - the ID of the user at Monupco website. All applications registered under
+<li><p>user_id - integer - the ID of the user at Difio website. All applications registered under
 the same user_id will be visible only to that user. You can view your UserID
-<a href="https://monupco-otb.rhcloud.com/profiles/mine/">here</a>. It is important that this value is not
+<a href="https://difio-otb.rhcloud.com/profiles/mine/">here</a>. It is important that this value is not
 hard-coded but read from ENV variable or a text file. The user will configure the proper
 value when installing the registration agent into their application;</p></li>
 <li><p>app_name - string - the name of the application. This is used to identify the application in the
@@ -373,9 +373,9 @@ do not provide a real UUID. In such case you may use any unique string, for exam
 web interface. Some cloud vendors store this in ENV variable;</p></li>
 <li><p>app_url - string - the URL at which the application can be accessed including the protocol part (http://).
 Should be available from ENV;</p></li>
-<li><p>app_vendor - integer - the vendor ID reserved by Monupco. This is used for proper identification
+<li><p>app_vendor - integer - the vendor ID reserved by Difio. This is used for proper identification
 of applications in the web console and for processing purposes;</p></li>
-<li><p>pkg_type - integer - the package type ID reserved by Monupco. This is used to properly process
+<li><p>pkg_type - integer - the package type ID reserved by Difio. This is used to properly process
 package information and find new versions and updates. If the cloud platform allows only a single
 type of packages to be installed into the application then use this variable. If you can install
 multiple package types (e.g. Python and Ruby) then you can set this on a per-package basis;</p></li>
@@ -384,7 +384,7 @@ multiple package types (e.g. Python and Ruby) then you can set this on a per-pac
 <ul>
 <li><p>n - string - package name as identified by a native package management tool (e.g. gem, pip, etc);</p></li>
 <li><p>v - string - package version;</p></li>
-<li><p>t - integer (optional) - package type ID reserved by Monupco. Define it here is multiple
+<li><p>t - integer (optional) - package type ID reserved by Difio. Define it here is multiple
 package types are allowed and the current package is different from <code>pkg_type</code>.</p></li>
 </ul>
 </li>
@@ -396,11 +396,11 @@ as well. You may use an ENV variable to ignore this name and not include it in t
 <li><p>When sending the request make sure to include a <code>User-agent</code> header. The <code>User-agent</code>
 string must follow the format:</p>
 
-<pre><code>  monupco-&lt;vendor&gt;-&lt;language&gt;/&lt;version&gt;
+<pre><code>  difio-&lt;vendor&gt;-&lt;language&gt;/&lt;version&gt;
 </code></pre></li>
 <li><p>If using common packages include them in the <code>User-agent</code> string as follows:</p>
 
-<pre><code>  monupco-&lt;vendor&gt;-&lt;language&gt;/&lt;version&gt; common-&lt;language&gt;-monupco/&lt;version&gt;
+<pre><code>  difio-&lt;vendor&gt;-&lt;language&gt;/&lt;version&gt; common-&lt;language&gt;-difio/&lt;version&gt;
 </code></pre>
 
 <p>For more information about <code>User-aget</code> string format click
@@ -428,17 +428,17 @@ hooks. In this case you may want to ping us for some help.</p></li>
 <p>Congratulations! You have just written a registration agent for your favorite PaaS and
 programming language. Sent us the code for review and we will add it to our GitHub channel.</p>
 
-<p>For more details you may take a look at <a href="https://github.com/monupco/monupco-openshift-express-python">https://github.com/monupco/monupco-openshift-express-python</a>.</p>
+<p>For more details you may take a look at <a href="https://github.com/difio/difio-openshift-python">https://github.com/difio/difio-openshift-python</a>.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Spinning-up a development instance on OpenShift Express]]></title>
-    <link href="http://monupco.com/blog/2012/02/10/spinning-up-a-development-instance-on-openshift-express/"/>
+    <link href="http://dif.io/blog/2012/02/10/spinning-up-a-development-instance-on-openshift-express/"/>
     <updated>2012-02-10T21:19:00+02:00</updated>
-    <id>http://monupco.com/blog/2012/02/10/spinning-up-a-development-instance-on-openshift-express</id>
-    <content type="html"><![CDATA[<p><a href="http://www.monupco.com">Monupco</a> is hosted on <a href="http://openshift.redhat.com">OpenShift</a> Express.
-During development we often need to spin-up another copy of Monupco to use for testing and development.
+    <id>http://dif.io/blog/2012/02/10/spinning-up-a-development-instance-on-openshift-express</id>
+    <content type="html"><![CDATA[<p><a href="http://www.dif.io">Difio</a> is hosted on <a href="http://openshift.redhat.com">OpenShift</a>.
+During development we often need to spin-up another copy of Difio to use for testing and development.
 With OpenShift this is easy and fast. Here's how:</p>
 
 <ol>

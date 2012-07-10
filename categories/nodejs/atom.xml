@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: NodeJS | Monupco]]></title>
-  <link href="http://monupco.com/blog/categories/nodejs/atom.xml" rel="self"/>
-  <link href="http://monupco.com/blog/"/>
-  <updated>2012-07-10T14:14:28+03:00</updated>
-  <id>http://monupco.com/blog/</id>
+  <title><![CDATA[Category: NodeJS | Difio]]></title>
+  <link href="http://dif.io/blog/categories/nodejs/atom.xml" rel="self"/>
+  <link href="http://dif.io/blog/"/>
+  <updated>2012-07-10T14:53:32+03:00</updated>
+  <id>http://dif.io/blog/</id>
   <author>
-    <name><![CDATA[Monupco Team]]></name>
+    <name><![CDATA[Difio Team]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Monupco 1.2 Release Announcement]]></title>
-    <link href="http://monupco.com/blog/2012/02/17/monupco-1.2-release-announcement/"/>
+    <title type="html"><![CDATA[Difio 1.2 Release Announcement]]></title>
+    <link href="http://dif.io/blog/2012/02/17/difio-1.2-release-announcement/"/>
     <updated>2012-02-17T00:34:00+02:00</updated>
-    <id>http://monupco.com/blog/2012/02/17/monupco-1.2-release-announcement</id>
-    <content type="html"><![CDATA[<p>Today <a href="http://www.monupco.com">Monupco</a> is pleased to announce version 1.2
-of our updates monitoring service. Monupco provides user friendly interface to
+    <id>http://dif.io/blog/2012/02/17/difio-1.2-release-announcement</id>
+    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce version 1.2
+of our updates monitoring service. Difio provides user friendly interface to
 monitor available updates for your cloud applications and information about different
 package versions.</p>
 
 <p>This release adds support for <a href="http://npmjs.org">NodeJS</a> packages. We've
 aready imported 1000 of the most dependent upon packages and started to process updates.
-Monupco has already produced detailed information for 60+ updates.</p>
+Difio has already produced detailed information for 60+ updates.</p>
 
 <p>Client side registration tool for NodeJS applications hosted at <a href="http://dotcloud.com">dotCloud</a> has
 been added as well. It is contributed and maintained by <a href="http://github.com/zaro">Svetlozar Argirov</a>.
-For more information see the <a href="http://www.monupco.com/register/">register</a> page.</p>
+For more information see the <a href="http://www.dif.io/register/">register</a> page.</p>
 
 <p>Small improvements to the web interface were made:</p>
 
@@ -41,10 +41,10 @@ For more information see the <a href="http://www.monupco.com/register/">register
 
 
 <p>In the next weeks we're looking to enable support for Ruby, PHP, Perl and Java and extend
-client side tools to more vendors. Stay <a href="https://twitter.com/monupco">tuned</a> if you don't
+client side tools to more vendors. Stay <a href="https://twitter.com/difio">tuned</a> if you don't
 want to miss the announcement.</p>
 
-<p><a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try Now</a></p>
+<p><a href="https://difio-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try Now</a></p>
 ]]></content>
   </entry>
   

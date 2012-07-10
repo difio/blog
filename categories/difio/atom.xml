@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Monupco | Monupco]]></title>
-  <link href="http://monupco.com/blog/categories/monupco/atom.xml" rel="self"/>
-  <link href="http://monupco.com/blog/"/>
-  <updated>2012-07-10T14:14:28+03:00</updated>
-  <id>http://monupco.com/blog/</id>
+  <title><![CDATA[Category: Difio | Difio]]></title>
+  <link href="http://dif.io/blog/categories/difio/atom.xml" rel="self"/>
+  <link href="http://dif.io/blog/"/>
+  <updated>2012-07-10T14:53:32+03:00</updated>
+  <id>http://dif.io/blog/</id>
   <author>
-    <name><![CDATA[Monupco Team]]></name>
+    <name><![CDATA[Difio Team]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[How to write a registration agent for Monupco]]></title>
-    <link href="http://monupco.com/blog/2012/02/11/how-to-write-registration-agent-for-monupco/"/>
+    <title type="html"><![CDATA[How to write a registration agent for Difio]]></title>
+    <link href="http://dif.io/blog/2012/02/11/how-to-write-registration-agent-for-difio/"/>
     <updated>2012-02-11T00:32:00+02:00</updated>
-    <id>http://monupco.com/blog/2012/02/11/how-to-write-registration-agent-for-monupco</id>
-    <content type="html"><![CDATA[<p><a href="http://www.monupco.com">Monupco</a> is aiming to support a broad range of PaaS and
+    <id>http://dif.io/blog/2012/02/11/how-to-write-registration-agent-for-difio</id>
+    <content type="html"><![CDATA[<p><a href="http://www.dif.io">Difio</a> is aiming to support a broad range of PaaS and
 cloud vendors but that takes time. If your favorite PaaS platform is not
 already supported here's how you can help.</p>
 
@@ -34,10 +34,10 @@ an agent for PHP PaaS use PHP, if writing for Node.JS use JavaScript, etc;</p></
 <li><p>All registration agents are bundled as packages so that they can install natively
 on the platform. For Python it is a package from PyPI, for PHP it will be a PEAR package,
 etc. Develop your agent as a package;</p></li>
-<li><p>Naming convention for registration agent is <strong>monupco-&lt;vendor>-&lt;language></strong>. For example
-<code>monupco-openshift-express-python</code>, <code>monupco-dotcloud-nodejs</code>. If you have common code,
+<li><p>Naming convention for registration agent is <strong>difio-&lt;vendor>-&lt;language></strong>. For example
+<code>difio-openshift-python</code>, <code>difio-dotcloud-nodejs</code>. If you have common code,
 for example the package management part, it can be split into separate module named
-<strong>common-&lt;language>-monupco</strong>.</p></li>
+<strong>common-&lt;language>-difio</strong>.</p></li>
 <li><p>Registration agents are specific to vendor and programming language. This is because
 different PaaS vendors provide the information in a different way. This makes code easier
 to maintain and easier for end-users to find the proper registration agent later;</p></li>
@@ -72,9 +72,9 @@ registration/update process. Just let us know you need one.</p></li>
 <p>Fields are defined as follow:</p>
 
 <ul>
-<li><p>user_id - integer - the ID of the user at Monupco website. All applications registered under
+<li><p>user_id - integer - the ID of the user at Difio website. All applications registered under
 the same user_id will be visible only to that user. You can view your UserID
-<a href="https://monupco-otb.rhcloud.com/profiles/mine/">here</a>. It is important that this value is not
+<a href="https://difio-otb.rhcloud.com/profiles/mine/">here</a>. It is important that this value is not
 hard-coded but read from ENV variable or a text file. The user will configure the proper
 value when installing the registration agent into their application;</p></li>
 <li><p>app_name - string - the name of the application. This is used to identify the application in the
@@ -85,9 +85,9 @@ do not provide a real UUID. In such case you may use any unique string, for exam
 web interface. Some cloud vendors store this in ENV variable;</p></li>
 <li><p>app_url - string - the URL at which the application can be accessed including the protocol part (http://).
 Should be available from ENV;</p></li>
-<li><p>app_vendor - integer - the vendor ID reserved by Monupco. This is used for proper identification
+<li><p>app_vendor - integer - the vendor ID reserved by Difio. This is used for proper identification
 of applications in the web console and for processing purposes;</p></li>
-<li><p>pkg_type - integer - the package type ID reserved by Monupco. This is used to properly process
+<li><p>pkg_type - integer - the package type ID reserved by Difio. This is used to properly process
 package information and find new versions and updates. If the cloud platform allows only a single
 type of packages to be installed into the application then use this variable. If you can install
 multiple package types (e.g. Python and Ruby) then you can set this on a per-package basis;</p></li>
@@ -96,7 +96,7 @@ multiple package types (e.g. Python and Ruby) then you can set this on a per-pac
 <ul>
 <li><p>n - string - package name as identified by a native package management tool (e.g. gem, pip, etc);</p></li>
 <li><p>v - string - package version;</p></li>
-<li><p>t - integer (optional) - package type ID reserved by Monupco. Define it here is multiple
+<li><p>t - integer (optional) - package type ID reserved by Difio. Define it here is multiple
 package types are allowed and the current package is different from <code>pkg_type</code>.</p></li>
 </ul>
 </li>
@@ -108,11 +108,11 @@ as well. You may use an ENV variable to ignore this name and not include it in t
 <li><p>When sending the request make sure to include a <code>User-agent</code> header. The <code>User-agent</code>
 string must follow the format:</p>
 
-<pre><code>  monupco-&lt;vendor&gt;-&lt;language&gt;/&lt;version&gt;
+<pre><code>  difio-&lt;vendor&gt;-&lt;language&gt;/&lt;version&gt;
 </code></pre></li>
 <li><p>If using common packages include them in the <code>User-agent</code> string as follows:</p>
 
-<pre><code>  monupco-&lt;vendor&gt;-&lt;language&gt;/&lt;version&gt; common-&lt;language&gt;-monupco/&lt;version&gt;
+<pre><code>  difio-&lt;vendor&gt;-&lt;language&gt;/&lt;version&gt; common-&lt;language&gt;-difio/&lt;version&gt;
 </code></pre>
 
 <p>For more information about <code>User-aget</code> string format click
@@ -140,7 +140,7 @@ hooks. In this case you may want to ping us for some help.</p></li>
 <p>Congratulations! You have just written a registration agent for your favorite PaaS and
 programming language. Sent us the code for review and we will add it to our GitHub channel.</p>
 
-<p>For more details you may take a look at <a href="https://github.com/monupco/monupco-openshift-express-python">https://github.com/monupco/monupco-openshift-express-python</a>.</p>
+<p>For more details you may take a look at <a href="https://github.com/difio/difio-openshift-python">https://github.com/difio/difio-openshift-python</a>.</p>
 ]]></content>
   </entry>
   

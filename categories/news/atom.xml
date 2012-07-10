@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: News | Monupco]]></title>
-  <link href="http://monupco.com/blog/categories/news/atom.xml" rel="self"/>
-  <link href="http://monupco.com/blog/"/>
-  <updated>2012-07-10T14:14:28+03:00</updated>
-  <id>http://monupco.com/blog/</id>
+  <title><![CDATA[Category: News | Difio]]></title>
+  <link href="http://dif.io/blog/categories/news/atom.xml" rel="self"/>
+  <link href="http://dif.io/blog/"/>
+  <updated>2012-07-10T14:53:32+03:00</updated>
+  <id>http://dif.io/blog/</id>
   <author>
-    <name><![CDATA[Monupco Team]]></name>
+    <name><![CDATA[Difio Team]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Monupco 1.5 Release Announcement]]></title>
-    <link href="http://monupco.com/blog/2012/06/04/monupco-1.5-release-announcement/"/>
+    <title type="html"><![CDATA[Difio 1.5 Release Announcement]]></title>
+    <link href="http://dif.io/blog/2012/06/04/difio-1.5-release-announcement/"/>
     <updated>2012-06-04T13:24:00+03:00</updated>
-    <id>http://monupco.com/blog/2012/06/04/monupco-1.5-release-announcement</id>
-    <content type="html"><![CDATA[<p>Today <a href="http://www.monupco.com">Monupco</a> is pleased to announce version 1.5
-of our updates monitoring service. Monupco provides insight of available
+    <id>http://dif.io/blog/2012/06/04/difio-1.5-release-announcement</id>
+    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce version 1.5
+of our updates monitoring service. Difio provides insight of available
 updates for open source components. It lets you inspect changes and take
 informed decision when or what to upgrade. This improves software life cycle
 planning and minimizes possible regressions and downtime.</p>
@@ -27,7 +27,7 @@ planning and minimizes possible regressions and downtime.</p>
 <p>This release adds support for <a href="http://pear.php.net/">PHP PEAR</a> packages and
 new registration agents for <a href="http://dotcloud.com">dotCloud</a> and
 <a href="http://openshift.redhat.com">OpenShift</a> PHP applications. See
-<a href="http://www.monupco.com/register/">how to register applications</a> page for more information.
+<a href="http://www.dif.io/register/">how to register applications</a> page for more information.
 Currently only packages from <a href="http://pear.php.net">http://pear.php.net</a> channel are supported.
 We're working on enabling additional channels like <a href="http://pecl.php.net">PECL</a>
 and self hosted PEAR channels.</p>
@@ -46,32 +46,32 @@ is working on a number of website improvements to make it faster and easier to u
 In addition to that we're also working on enabling e-mail and SMS notifications so
 stay tuned!</p>
 
-<p><a href="https://monupco-otb.rhcloud.com/applications/mine/">Give it a try</a>
-or <a href="https://twitter.com/monupco">follow us</a> on Twitter for more news.</p>
+<p><a href="https://difio-otb.rhcloud.com/applications/mine/">Give it a try</a>
+or <a href="https://twitter.com/difio">follow us</a> on Twitter for more news.</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Monupco 1.4 Release Announcement]]></title>
-    <link href="http://monupco.com/blog/2012/05/03/monupco-1.4-release-announcement/"/>
+    <title type="html"><![CDATA[Difio 1.4 Release Announcement]]></title>
+    <link href="http://dif.io/blog/2012/05/03/difio-1.4-release-announcement/"/>
     <updated>2012-05-03T12:00:00+03:00</updated>
-    <id>http://monupco.com/blog/2012/05/03/monupco-1.4-release-announcement</id>
-    <content type="html"><![CDATA[<p>Today <a href="http://www.monupco.com">Monupco</a> is pleased to announce version 1.4
-of our updates monitoring service. Monupco provides user friendly interface to
+    <id>http://dif.io/blog/2012/05/03/difio-1.4-release-announcement</id>
+    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce version 1.4
+of our updates monitoring service. Difio provides user friendly interface to
 available updates for your cloud applications and information about different
 package versions.</p>
 
 <p>This release adds support for <a href="http://rubygems.org/">RubyGems</a> and
 new registration agents for <a href="http://dotcloud.com">dotCloud</a> and
 <a href="http://openshift.redhat.com">OpenShift</a> Ruby applications. See
-<a href="http://www.monupco.com/register/">how to register applications</a> page for more information.</p>
+<a href="http://www.dif.io/register/">how to register applications</a> page for more information.</p>
 
 <p>There have been lots of bug fixes and improvements behind the scenes.
-Since the <a href="/blog/2012/04/02/monupco-1.3-release-announcement/">1.3 release</a>
+Since the <a href="/blog/2012/04/02/difio-1.3-release-announcement/">1.3 release</a>
 we have significantly increased the number of updates processed by the service.
 Currently new package versions are detected and published every day.
-Monupco has already produced detailed information for 1600+
-<a href="https://monupco-otb.rhcloud.com/updates/">updates</a>.</p>
+Difio has already produced detailed information for 1600+
+<a href="https://difio-otb.rhcloud.com/updates/">updates</a>.</p>
 
 <p>There were some changes to our web site to provide faster page load times:</p>
 
@@ -81,18 +81,18 @@ Monupco has already produced detailed information for 1600+
 </ul>
 
 
-<p><a href="https://monupco-otb.rhcloud.com/applications/mine/">Give it a try</a>
-or <a href="https://twitter.com/monupco">follow us</a> on Twitter for more news.</p>
+<p><a href="https://difio-otb.rhcloud.com/applications/mine/">Give it a try</a>
+or <a href="https://twitter.com/difio">follow us</a> on Twitter for more news.</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Monupco 1.3 Release Announcement]]></title>
-    <link href="http://monupco.com/blog/2012/04/02/monupco-1.3-release-announcement/"/>
+    <title type="html"><![CDATA[Difio 1.3 Release Announcement]]></title>
+    <link href="http://dif.io/blog/2012/04/02/difio-1.3-release-announcement/"/>
     <updated>2012-04-02T10:17:00+03:00</updated>
-    <id>http://monupco.com/blog/2012/04/02/monupco-1.3-release-announcement</id>
-    <content type="html"><![CDATA[<p>Today <a href="http://www.monupco.com">Monupco</a> is pleased to announce version 1.3
-of our updates monitoring service. Monupco provides user friendly interface to
+    <id>http://dif.io/blog/2012/04/02/difio-1.3-release-announcement</id>
+    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce version 1.3
+of our updates monitoring service. Difio provides user friendly interface to
 monitor available updates for your cloud applications and information about different
 package versions.</p>
 
@@ -102,7 +102,7 @@ are also supported.</p>
 
 <p>Perl support comes with registration agents for <a href="http://dotcloud.com">dotCloud</a> and
 <a href="http://openshift.redhat.com">OpenShift</a>. See the
-<a href="http://www.monupco.com/register/">how to register applications</a> page for more information.</p>
+<a href="http://www.dif.io/register/">how to register applications</a> page for more information.</p>
 
 <p>Our web interface faced some changes too:</p>
 
@@ -116,30 +116,30 @@ is incorrect.</li>
 </ul>
 
 
-<p>Monupco has already produced detailed information for 950+ <a href="https://monupco-otb.rhcloud.com/updates/">updates</a>.</p>
+<p>Difio has already produced detailed information for 950+ <a href="https://difio-otb.rhcloud.com/updates/">updates</a>.</p>
 
-<p><a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try</a>
-or <a href="https://twitter.com/monupco">follow us</a> on Twitter for more news.</p>
+<p><a href="https://difio-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try</a>
+or <a href="https://twitter.com/difio">follow us</a> on Twitter for more news.</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Monupco 1.2 Release Announcement]]></title>
-    <link href="http://monupco.com/blog/2012/02/17/monupco-1.2-release-announcement/"/>
+    <title type="html"><![CDATA[Difio 1.2 Release Announcement]]></title>
+    <link href="http://dif.io/blog/2012/02/17/difio-1.2-release-announcement/"/>
     <updated>2012-02-17T00:34:00+02:00</updated>
-    <id>http://monupco.com/blog/2012/02/17/monupco-1.2-release-announcement</id>
-    <content type="html"><![CDATA[<p>Today <a href="http://www.monupco.com">Monupco</a> is pleased to announce version 1.2
-of our updates monitoring service. Monupco provides user friendly interface to
+    <id>http://dif.io/blog/2012/02/17/difio-1.2-release-announcement</id>
+    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce version 1.2
+of our updates monitoring service. Difio provides user friendly interface to
 monitor available updates for your cloud applications and information about different
 package versions.</p>
 
 <p>This release adds support for <a href="http://npmjs.org">NodeJS</a> packages. We've
 aready imported 1000 of the most dependent upon packages and started to process updates.
-Monupco has already produced detailed information for 60+ updates.</p>
+Difio has already produced detailed information for 60+ updates.</p>
 
 <p>Client side registration tool for NodeJS applications hosted at <a href="http://dotcloud.com">dotCloud</a> has
 been added as well. It is contributed and maintained by <a href="http://github.com/zaro">Svetlozar Argirov</a>.
-For more information see the <a href="http://www.monupco.com/register/">register</a> page.</p>
+For more information see the <a href="http://www.dif.io/register/">register</a> page.</p>
 
 <p>Small improvements to the web interface were made:</p>
 
@@ -151,41 +151,41 @@ For more information see the <a href="http://www.monupco.com/register/">register
 
 
 <p>In the next weeks we're looking to enable support for Ruby, PHP, Perl and Java and extend
-client side tools to more vendors. Stay <a href="https://twitter.com/monupco">tuned</a> if you don't
+client side tools to more vendors. Stay <a href="https://twitter.com/difio">tuned</a> if you don't
 want to miss the announcement.</p>
 
-<p><a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try Now</a></p>
+<p><a href="https://difio-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try Now</a></p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Monupco 1.1 Release Announcement]]></title>
-    <link href="http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement/"/>
+    <title type="html"><![CDATA[Difio 1.1 Release Announcement]]></title>
+    <link href="http://dif.io/blog/2012/02/06/difio-1.1-release-announcement/"/>
     <updated>2012-02-06T10:00:00+02:00</updated>
-    <id>http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement</id>
-    <content type="html"><![CDATA[<p>Today <a href="http://www.monupco.com">Monupco</a> is pleased to announce the general availability
-of our updates monitoring service. Monupco provides user friendly interface to
+    <id>http://dif.io/blog/2012/02/06/difio-1.1-release-announcement</id>
+    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce the general availability
+of our updates monitoring service. Difio provides user friendly interface to
 monitor available updates for your cloud applications and information about different
 package versions.</p>
 
 <p>This is an alpha release for early adopters. Currently we support registration of
 Python applications hosted on Red Hat's <a href="http://openshift.redhat.com">OpenShift Express</a>
 platform. Client side tools and installation information can be found at our
-<a href="https://github.com/monupco/monupco-openshift-express-python">GitHub page</a>.</p>
+<a href="https://github.com/difio/difio-openshift-python">GitHub page</a>.</p>
 
-<p>Monupco itself is developed in the cloud, for the cloud. We're working to support
+<p>Difio itself is developed in the cloud, for the cloud. We're working to support
 additional cloud vendors and more programming languages. Your feedback is valuable to us!
-We welcome your feature requests on <a href="http://twitter.com/monupco">Twitter</a> and
-<a href="https://github.com/monupco/monupco.github.com/issues/new">GitHub</a>.</p>
+We welcome your feature requests on <a href="http://twitter.com/difio">Twitter</a> and
+<a href="https://github.com/difio/bugs/issues/new">GitHub</a>.</p>
 
-<p>Monupco will remain free of charge until it reaches production-ready quality, when
+<p>Difio will remain free of charge until it reaches production-ready quality, when
 subscription plans will be announced. A gratis period and/or bonus credits will be made
 available to all early birds at that time.</p>
 
 <p>We provide simplified registration and log in into our management console using
 credentials from popular social networking providers.</p>
 
-<p><a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try Now</a></p>
+<p><a href="https://difio-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try Now</a></p>
 ]]></content>
   </entry>
   

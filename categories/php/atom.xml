@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: PHP | Monupco]]></title>
-  <link href="http://monupco.com/blog/categories/php/atom.xml" rel="self"/>
-  <link href="http://monupco.com/blog/"/>
-  <updated>2012-07-10T14:14:28+03:00</updated>
-  <id>http://monupco.com/blog/</id>
+  <title><![CDATA[Category: PHP | Difio]]></title>
+  <link href="http://dif.io/blog/categories/php/atom.xml" rel="self"/>
+  <link href="http://dif.io/blog/"/>
+  <updated>2012-07-10T14:53:32+03:00</updated>
+  <id>http://dif.io/blog/</id>
   <author>
-    <name><![CDATA[Monupco Team]]></name>
+    <name><![CDATA[Difio Team]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Monupco 1.5 Release Announcement]]></title>
-    <link href="http://monupco.com/blog/2012/06/04/monupco-1.5-release-announcement/"/>
+    <title type="html"><![CDATA[Difio 1.5 Release Announcement]]></title>
+    <link href="http://dif.io/blog/2012/06/04/difio-1.5-release-announcement/"/>
     <updated>2012-06-04T13:24:00+03:00</updated>
-    <id>http://monupco.com/blog/2012/06/04/monupco-1.5-release-announcement</id>
-    <content type="html"><![CDATA[<p>Today <a href="http://www.monupco.com">Monupco</a> is pleased to announce version 1.5
-of our updates monitoring service. Monupco provides insight of available
+    <id>http://dif.io/blog/2012/06/04/difio-1.5-release-announcement</id>
+    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce version 1.5
+of our updates monitoring service. Difio provides insight of available
 updates for open source components. It lets you inspect changes and take
 informed decision when or what to upgrade. This improves software life cycle
 planning and minimizes possible regressions and downtime.</p>
@@ -27,7 +27,7 @@ planning and minimizes possible regressions and downtime.</p>
 <p>This release adds support for <a href="http://pear.php.net/">PHP PEAR</a> packages and
 new registration agents for <a href="http://dotcloud.com">dotCloud</a> and
 <a href="http://openshift.redhat.com">OpenShift</a> PHP applications. See
-<a href="http://www.monupco.com/register/">how to register applications</a> page for more information.
+<a href="http://www.dif.io/register/">how to register applications</a> page for more information.
 Currently only packages from <a href="http://pear.php.net">http://pear.php.net</a> channel are supported.
 We're working on enabling additional channels like <a href="http://pecl.php.net">PECL</a>
 and self hosted PEAR channels.</p>
@@ -46,8 +46,8 @@ is working on a number of website improvements to make it faster and easier to u
 In addition to that we're also working on enabling e-mail and SMS notifications so
 stay tuned!</p>
 
-<p><a href="https://monupco-otb.rhcloud.com/applications/mine/">Give it a try</a>
-or <a href="https://twitter.com/monupco">follow us</a> on Twitter for more news.</p>
+<p><a href="https://difio-otb.rhcloud.com/applications/mine/">Give it a try</a>
+or <a href="https://twitter.com/difio">follow us</a> on Twitter for more news.</p>
 ]]></content>
   </entry>
   

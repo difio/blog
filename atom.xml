@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Monupco]]></title>
-  <link href="http://monupco.com/blog/atom.xml" rel="self"/>
-  <link href="http://monupco.com/blog/"/>
-  <updated>2012-07-10T14:14:28+03:00</updated>
-  <id>http://monupco.com/blog/</id>
+  <title><![CDATA[Difio]]></title>
+  <link href="http://dif.io/blog/atom.xml" rel="self"/>
+  <link href="http://dif.io/blog/"/>
+  <updated>2012-07-10T14:53:32+03:00</updated>
+  <id>http://dif.io/blog/</id>
   <author>
-    <name><![CDATA[Monupco Team]]></name>
+    <name><![CDATA[Difio Team]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Monupco 1.5 Release Announcement]]></title>
-    <link href="http://monupco.com/blog/2012/06/04/monupco-1.5-release-announcement/"/>
+    <title type="html"><![CDATA[Difio 1.5 Release Announcement]]></title>
+    <link href="http://dif.io/blog/2012/06/04/difio-1.5-release-announcement/"/>
     <updated>2012-06-04T13:24:00+03:00</updated>
-    <id>http://monupco.com/blog/2012/06/04/monupco-1.5-release-announcement</id>
-    <content type="html"><![CDATA[<p>Today <a href="http://www.monupco.com">Monupco</a> is pleased to announce version 1.5
-of our updates monitoring service. Monupco provides insight of available
+    <id>http://dif.io/blog/2012/06/04/difio-1.5-release-announcement</id>
+    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce version 1.5
+of our updates monitoring service. Difio provides insight of available
 updates for open source components. It lets you inspect changes and take
 informed decision when or what to upgrade. This improves software life cycle
 planning and minimizes possible regressions and downtime.</p>
@@ -27,7 +27,7 @@ planning and minimizes possible regressions and downtime.</p>
 <p>This release adds support for <a href="http://pear.php.net/">PHP PEAR</a> packages and
 new registration agents for <a href="http://dotcloud.com">dotCloud</a> and
 <a href="http://openshift.redhat.com">OpenShift</a> PHP applications. See
-<a href="http://www.monupco.com/register/">how to register applications</a> page for more information.
+<a href="http://www.dif.io/register/">how to register applications</a> page for more information.
 Currently only packages from <a href="http://pear.php.net">http://pear.php.net</a> channel are supported.
 We&#8217;re working on enabling additional channels like <a href="http://pecl.php.net">PECL</a>
 and self hosted PEAR channels.</p>
@@ -46,22 +46,22 @@ is working on a number of website improvements to make it faster and easier to u
 In addition to that we&#8217;re also working on enabling e-mail and SMS notifications so
 stay tuned!</p>
 
-<p><a href="https://monupco-otb.rhcloud.com/applications/mine/">Give it a try</a>
-or <a href="https://twitter.com/monupco">follow us</a> on Twitter for more news.</p>
+<p><a href="https://difio-otb.rhcloud.com/applications/mine/">Give it a try</a>
+or <a href="https://twitter.com/difio">follow us</a> on Twitter for more news.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Cross-domain AJAX served from CDN]]></title>
-    <link href="http://monupco.com/blog/2012/05/19/cross-domain-ajax-served-from-cdn/"/>
+    <link href="http://dif.io/blog/2012/05/19/cross-domain-ajax-served-from-cdn/"/>
     <updated>2012-05-19T16:58:00+03:00</updated>
-    <id>http://monupco.com/blog/2012/05/19/cross-domain-ajax-served-from-cdn</id>
+    <id>http://dif.io/blog/2012/05/19/cross-domain-ajax-served-from-cdn</id>
     <content type="html"><![CDATA[<p>This week Amazon <a href="http://aws.typepad.com/aws/2012/05/amazon-cloudfront-support-for-dynamic-content.html">announced</a>
 support for dynamic content in their CDN solution <a href="http://aws.amazon.com/cloudfront/"><em>Amazon CloudFront</em></a>.
-The announce coincided with my efforts to migrate more pieces of <em>Monupco</em>&#8217;s <a href="http://www.monupco.com">website</a> to <em>CloudFront</em>.</p>
+The announce coincided with my efforts to migrate more pieces of <em>Difio</em>&#8217;s <a href="http://www.dif.io">website</a> to <em>CloudFront</em>.</p>
 
 <p>In this article I will not talk about hosting static files on CDN. This is easy and I&#8217;ve already written
-about it <a href="http://monupco.com/blog/2012/04/17/using-openshift-as-amazon-cloudfront-origin-server/">here</a>. I will show how to
+about it <a href="http://dif.io/blog/2012/04/17/using-openshift-as-amazon-cloudfront-origin-server/">here</a>. I will show how to
 cache AJAX(JSONP actually) responses and serve them directly from <em>Amazon CloudFront</em>.</p>
 
 <h2>Background</h2>
@@ -77,10 +77,10 @@ This is what Google uses to create dynamic user interface which doesn&#8217;t re
 
 <h2>Architecture</h2>
 
-<p><em>Monupco</em> has two web interfaces. The primary one is a static HTML website
-which employs JavaScript for the dynamic areas. It is hosted on the monupco.com domain.
+<p><em>Difio</em> has two web interfaces. The primary one is a static HTML website
+which employs JavaScript for the dynamic areas. It is hosted on the dif.io domain.
 The other one is powered by Django and provides the same interface plus the
-<a href="https://monupco-otb.rhcloud.com/applications/mine/">applications dashboard</a> and several API functions
+<a href="https://difio-otb.rhcloud.com/applications/mine/">applications dashboard</a> and several API functions
 which don&#8217;t have a visible user interface. This is under the *.rhcloud.com domain b/c it is hosted on
 <a href="http://openshift.redhat.com"><em>OpenShift</em></a>.</p>
 
@@ -88,14 +88,14 @@ which don&#8217;t have a visible user interface. This is under the *.rhcloud.com
 HTML templates and server-side processing. This is migrating to modern web technology like static HTML
 and JavaScript while the server side will remain pure API service.</p>
 
-<p>For this migration to happen I need the HTML pages at monupco.com to execute JavaScript and load information
+<p>For this migration to happen I need the HTML pages at dif.io to execute JavaScript and load information
 which comes from the rhcloud.com domain. Unfortunately this is not easily doable with AJAX because
 of the <a href="https://en.wikipedia.org/wiki/Same_origin_policy">Same origin policy</a> in browsers.</p>
 
 <p>I&#8217;m using the <a href="http://dojotoolkit.org/"><em>Dojo Toolkit</em></a> JavaScript framework which has a solution.
 It&#8217;s called <a href="https://en.wikipedia.org/wiki/JSONP">JSONP</a>. Here&#8217;s how it works:</p>
 
-<pre><code>    monupco.com -- JSONP request --&gt; abc.rhcloud.com --v
+<pre><code>     dif.io ------ JSONP request --&gt; abc.rhcloud.com --v
         ^                                              |
         |                                              |
     JavaScript processing                              |
@@ -127,7 +127,7 @@ to point to the cloudfront.net domain. It became like this:</p>
 <pre><code>                                                        | Everything on this side is handled by Amazon.
                                                         | No code required!
                                                         |
-    monupco.com -- JSONP request --&gt; xyz.cloudfront.net -- JSONP request if cache miss --&gt; abc.rhcloud.com --v
+     dif.io ------ JSONP request --&gt; xyz.cloudfront.net -- JSONP request if cache miss --&gt; abc.rhcloud.com --v
         ^                              |                ^                                                    |
         |                              |                |                                                    |
     JavaScript processing              |                +---------- JSONP response --------------------------+
@@ -180,10 +180,10 @@ The server isn&#8217;t so busy serving content so it can be used to do more comp
 </ul>
 
 
-<p>The presented method works well for <em>Monupco</em> because of two things:</p>
+<p>The presented method works well for <em>Difio</em> because of two things:</p>
 
 <ul>
-<li>The content which <em>Monupco</em> serves usually doesn&#8217;t change at all once made public. In rare occasions, for example an error
+<li>The content which <em>Difio</em> serves usually doesn&#8217;t change at all once made public. In rare occasions, for example an error
 has been published, we have to regenerate new content and publish it under the same URL.</li>
 <li>Before content is made public it is inspected for errors and this also preseeds the cache.</li>
 </ul>
@@ -191,34 +191,34 @@ has been published, we have to regenerate new content and publish it under the s
 
 <hr />
 
-<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Monupco&#8217;s founder and lead developer!</p>
+<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Difio&#8217;s founder and lead developer!</p>
 
 <p>For an insight of available updates to your open source components give
-Monupco a <a href="https://monupco-otb.rhcloud.com/applications/mine/">try</a>!</p>
+Difio a <a href="https://difio-otb.rhcloud.com/applications/mine/">try</a>!</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Monupco 1.4 Release Announcement]]></title>
-    <link href="http://monupco.com/blog/2012/05/03/monupco-1.4-release-announcement/"/>
+    <title type="html"><![CDATA[Difio 1.4 Release Announcement]]></title>
+    <link href="http://dif.io/blog/2012/05/03/difio-1.4-release-announcement/"/>
     <updated>2012-05-03T12:00:00+03:00</updated>
-    <id>http://monupco.com/blog/2012/05/03/monupco-1.4-release-announcement</id>
-    <content type="html"><![CDATA[<p>Today <a href="http://www.monupco.com">Monupco</a> is pleased to announce version 1.4
-of our updates monitoring service. Monupco provides user friendly interface to
+    <id>http://dif.io/blog/2012/05/03/difio-1.4-release-announcement</id>
+    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce version 1.4
+of our updates monitoring service. Difio provides user friendly interface to
 available updates for your cloud applications and information about different
 package versions.</p>
 
 <p>This release adds support for <a href="http://rubygems.org/">RubyGems</a> and
 new registration agents for <a href="http://dotcloud.com">dotCloud</a> and
 <a href="http://openshift.redhat.com">OpenShift</a> Ruby applications. See
-<a href="http://www.monupco.com/register/">how to register applications</a> page for more information.</p>
+<a href="http://www.dif.io/register/">how to register applications</a> page for more information.</p>
 
 <p>There have been lots of bug fixes and improvements behind the scenes.
-Since the <a href="http://monupco.com/blog/blog/2012/04/02/monupco-1.3-release-announcement/">1.3 release</a>
+Since the <a href="http://dif.io/blog/blog/2012/04/02/difio-1.3-release-announcement/">1.3 release</a>
 we have significantly increased the number of updates processed by the service.
 Currently new package versions are detected and published every day.
-Monupco has already produced detailed information for 1600+
-<a href="https://monupco-otb.rhcloud.com/updates/">updates</a>.</p>
+Difio has already produced detailed information for 1600+
+<a href="https://difio-otb.rhcloud.com/updates/">updates</a>.</p>
 
 <p>There were some changes to our web site to provide faster page load times:</p>
 
@@ -228,17 +228,17 @@ Monupco has already produced detailed information for 1600+
 </ul>
 
 
-<p><a href="https://monupco-otb.rhcloud.com/applications/mine/">Give it a try</a>
-or <a href="https://twitter.com/monupco">follow us</a> on Twitter for more news.</p>
+<p><a href="https://difio-otb.rhcloud.com/applications/mine/">Give it a try</a>
+or <a href="https://twitter.com/difio">follow us</a> on Twitter for more news.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Using OpenShift as Amazon CloudFront origin server]]></title>
-    <link href="http://monupco.com/blog/2012/04/17/using-openshift-as-amazon-cloudfront-origin-server/"/>
+    <link href="http://dif.io/blog/2012/04/17/using-openshift-as-amazon-cloudfront-origin-server/"/>
     <updated>2012-04-17T17:30:00+03:00</updated>
-    <id>http://monupco.com/blog/2012/04/17/using-openshift-as-amazon-cloudfront-origin-server</id>
-    <content type="html"><![CDATA[<p>It&#8217;s been several months after the start of <a href="http://www.monupco.com"><em>Monupco</em></a> and we started
+    <id>http://dif.io/blog/2012/04/17/using-openshift-as-amazon-cloudfront-origin-server</id>
+    <content type="html"><![CDATA[<p>It&#8217;s been several months after the start of <a href="http://www.dif.io"><em>Difio</em></a> and we started
 migrating various parts of the platform to CDN. The first to go are static 01 like
 CSS, JavaScript, images and such. In this article I will show you how to get started with
 <em>Amazon CloudFront</em> and <em>OpenShift</em>. It is very easy once you understand how it works.</p>
@@ -318,7 +318,7 @@ See <a href="https://bugzilla.redhat.com/show_bug.cgi?id=812389">bug 812389</a> 
 <p>Luckily I was able to use symlinks to point to the content. Here&#8217;s how it looks:</p>
 
 <pre><code>    $ pwd
-    /home/atodorov/monupco/wsgi/static
+    /home/atodorov/difio/wsgi/static
 
     $ cat .htaccess
     ExpiresActive On
@@ -345,7 +345,7 @@ place the files under wsgi/static/ directory in your git repo.</p>
 <p>Point all of your HTML templates to the static location on <em>OpenShift</em> and test if everything works as expected.
 This is best done if you&#8217;re using some sort of template language and store the location
 in a single variable which you can change later.
-<em>Monupco</em> uses <em>Django</em> and the <em>STATIC_URL</em> variable of course.</p>
+<em>Difio</em> uses <em>Django</em> and the <em>STATIC_URL</em> variable of course.</p>
 
 <p>Create your <em>CloudFront</em> distribution - don&#8217;t use <em>Amazon S3</em>, instead configure a custom origin server. Write down
 your <em>CloudFront</em> URL. It will be something like <strong>1234xyz.cludfront.net</strong>.</p>
@@ -358,20 +358,20 @@ to the user.</p>
 
 <hr />
 
-<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Monupco&#8217;s founder and lead developer!</p>
+<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Difio&#8217;s founder and lead developer!</p>
 
 <p>For an insight of available updates to you OpenShift applications give
-Monupco a <a href="https://monupco-otb.rhcloud.com/applications/mine/">try</a>!</p>
+Difio a <a href="https://difio-otb.rhcloud.com/applications/mine/">try</a>!</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Monupco 1.3 Release Announcement]]></title>
-    <link href="http://monupco.com/blog/2012/04/02/monupco-1.3-release-announcement/"/>
+    <title type="html"><![CDATA[Difio 1.3 Release Announcement]]></title>
+    <link href="http://dif.io/blog/2012/04/02/difio-1.3-release-announcement/"/>
     <updated>2012-04-02T10:17:00+03:00</updated>
-    <id>http://monupco.com/blog/2012/04/02/monupco-1.3-release-announcement</id>
-    <content type="html"><![CDATA[<p>Today <a href="http://www.monupco.com">Monupco</a> is pleased to announce version 1.3
-of our updates monitoring service. Monupco provides user friendly interface to
+    <id>http://dif.io/blog/2012/04/02/difio-1.3-release-announcement</id>
+    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce version 1.3
+of our updates monitoring service. Difio provides user friendly interface to
 monitor available updates for your cloud applications and information about different
 package versions.</p>
 
@@ -381,7 +381,7 @@ are also supported.</p>
 
 <p>Perl support comes with registration agents for <a href="http://dotcloud.com">dotCloud</a> and
 <a href="http://openshift.redhat.com">OpenShift</a>. See the
-<a href="http://www.monupco.com/register/">how to register applications</a> page for more information.</p>
+<a href="http://www.dif.io/register/">how to register applications</a> page for more information.</p>
 
 <p>Our web interface faced some changes too:</p>
 
@@ -395,22 +395,22 @@ is incorrect.</li>
 </ul>
 
 
-<p>Monupco has already produced detailed information for 950+ <a href="https://monupco-otb.rhcloud.com/updates/">updates</a>.</p>
+<p>Difio has already produced detailed information for 950+ <a href="https://difio-otb.rhcloud.com/updates/">updates</a>.</p>
 
-<p><a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try</a>
-or <a href="https://twitter.com/monupco">follow us</a> on Twitter for more news.</p>
+<p><a href="https://difio-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try</a>
+or <a href="https://twitter.com/difio">follow us</a> on Twitter for more news.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[OpenShift Cron Takes Over Celerybeat]]></title>
-    <link href="http://monupco.com/blog/2012/03/14/openshift-cron-takes-over-celerybeat/"/>
+    <link href="http://dif.io/blog/2012/03/14/openshift-cron-takes-over-celerybeat/"/>
     <updated>2012-03-14T20:48:00+02:00</updated>
-    <id>http://monupco.com/blog/2012/03/14/openshift-cron-takes-over-celerybeat</id>
+    <id>http://dif.io/blog/2012/03/14/openshift-cron-takes-over-celerybeat</id>
     <content type="html"><![CDATA[<p><a href="http://celeryproject.org/"><em>Celery</em></a> is an asynchronous task queue/job queue
 based on distributed message passing. You can define tasks as Python functions,
 execute them in the background and in a periodic fashion.
-<a href="http://www.monupco.com"><em>Monupco</em></a> uses <em>Celery</em> for virtually everything.
+<a href="http://www.dif.io"><em>Difio</em></a> uses <em>Celery</em> for virtually everything.
 Some of the tasks are scheduled after some event takes place (like user pressed a button)
 or scheduled periodically.</p>
 
@@ -420,18 +420,18 @@ which allows periodic tasks to be added to the scheduler.</p>
 
 <h2>Why change</h2>
 
-<p><em>Monupco</em> has relied on <em>celerybeat</em> for a couple of months. Back then, when <em>Monupco</em> launched,
+<p><em>Difio</em> has relied on <em>celerybeat</em> for a couple of months. Back then, when <em>Difio</em> launched,
 there was no cron support for OpenShift so running <em>celerybeat</em> sounded reasonable.
 It used to run on a dedicated virtual server and for most of the time that was fine.</p>
 
-<p>There were a number of issues which <em>Monupco</em> faced during its first months:</p>
+<p>There were a number of issues which <em>Difio</em> faced during its first months:</p>
 
 <ul>
 <li><p><em>celerybeat</em> would sometime die due to no free memory on the virtual instance.
 When that happened no new tasks were scheduled and data was left unprocessed.
 Let alone that higher memory instance and the processing power which comes with it
 cost extra money.</p></li>
-<li><p><em>Monupco</em> is split into several components which need to have the same code base
+<li><p><em>Difio</em> is split into several components which need to have the same code base
 locally - the most important are database settings and the periodic tasks
 code. At least in one occasion <em>celerybeat</em> failed to start because of a buggy
 task code. The offending code was fixed in the application server on OpenShift but
@@ -455,7 +455,7 @@ write, commit and push work-flow.</p></li>
 <a href="https://www.redhat.com/openshift/community/blogs/getting-started-with-cron-jobs-on-openshift">introduced</a>
 the cron cartridge and I decided to give it a try.</p>
 
-<p>The first thing I did is to write a simple script which can execute any task from the monupco.tasks module
+<p>The first thing I did is to write a simple script which can execute any task from the difio.tasks module
 by piping it to the Django shell (a Python shell actually).</p>
 
 <pre><code>$ cat run_celery_task 
@@ -487,7 +487,7 @@ else
     REPO_DIR=$(dirname $0)"/../../.."
 fi
 
-echo "import monupco.tasks; monupco.tasks.$TASK_NAME.delay()" | $REPO_DIR/wsgi/monupco/manage.py shell
+echo "import difio.tasks; difio.tasks.$TASK_NAME.delay()" | $REPO_DIR/wsgi/difio/manage.py shell
 </code></pre>
 
 <p>This is a multicall script which allows symlinks with different names to point to it.
@@ -506,7 +506,7 @@ another_task -&gt; ../tasks/run_celery_task
 
 <p>After having done these preparations I only had to embed the cron cartridge and git push to OpenShift:</p>
 
-<pre><code>rhc-ctl-app -a monupco -e add-cron-1.4 &amp;&amp; git push
+<pre><code>rhc-ctl-app -a difio -e add-cron-1.4 &amp;&amp; git push
 </code></pre>
 
 <h2>What&#8217;s next</h2>
@@ -514,26 +514,26 @@ another_task -&gt; ../tasks/run_celery_task
 <p>At present OpenShift can schedule your jobs every minute, hour, day, week or month and does so using the
 <em>run-parts</em> script. You can&#8217;t schedule a script to execute at 4:30 every Monday or every 45 minutes for example.
 See <a href="https://bugzilla.redhat.com/show_bug.cgi?id=803485">rhbz #803485</a> if you want to follow the
-progress. Luckily <em>Monupco</em> doesn&#8217;t use this sort of job scheduling for the moment.</p>
+progress. Luckily <em>Difio</em> doesn&#8217;t use this sort of job scheduling for the moment.</p>
 
-<p><em>Monupco</em> is scheduling periodic tasks from OpenShift cron for a few days already.
+<p><em>Difio</em> is scheduling periodic tasks from OpenShift cron for a few days already.
 It seems to work reliably and with no issues. One less component to maintain and worry about.
 More time to write code.</p>
 
 <hr />
 
-<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Monupco&#8217;s founder and lead developer!</p>
+<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Difio&#8217;s founder and lead developer!</p>
 
 <p>For an insight of available updates to you OpenShift applications give
-Monupco a <a href="https://monupco-otb.rhcloud.com/applications/mine/">try</a>!</p>
+Difio a <a href="https://difio-otb.rhcloud.com/applications/mine/">try</a>!</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[How to get to the OpenShift shell]]></title>
-    <link href="http://monupco.com/blog/2012/03/09/how-to-get-to-the-openshift-shell/"/>
+    <link href="http://dif.io/blog/2012/03/09/how-to-get-to-the-openshift-shell/"/>
     <updated>2012-03-09T21:43:00+02:00</updated>
-    <id>http://monupco.com/blog/2012/03/09/how-to-get-to-the-openshift-shell</id>
+    <id>http://dif.io/blog/2012/03/09/how-to-get-to-the-openshift-shell</id>
     <content type="html"><![CDATA[<p>I wanted to examine the Perl environment on OpenShift and got tired of making snapshots,
 unzipping the archive and poking through the files. I wanted a shell. Here&#8217;s how to get one.</p>
 
@@ -581,18 +581,18 @@ unzipping the archive and poking through the files. I wanted a shell. Here&#8217
 
 <hr />
 
-<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Monupco&#8217;s founder and lead developer!</p>
+<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Difio&#8217;s founder and lead developer!</p>
 
 <p>For an insight of available updates to you OpenShift applications give
-Monupco a <a href="https://monupco-otb.rhcloud.com/applications/mine/">try</a>!</p>
+Difio a <a href="https://difio-otb.rhcloud.com/applications/mine/">try</a>!</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[How to update dependencies on OpenShift]]></title>
-    <link href="http://monupco.com/blog/2012/02/18/how-to-update-dependencies-on-openshift/"/>
+    <link href="http://dif.io/blog/2012/02/18/how-to-update-dependencies-on-openshift/"/>
     <updated>2012-02-18T01:00:00+02:00</updated>
-    <id>http://monupco.com/blog/2012/02/18/how-to-update-dependencies-on-openshift</id>
+    <id>http://dif.io/blog/2012/02/18/how-to-update-dependencies-on-openshift</id>
     <content type="html"><![CDATA[<p>If you are already running some cool application on <a href="http://openshift.redhat.com">OpenShift</a>
 it could be the case that you have to update some of the packages installed as dependencies.
 Here is an example for an application using the python-2.6 cartridge.</p>
@@ -612,7 +612,7 @@ look like this:</p>
 
 <pre><code>  ...
   install_requires=[
-                  'monupco-openshift-express-python',
+                  'difio-openshift-python',
                   'MySQL-python',
                   'Markdown',
                  ],
@@ -682,31 +682,31 @@ to a package that was just released. It will not work!</p>
 
 <hr />
 
-<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Monupco&#8217;s founder and lead developer!</p>
+<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Difio&#8217;s founder and lead developer!</p>
 
 <p>For an insight of available updates to you OpenShift applications give
-Monupco a <a href="https://monupco-otb.rhcloud.com/applications/mine/">try</a>!
-It keeps generating new <a href="http://www.monupco.com">updates</a> every day!</p>
+Difio a <a href="https://difio-otb.rhcloud.com/applications/mine/">try</a>!
+It keeps generating new <a href="http://www.dif.io">updates</a> every day!</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Monupco 1.2 Release Announcement]]></title>
-    <link href="http://monupco.com/blog/2012/02/17/monupco-1.2-release-announcement/"/>
+    <title type="html"><![CDATA[Difio 1.2 Release Announcement]]></title>
+    <link href="http://dif.io/blog/2012/02/17/difio-1.2-release-announcement/"/>
     <updated>2012-02-17T00:34:00+02:00</updated>
-    <id>http://monupco.com/blog/2012/02/17/monupco-1.2-release-announcement</id>
-    <content type="html"><![CDATA[<p>Today <a href="http://www.monupco.com">Monupco</a> is pleased to announce version 1.2
-of our updates monitoring service. Monupco provides user friendly interface to
+    <id>http://dif.io/blog/2012/02/17/difio-1.2-release-announcement</id>
+    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce version 1.2
+of our updates monitoring service. Difio provides user friendly interface to
 monitor available updates for your cloud applications and information about different
 package versions.</p>
 
 <p>This release adds support for <a href="http://npmjs.org">NodeJS</a> packages. We&#8217;ve
 aready imported 1000 of the most dependent upon packages and started to process updates.
-Monupco has already produced detailed information for 60+ updates.</p>
+Difio has already produced detailed information for 60+ updates.</p>
 
 <p>Client side registration tool for NodeJS applications hosted at <a href="http://dotcloud.com">dotCloud</a> has
 been added as well. It is contributed and maintained by <a href="http://github.com/zaro">Svetlozar Argirov</a>.
-For more information see the <a href="http://www.monupco.com/register/">register</a> page.</p>
+For more information see the <a href="http://www.dif.io/register/">register</a> page.</p>
 
 <p>Small improvements to the web interface were made:</p>
 
@@ -718,19 +718,19 @@ For more information see the <a href="http://www.monupco.com/register/">register
 
 
 <p>In the next weeks we&#8217;re looking to enable support for Ruby, PHP, Perl and Java and extend
-client side tools to more vendors. Stay <a href="https://twitter.com/monupco">tuned</a> if you don&#8217;t
+client side tools to more vendors. Stay <a href="https://twitter.com/difio">tuned</a> if you don&#8217;t
 want to miss the announcement.</p>
 
-<p><a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try Now</a></p>
+<p><a href="https://difio-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try Now</a></p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to write a registration agent for Monupco]]></title>
-    <link href="http://monupco.com/blog/2012/02/11/how-to-write-registration-agent-for-monupco/"/>
+    <title type="html"><![CDATA[How to write a registration agent for Difio]]></title>
+    <link href="http://dif.io/blog/2012/02/11/how-to-write-registration-agent-for-difio/"/>
     <updated>2012-02-11T00:32:00+02:00</updated>
-    <id>http://monupco.com/blog/2012/02/11/how-to-write-registration-agent-for-monupco</id>
-    <content type="html"><![CDATA[<p><a href="http://www.monupco.com">Monupco</a> is aiming to support a broad range of PaaS and
+    <id>http://dif.io/blog/2012/02/11/how-to-write-registration-agent-for-difio</id>
+    <content type="html"><![CDATA[<p><a href="http://www.dif.io">Difio</a> is aiming to support a broad range of PaaS and
 cloud vendors but that takes time. If your favorite PaaS platform is not
 already supported here&#8217;s how you can help.</p>
 
@@ -746,10 +746,10 @@ an agent for PHP PaaS use PHP, if writing for Node.JS use JavaScript, etc;</p></
 <li><p>All registration agents are bundled as packages so that they can install natively
 on the platform. For Python it is a package from PyPI, for PHP it will be a PEAR package,
 etc. Develop your agent as a package;</p></li>
-<li><p>Naming convention for registration agent is <strong>monupco-&lt;vendor>-&lt;language></strong>. For example
-<code>monupco-openshift-express-python</code>, <code>monupco-dotcloud-nodejs</code>. If you have common code,
+<li><p>Naming convention for registration agent is <strong>difio-&lt;vendor>-&lt;language></strong>. For example
+<code>difio-openshift-python</code>, <code>difio-dotcloud-nodejs</code>. If you have common code,
 for example the package management part, it can be split into separate module named
-<strong>common-&lt;language>-monupco</strong>.</p></li>
+<strong>common-&lt;language>-difio</strong>.</p></li>
 <li><p>Registration agents are specific to vendor and programming language. This is because
 different PaaS vendors provide the information in a different way. This makes code easier
 to maintain and easier for end-users to find the proper registration agent later;</p></li>
@@ -784,9 +784,9 @@ registration/update process. Just let us know you need one.</p></li>
 <p>Fields are defined as follow:</p>
 
 <ul>
-<li><p>user_id - integer - the ID of the user at Monupco website. All applications registered under
+<li><p>user_id - integer - the ID of the user at Difio website. All applications registered under
 the same user_id will be visible only to that user. You can view your UserID
-<a href="https://monupco-otb.rhcloud.com/profiles/mine/">here</a>. It is important that this value is not
+<a href="https://difio-otb.rhcloud.com/profiles/mine/">here</a>. It is important that this value is not
 hard-coded but read from ENV variable or a text file. The user will configure the proper
 value when installing the registration agent into their application;</p></li>
 <li><p>app_name - string - the name of the application. This is used to identify the application in the
@@ -797,9 +797,9 @@ do not provide a real UUID. In such case you may use any unique string, for exam
 web interface. Some cloud vendors store this in ENV variable;</p></li>
 <li><p>app_url - string - the URL at which the application can be accessed including the protocol part (http://).
 Should be available from ENV;</p></li>
-<li><p>app_vendor - integer - the vendor ID reserved by Monupco. This is used for proper identification
+<li><p>app_vendor - integer - the vendor ID reserved by Difio. This is used for proper identification
 of applications in the web console and for processing purposes;</p></li>
-<li><p>pkg_type - integer - the package type ID reserved by Monupco. This is used to properly process
+<li><p>pkg_type - integer - the package type ID reserved by Difio. This is used to properly process
 package information and find new versions and updates. If the cloud platform allows only a single
 type of packages to be installed into the application then use this variable. If you can install
 multiple package types (e.g. Python and Ruby) then you can set this on a per-package basis;</p></li>
@@ -808,7 +808,7 @@ multiple package types (e.g. Python and Ruby) then you can set this on a per-pac
 <ul>
 <li><p>n - string - package name as identified by a native package management tool (e.g. gem, pip, etc);</p></li>
 <li><p>v - string - package version;</p></li>
-<li><p>t - integer (optional) - package type ID reserved by Monupco. Define it here is multiple
+<li><p>t - integer (optional) - package type ID reserved by Difio. Define it here is multiple
 package types are allowed and the current package is different from <code>pkg_type</code>.</p></li>
 </ul>
 </li>
@@ -820,11 +820,11 @@ as well. You may use an ENV variable to ignore this name and not include it in t
 <li><p>When sending the request make sure to include a <code>User-agent</code> header. The <code>User-agent</code>
 string must follow the format:</p>
 
-<pre><code>  monupco-&lt;vendor&gt;-&lt;language&gt;/&lt;version&gt;
+<pre><code>  difio-&lt;vendor&gt;-&lt;language&gt;/&lt;version&gt;
 </code></pre></li>
 <li><p>If using common packages include them in the <code>User-agent</code> string as follows:</p>
 
-<pre><code>  monupco-&lt;vendor&gt;-&lt;language&gt;/&lt;version&gt; common-&lt;language&gt;-monupco/&lt;version&gt;
+<pre><code>  difio-&lt;vendor&gt;-&lt;language&gt;/&lt;version&gt; common-&lt;language&gt;-difio/&lt;version&gt;
 </code></pre>
 
 <p>For more information about <code>User-aget</code> string format click
@@ -852,17 +852,17 @@ hooks. In this case you may want to ping us for some help.</p></li>
 <p>Congratulations! You have just written a registration agent for your favorite PaaS and
 programming language. Sent us the code for review and we will add it to our GitHub channel.</p>
 
-<p>For more details you may take a look at <a href="https://github.com/monupco/monupco-openshift-express-python">https://github.com/monupco/monupco-openshift-express-python</a>.</p>
+<p>For more details you may take a look at <a href="https://github.com/difio/difio-openshift-python">https://github.com/difio/difio-openshift-python</a>.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Spinning-up a development instance on OpenShift Express]]></title>
-    <link href="http://monupco.com/blog/2012/02/10/spinning-up-a-development-instance-on-openshift-express/"/>
+    <link href="http://dif.io/blog/2012/02/10/spinning-up-a-development-instance-on-openshift-express/"/>
     <updated>2012-02-10T21:19:00+02:00</updated>
-    <id>http://monupco.com/blog/2012/02/10/spinning-up-a-development-instance-on-openshift-express</id>
-    <content type="html"><![CDATA[<p><a href="http://www.monupco.com">Monupco</a> is hosted on <a href="http://openshift.redhat.com">OpenShift</a> Express.
-During development we often need to spin-up another copy of Monupco to use for testing and development.
+    <id>http://dif.io/blog/2012/02/10/spinning-up-a-development-instance-on-openshift-express</id>
+    <content type="html"><![CDATA[<p><a href="http://www.dif.io">Difio</a> is hosted on <a href="http://openshift.redhat.com">OpenShift</a>.
+During development we often need to spin-up another copy of Difio to use for testing and development.
 With OpenShift this is easy and fast. Here&#8217;s how:</p>
 
 <ol>
@@ -897,26 +897,26 @@ modify your database connection settings at this point and start adding new feat
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Monupco on OpenShift Express]]></title>
-    <link href="http://monupco.com/blog/2012/02/09/monupco-on-openshift-express/"/>
+    <title type="html"><![CDATA[Difio on OpenShift Express]]></title>
+    <link href="http://dif.io/blog/2012/02/09/difio-on-openshift-express/"/>
     <updated>2012-02-09T18:48:00+02:00</updated>
-    <id>http://monupco.com/blog/2012/02/09/monupco-on-openshift-express</id>
-    <content type="html"><![CDATA[<p><a href="http://www.monupco.com">Monupco</a> stands for Monitor Updates In The Cloud.
+    <id>http://dif.io/blog/2012/02/09/difio-on-openshift-express</id>
+    <content type="html"><![CDATA[<p><a href="http://www.dif.io">Difio</a> stands for Monitor Updates In The Cloud.
 As the name suggests this is a service which provides updates information
 for applications hosted in a PaaS environment. If you are a developer or
 a sysadmin knowing when and what to upgrade will make your life easier.</p>
 
-<p>Monupco will generate a human friendly description of changes between the
-installed package version and the latest one. Currently a <a href="https://github.com/monupco/monupco-openshift-express-python">client
+<p>Difio will generate a human friendly description of changes between the
+installed package version and the latest one. Currently a <a href="https://github.com/difio/difio-openshift-python">client
 side tool</a> for
-Python applications on OpenShift Express is available and
+Python applications on OpenShift is available and
 others will follow soon.</p>
 
-<p>Monupco started with a local SQLite database which was the fastest way to get up
+<p>Difio started with a local SQLite database which was the fastest way to get up
 and running. At present the database layer is powered by MySQL and the intention
 is to switch to NoSQL at some point. It is written in Python.</p>
 
-<p>Monupco is split into several parts:</p>
+<p>Difio is split into several parts:</p>
 
 <ul>
 <li>Management console - the interface with which users interact.
@@ -928,7 +928,7 @@ the website this is hosted on GitHub.</li>
 </ul>
 
 
-<p>All source code of Monupco is managed with git and &#8216;git push&#8217; is simply a
+<p>All source code of Difio is managed with git and &#8216;git push&#8217; is simply a
 rock star. Combining git + ssh keys made it possible to programatically commit
 and push when necessary.</p>
 
@@ -936,12 +936,12 @@ and push when necessary.</p>
 and multi-line text entries into the database are rendered as Markdown.
 This makes entering and editing text very easy.</p>
 
-<p>While developing Monupco I didn&#8217;t want to force users to remember yet another
+<p>While developing Difio I didn&#8217;t want to force users to remember yet another
 username and password nor store them into the database. The solution is no passwords required!
-Instead Monupco uses popular social networks credentials and limits the information
+Instead Difio uses popular social networks credentials and limits the information
 stored in database to the bare minimum.</p>
 
-<p>Monupco has recently <a href="http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement/">announced</a>
+<p>Difio has recently <a href="http://dif.io/blog/2012/02/06/difio-1.1-release-announcement/">announced</a>
 its first Alpha release. The following weeks will see development for Ruby, PHP and Perl packages
 and the corresponding client side tools for these catridges on OpenShift.
 Java and Node.js are also under investigation.</p>
@@ -959,39 +959,39 @@ for other PaaS vendors will follow. On the radar are requests for:</p>
 </ul>
 
 
-<p>If you&#8217;re already excited please follow @monupco on <a href="https://twitter.com/monupco">Twitter</a> and
-<a href="https://github.com/monupco">GitHub</a> or <a href="https://monupco-otb.rhcloud.com/applications/mine/">get started</a> today!</p>
+<p>If you&#8217;re already excited please follow @difio on <a href="https://twitter.com/difio">Twitter</a> and
+<a href="https://github.com/difio">GitHub</a> or <a href="https://difio-otb.rhcloud.com/applications/mine/">get started</a> today!</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Monupco 1.1 Release Announcement]]></title>
-    <link href="http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement/"/>
+    <title type="html"><![CDATA[Difio 1.1 Release Announcement]]></title>
+    <link href="http://dif.io/blog/2012/02/06/difio-1.1-release-announcement/"/>
     <updated>2012-02-06T10:00:00+02:00</updated>
-    <id>http://monupco.com/blog/2012/02/06/monupco-1.1-release-announcement</id>
-    <content type="html"><![CDATA[<p>Today <a href="http://www.monupco.com">Monupco</a> is pleased to announce the general availability
-of our updates monitoring service. Monupco provides user friendly interface to
+    <id>http://dif.io/blog/2012/02/06/difio-1.1-release-announcement</id>
+    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce the general availability
+of our updates monitoring service. Difio provides user friendly interface to
 monitor available updates for your cloud applications and information about different
 package versions.</p>
 
 <p>This is an alpha release for early adopters. Currently we support registration of
 Python applications hosted on Red Hat&#8217;s <a href="http://openshift.redhat.com">OpenShift Express</a>
 platform. Client side tools and installation information can be found at our
-<a href="https://github.com/monupco/monupco-openshift-express-python">GitHub page</a>.</p>
+<a href="https://github.com/difio/difio-openshift-python">GitHub page</a>.</p>
 
-<p>Monupco itself is developed in the cloud, for the cloud. We&#8217;re working to support
+<p>Difio itself is developed in the cloud, for the cloud. We&#8217;re working to support
 additional cloud vendors and more programming languages. Your feedback is valuable to us!
-We welcome your feature requests on <a href="http://twitter.com/monupco">Twitter</a> and
-<a href="https://github.com/monupco/monupco.github.com/issues/new">GitHub</a>.</p>
+We welcome your feature requests on <a href="http://twitter.com/difio">Twitter</a> and
+<a href="https://github.com/difio/bugs/issues/new">GitHub</a>.</p>
 
-<p>Monupco will remain free of charge until it reaches production-ready quality, when
+<p>Difio will remain free of charge until it reaches production-ready quality, when
 subscription plans will be announced. A gratis period and/or bonus credits will be made
 available to all early birds at that time.</p>
 
 <p>We provide simplified registration and log in into our management console using
 credentials from popular social networking providers.</p>
 
-<p><a href="https://monupco-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try Now</a></p>
+<p><a href="https://difio-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try Now</a></p>
 ]]></content>
   </entry>
   
