@@ -26,7 +26,7 @@ Small improvements to the web interface were made:
 * Added buttons to filter applications by status.
 
 In the next weeks we're looking to enable support for Ruby, PHP, Perl and Java and extend
-client side tools to more vendors. Stay [tuned](https://twitter.com/difio) if you don't
+client side tools to more vendors. Stay [tuned](https://twitter.com/DifioNews) if you don't
 want to miss the announcement.
 
 

@@ -29,4 +29,4 @@ There were some changes to our web site to provide faster page load times:
 * Individual update pages use *JSONP* to dynamically load the content.
 
 <a href="https://difio-otb.rhcloud.com/applications/mine/">Give it a try</a>
-or [follow us](https://twitter.com/difio) on Twitter for more news.
+or [follow us](https://twitter.com/DifioNews) on Twitter for more news.

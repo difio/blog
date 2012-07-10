@@ -33,4 +33,4 @@ is incorrect.
 Difio has already produced detailed information for 950+ [updates](https://difio-otb.rhcloud.com/updates/).
 
 <a href="https://difio-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try</a>
-or [follow us](https://twitter.com/difio) on Twitter for more news.
+or [follow us](https://twitter.com/DifioNews) on Twitter for more news.

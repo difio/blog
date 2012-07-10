@@ -37,4 +37,4 @@ In addition to that we're also working on enabling e-mail and SMS notifications 
 stay tuned!
 
 <a href="https://difio-otb.rhcloud.com/applications/mine/">Give it a try</a>
-or [follow us](https://twitter.com/difio) on Twitter for more news.
+or [follow us](https://twitter.com/DifioNews) on Twitter for more news.

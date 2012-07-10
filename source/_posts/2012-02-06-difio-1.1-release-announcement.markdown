@@ -20,7 +20,7 @@ platform. Client side tools and installation information can be found at our
 
 Difio itself is developed in the cloud, for the cloud. We're working to support
 additional cloud vendors and more programming languages. Your feedback is valuable to us!
-We welcome your feature requests on [Twitter](http://twitter.com/difio) and
+We welcome your feature requests on [Twitter](http://twitter.com/DifioNews) and
 [GitHub](https://github.com/difio/bugs/issues/new).
 
 
