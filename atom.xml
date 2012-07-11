@@ -4,7 +4,7 @@
   <title><![CDATA[Difio]]></title>
   <link href="http://dif.io/blog/atom.xml" rel="self"/>
   <link href="http://dif.io/blog/"/>
-  <updated>2012-07-11T13:47:30+03:00</updated>
+  <updated>2012-07-11T14:09:51+03:00</updated>
   <id>http://dif.io/blog/</id>
   <author>
     <name><![CDATA[Difio Team]]></name>
@@ -12,6 +12,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Monupco is now called Difio]]></title>
+    <link href="http://dif.io/blog/2012/07/11/monupco-is-now-called-difio/"/>
+    <updated>2012-07-11T13:55:00+03:00</updated>
+    <id>http://dif.io/blog/2012/07/11/monupco-is-now-called-difio</id>
+    <content type="html"><![CDATA[<p>We are pleased to announce that our updates monitoring service previously called
+Monupco has a new name. It is now called Difio and lives at <a href="http://www.dif.io">http://www.dif.io</a>.</p>
+
+<p>All data and user accounts have been migrated. Old web addreses have been updated
+to redirect to the new address. You will see the changes in effect after the DNS
+system propagates the new values across the world.</p>
+
+<p>We kindly ask those of you, who are using our registration agents to register their
+applications to the service to start using the new agents which can be found on
+<a href="http://www.dif.io/register/">this page</a>. If you have imported you applications manually,
+no action is needed.</p>
+
+<p>New data and updates will be published under the <a href="http://www.dif.io">http://www.dif.io</a> domain. Please
+update your bookmarks. Email notifications will continue to work and will contain the
+new addresses as well.</p>
+
+<p>We have updated our Twitter account as well. Please follow <a href="http://twitter.com/DifioNews">@DifioNews</a>
+for the latest updates.</p>
+
+<p>Along all these changes we have announced our public beta availability. For more information
+please go to <a href="http://dif.io/blog/2012/07/11/difio-1.6-public-beta-release-announcement">http://dif.io/blog/2012/07/11/difio-1.6-public-beta-release-announcement</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Difio 1.6 Public Beta Release Announcement]]></title>
