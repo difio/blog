@@ -4,7 +4,7 @@
   <title><![CDATA[Category: News | Difio]]></title>
   <link href="http://dif.io/blog/categories/news/atom.xml" rel="self"/>
   <link href="http://dif.io/blog/"/>
-  <updated>2012-07-11T10:26:34+03:00</updated>
+  <updated>2012-07-11T13:47:30+03:00</updated>
   <id>http://dif.io/blog/</id>
   <author>
     <name><![CDATA[Difio Team]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Difio 1.6 Public Beta Release Announcement]]></title>
+    <link href="http://dif.io/blog/2012/07/11/difio-1.6-public-beta-release-announcement/"/>
+    <updated>2012-07-11T13:34:00+03:00</updated>
+    <id>http://dif.io/blog/2012/07/11/difio-1.6-public-beta-release-announcement</id>
+    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce version 1.6
+of our updates monitoring service. Difio provides insight of available
+updates for open source components. It lets you inspect changes and take
+informed decision when or what to upgrade. This improves software life cycle
+planning and minimizes possible regressions and downtime.</p>
+
+<p>This release inludes tons of bug fixes and improvements to the service.
+Suport for manually importing packages is available as well. If you are not
+able to install any of our registration agents you can manually import a list
+of name/version pairs and follow updates for them. This functionality is available
+for Python, Ruby, Perl and Node.js environments. See
+<a href="http://www.dif.io/register/">how to register applications</a> page for more information.</p>
+
+<p>With this release Difio enters Public Beta and registration is open to everyone.
+We encourage developers of all backgrounds to <a href="http://www.dif.io/register/">register</a>
+their applications and send us their feedback via <a href="https://github.com/difio/bugs/issues/new">GitHub</a>
+or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
+
+<p><a href="https://difio-otb.rhcloud.com/applications/mine/">Give it a try</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Difio 1.5 Release Announcement]]></title>
@@ -153,37 +180,6 @@ For more information see the <a href="http://www.dif.io/register/">register</a> 
 <p>In the next weeks we're looking to enable support for Ruby, PHP, Perl and Java and extend
 client side tools to more vendors. Stay <a href="https://twitter.com/DifioNews">tuned</a> if you don't
 want to miss the announcement.</p>
-
-<p><a href="https://difio-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try Now</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Difio 1.1 Release Announcement]]></title>
-    <link href="http://dif.io/blog/2012/02/06/difio-1.1-release-announcement/"/>
-    <updated>2012-02-06T10:00:00+02:00</updated>
-    <id>http://dif.io/blog/2012/02/06/difio-1.1-release-announcement</id>
-    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce the general availability
-of our updates monitoring service. Difio provides user friendly interface to
-monitor available updates for your cloud applications and information about different
-package versions.</p>
-
-<p>This is an alpha release for early adopters. Currently we support registration of
-Python applications hosted on Red Hat's <a href="http://openshift.redhat.com">OpenShift Express</a>
-platform. Client side tools and installation information can be found at our
-<a href="https://github.com/difio/difio-openshift-python">GitHub page</a>.</p>
-
-<p>Difio itself is developed in the cloud, for the cloud. We're working to support
-additional cloud vendors and more programming languages. Your feedback is valuable to us!
-We welcome your feature requests on <a href="http://twitter.com/DifioNews">Twitter</a> and
-<a href="https://github.com/difio/bugs/issues/new">GitHub</a>.</p>
-
-<p>Difio will remain free of charge until it reaches production-ready quality, when
-subscription plans will be announced. A gratis period and/or bonus credits will be made
-available to all early birds at that time.</p>
-
-<p>We provide simplified registration and log in into our management console using
-credentials from popular social networking providers.</p>
 
 <p><a href="https://difio-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try Now</a></p>
 ]]></content>
