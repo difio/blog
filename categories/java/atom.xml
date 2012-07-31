@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Java | Difio]]></title>
+  <link href="http://dif.io/blog/categories/java/atom.xml" rel="self"/>
+  <link href="http://dif.io/blog/"/>
+  <updated>2012-07-31T22:01:50+03:00</updated>
+  <id>http://dif.io/blog/</id>
+  <author>
+    <name><![CDATA[Difio Team]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Difio 1.7 Release Announcement]]></title>
+    <link href="http://dif.io/blog/2012/07/31/difio-1.7-release-announcement/"/>
+    <updated>2012-07-31T21:50:00+03:00</updated>
+    <id>http://dif.io/blog/2012/07/31/difio-1.7-release-announcement</id>
+    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce version 1.7
+of our updates monitoring service. Difio provides insight of available
+updates for open source components. It lets you inspect changes and take
+informed decision when or what to upgrade. This improves software life cycle
+planning and minimizes possible regressions and downtime.</p>
+
+<p>This release adds support for Java! Available immediately is support for Java packages
+from <a href="http://search.maven.org">Maven Central</a>. We provide manual import capability as
+well as registration script for <a href="http://openshift.redhat.com">OpenShift</a> JBoss cartridges.
+See <a href="http://www.dif.io/register/">how to register applications</a> page for more information.</p>
+
+<p>We encourage developers from all backgrounds and languages to <a href="http://www.dif.io/register/">register</a>
+their applications and send us their feedback via <a href="https://github.com/difio/bugs/issues/new">GitHub</a>
+or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>
