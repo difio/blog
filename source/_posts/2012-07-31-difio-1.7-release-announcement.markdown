@@ -1,0 +1,22 @@
+---
+layout: post
+title: "Difio 1.7 Release Announcement"
+date: 2012-07-31 21:50
+comments: true
+categories: ["News", "Java", "JBoss", "OpenShift"]
+---
+
+Today [Difio](http://www.dif.io) is pleased to announce version 1.7
+of our updates monitoring service. Difio provides insight of available
+updates for open source components. It lets you inspect changes and take
+informed decision when or what to upgrade. This improves software life cycle
+planning and minimizes possible regressions and downtime.
+
+This release adds support for Java! Available immediately is support for Java packages
+from [Maven Central](http://search.maven.org). We provide manual import capability as
+well as registration script for [OpenShift](http://openshift.redhat.com) JBoss cartridges.
+See [how to register applications](http://www.dif.io/register/) page for more information.
+
+We encourage developers from all backgrounds and languages to [register](http://www.dif.io/register/)
+their applications and send us their feedback via [GitHub](https://github.com/difio/bugs/issues/new)
+or [Twitter](https://twitter.com/DifioNews).
