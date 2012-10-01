@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Python | Difio]]></title>
-  <link href="http://dif.io/blog/categories/python/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Heroku | Difio]]></title>
+  <link href="http://dif.io/blog/categories/heroku/atom.xml" rel="self"/>
   <link href="http://dif.io/blog/"/>
   <updated>2012-10-01T17:13:55+03:00</updated>
   <id>http://dif.io/blog/</id>
@@ -35,33 +35,6 @@ manually but now this is automated and more convenient.</p>
 <p>We encourage developers who use <em>Heroku</em> to <a href="http://www.dif.io/register/">register</a>
 their applications and send us their feedback via <a href="https://github.com/difio/bugs/issues/new">GitHub</a>
 or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Difio 1.6 Public Beta Release Announcement]]></title>
-    <link href="http://dif.io/blog/2012/07/11/difio-1.6-public-beta-release-announcement/"/>
-    <updated>2012-07-11T13:34:00+03:00</updated>
-    <id>http://dif.io/blog/2012/07/11/difio-1.6-public-beta-release-announcement</id>
-    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce version 1.6
-of our updates monitoring service. Difio provides insight of available
-updates for open source components. It lets you inspect changes and take
-informed decision when or what to upgrade. This improves software life cycle
-planning and minimizes possible regressions and downtime.</p>
-
-<p>This release inludes tons of bug fixes and improvements to the service.
-Suport for manually importing packages is available as well. If you are not
-able to install any of our registration agents you can manually import a list
-of name/version pairs and follow updates for them. This functionality is available
-for Python, Ruby, Perl and Node.js environments. See
-<a href="http://www.dif.io/register/">how to register applications</a> page for more information.</p>
-
-<p>With this release Difio enters Public Beta and registration is open to everyone.
-We encourage developers of all backgrounds to <a href="http://www.dif.io/register/">register</a>
-their applications and send us their feedback via <a href="https://github.com/difio/bugs/issues/new">GitHub</a>
-or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
-
-<p><a href="https://difio-otb.rhcloud.com/applications/mine/">Give it a try</a></p>
 ]]></content>
   </entry>
   
