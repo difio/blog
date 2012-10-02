@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Heroku | Difio]]></title>
-  <link href="http://dif.io/blog/categories/heroku/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Xeround | Difio]]></title>
+  <link href="http://dif.io/blog/categories/xeround/atom.xml" rel="self"/>
   <link href="http://dif.io/blog/"/>
   <updated>2012-10-02T13:49:35+03:00</updated>
   <id>http://dif.io/blog/</id>
@@ -39,31 +39,6 @@ is using:</p>
 
 <p>We're especially interested in what other PaaS platforms developers are using. Please let us know
 what is your programming language and platform in the comments!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Difio Adds Support for Heroku]]></title>
-    <link href="http://dif.io/blog/2012/10/01/difio-adds-support-for-heroku/"/>
-    <updated>2012-10-01T17:05:00+03:00</updated>
-    <id>http://dif.io/blog/2012/10/01/difio-adds-support-for-heroku</id>
-    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce initial
-support for <a href="http://heroku.com">Heroku</a>. Difio provides insight of available
-updates for open source components. It lets you inspect changes and take
-informed decision when or what to upgrade. This improves software life cycle
-planning and minimizes possible regressions and downtime.</p>
-
-<p>We have added three new registration scripts allowing <em>Heroku</em> users to
-subscribe their applications to Difio. At the moment there is support for
-<a href="https://github.com/difio/difio-heroku-python/blob/master/README.rst">Python</a>,
-<a href="https://github.com/difio/difio-heroku-ruby/blob/master/README.md">Ruby</a> and
-<a href="https://github.com/difio/difio-heroku-nodejs/blob/master/README.md">Node.js</a>
-programming languages. Previously <em>Heroku</em> applications could be registered only
-manually but now this is automated and more convenient.</p>
-
-<p>We encourage developers who use <em>Heroku</em> to <a href="http://www.dif.io/register/">register</a>
-their applications and send us their feedback via <a href="https://github.com/difio/bugs/issues/new">GitHub</a>
-or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
 ]]></content>
   </entry>
   
