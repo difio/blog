@@ -1,0 +1,25 @@
+---
+layout: post
+title: "Difio 1.8 Release Announcement"
+date: 2012-10-24 22:27
+comments: true
+categories: ["News"]
+---
+
+Today [Difio](http://www.dif.io) is pleased to announce version 1.8
+of our updates monitoring service. Difio provides insight of available
+updates for open source components. It lets you inspect changes and take
+informed decision when or what to upgrade. This improves software life cycle
+planning and minimizes possible regressions and downtime.
+
+This release changes our email notification subsystem. Users are now able to
+select between daily and weekly notification. Daily digest is the default value.
+If you want to change it, please login to your
+[profile](https://difio-otb.rhcloud.com/profiles/mine/).
+Email format has also changed. Messages now list URLs for all updates
+released since the last notification which are relevant to your applications.
+
+
+We encourage developers from all backgrounds and languages to [register](http://www.dif.io/register/)
+their applications and send us their feedback via [GitHub](https://github.com/difio/bugs/issues/new)
+or [Twitter](https://twitter.com/DifioNews).
