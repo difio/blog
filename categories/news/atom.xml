@@ -4,7 +4,7 @@
   <title><![CDATA[Category: News | Difio]]></title>
   <link href="http://dif.io/blog/categories/news/atom.xml" rel="self"/>
   <link href="http://dif.io/blog/"/>
-  <updated>2012-10-16T14:41:37+03:00</updated>
+  <updated>2012-10-24T23:16:38+03:00</updated>
   <id>http://dif.io/blog/</id>
   <author>
     <name><![CDATA[Difio Team]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Difio 1.8 Release Announcement]]></title>
+    <link href="http://dif.io/blog/2012/10/24/difio-1.8-release-announcement/"/>
+    <updated>2012-10-24T22:27:00+03:00</updated>
+    <id>http://dif.io/blog/2012/10/24/difio-1.8-release-announcement</id>
+    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce version 1.8
+of our updates monitoring service. Difio provides insight of available
+updates for open source components. It lets you inspect changes and take
+informed decision when or what to upgrade. This improves software life cycle
+planning and minimizes possible regressions and downtime.</p>
+
+<p>This release changes our email notification subsystem. Users are now able to
+select between daily and weekly notification. Daily digest is the default value.
+If you want to change it, please login to your
+<a href="https://difio-otb.rhcloud.com/profiles/mine/">profile</a>.
+Email format has also changed. Messages now list URLs for all updates
+released since the last notification which are relevant to your applications.</p>
+
+<p>We encourage developers from all backgrounds and languages to <a href="http://www.dif.io/register/">register</a>
+their applications and send us their feedback via <a href="https://github.com/difio/bugs/issues/new">GitHub</a>
+or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Difio Adds Support for Heroku]]></title>
@@ -113,44 +137,6 @@ their applications and send us their feedback via <a href="https://github.com/di
 or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
 
 <p><a href="https://difio-otb.rhcloud.com/applications/mine/">Give it a try</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Difio 1.5 Release Announcement]]></title>
-    <link href="http://dif.io/blog/2012/06/04/difio-1.5-release-announcement/"/>
-    <updated>2012-06-04T13:24:00+03:00</updated>
-    <id>http://dif.io/blog/2012/06/04/difio-1.5-release-announcement</id>
-    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce version 1.5
-of our updates monitoring service. Difio provides insight of available
-updates for open source components. It lets you inspect changes and take
-informed decision when or what to upgrade. This improves software life cycle
-planning and minimizes possible regressions and downtime.</p>
-
-<p>This release adds support for <a href="http://pear.php.net/">PHP PEAR</a> packages and
-new registration agents for <a href="http://dotcloud.com">dotCloud</a> and
-<a href="http://openshift.redhat.com">OpenShift</a> PHP applications. See
-<a href="http://www.dif.io/register/">how to register applications</a> page for more information.
-Currently only packages from <a href="http://pear.php.net">http://pear.php.net</a> channel are supported.
-We're working on enabling additional channels like <a href="http://pecl.php.net">PECL</a>
-and self hosted PEAR channels.</p>
-
-<p>In addition to popular package index directories there are many projects which
-are distributed directly and not via package index. We've made a first step towards
-supporting such projects. This release adds support for projects which are
-distributed directly from <a href="http://github.com">GitHub</a>. At the moment support is limited
-to projects which use tags.</p>
-
-<p>Our web site now supports search functionality via Google custom search.</p>
-
-<p>In the next releases we're going to add registration agents for more cloud/PaaS vendors
-and enable manual import of packages for those who do not work in the clouds. Our team
-is working on a number of website improvements to make it faster and easier to use.
-In addition to that we're also working on enabling e-mail and SMS notifications so
-stay tuned!</p>
-
-<p><a href="https://difio-otb.rhcloud.com/applications/mine/">Give it a try</a>
-or <a href="https://twitter.com/DifioNews">follow us</a> on Twitter for more news.</p>
 ]]></content>
   </entry>
   
