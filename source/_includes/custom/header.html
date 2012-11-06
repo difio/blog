@@ -1,12 +1,7 @@
-<div id="header">
-        <div class="toplevel">
-            {% include navigation.html %}
-        </div>
-</div> <!-- END HEADER -->
-
-
-    <div id="subheader">
-        <div class="toplevel">
-            <h1><a href="{{ root_url }}/" class="logo">difio</a><sub>{{ site.subtitle }}</sub></h1>
-        </div>
-    </div> <!-- END subheader -->
+<div id="subheader">
+    <div class="toplevel">
+        <h1><a href="{{ root_url }}/" class="logo">difio</a><sub>{{ site.subtitle }}</sub></h1>
+        {% include navigation.html %}
+    </div>
+</div> <!-- END subheader -->
+<div id="buffer"></div>
