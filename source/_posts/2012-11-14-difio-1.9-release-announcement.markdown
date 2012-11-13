@@ -9,7 +9,7 @@ categories: ["News", "API diff", "API"]
 Today [Difio](http://www.dif.io) is pleased to announce version 1.9
 of our dependencies monitoring service. Difio keeps track of application
 dependencies and tells you when they change. We let you inspect the
-changes and take informed decision when or what to upgrade.
+changes and make informed decision when or what to upgrade.
 
 This release includes several new features and website updates.
 
