@@ -4,7 +4,7 @@
   <title><![CDATA[Category: News | Difio]]></title>
   <link href="http://dif.io/blog/categories/news/atom.xml" rel="self"/>
   <link href="http://dif.io/blog/"/>
-  <updated>2012-11-07T00:26:14+02:00</updated>
+  <updated>2012-11-14T11:09:10+02:00</updated>
   <id>http://dif.io/blog/</id>
   <author>
     <name><![CDATA[Difio Team]]></name>
@@ -12,6 +12,73 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Difio 1.9 Release Announcement]]></title>
+    <link href="http://dif.io/blog/2012/11/14/difio-1.9-release-announcement/"/>
+    <updated>2012-11-14T10:00:00+02:00</updated>
+    <id>http://dif.io/blog/2012/11/14/difio-1.9-release-announcement</id>
+    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce version 1.9
+of our dependencies monitoring service. Difio keeps track of application
+dependencies and tells you when they change. We let you inspect the
+changes and make informed decision when or what to upgrade.</p>
+
+<p>This release includes several new features and website updates.</p>
+
+<h2>API diff</h2>
+
+<p>The <em>API diff</em> feature is exploring packages source code and builds their
+API definitions. Then definitions between your currently installed package
+and the latest upstream version are compared. Changes are presented as a
+colored diff format for better readability.</p>
+
+<p><em>API diff</em> is accessible through the main update view, next to changelog,
+commit log and bugs list as shown below:</p>
+
+<p><img src="/images/api_diff.png" title="API diff example" alt="API diff example" /></p>
+
+<p><em>API diff</em> is initially available only for Python. For Python we support
+detection of class definitions, function definitions and decorators.</p>
+
+<p>Example showing no API changes can be seen with a recent
+<a href="http://www.dif.io/updates/MySQL-python-1.2.4b5/MySQL-python-1.2.4c1/8439/">MySQL-python release</a>.</p>
+
+<p>Example showing new classes being added and some functions changing can be
+seen with a recent
+<a href="http://www.dif.io/updates/django-social-auth-0.7.7/django-social-auth-0.7.9/8791/">django-social-auth release</a>.</p>
+
+<p><em>API diff</em> support for other languages will be added in future releases!</p>
+
+<h2>Refresh manually imported apps</h2>
+
+<p>It is now possible to refresh the dependency list for manually imported applications.
+Simply click the <em>Refresh</em> button as shown below and import the dependency list again.</p>
+
+<p><img src="/images/refresh_app.png" title="Refresh button" alt="Refresh button" /></p>
+
+<p>The refresh functionality has always been present for all of our PaaS
+<a href="http://www.dif.io/register/">registration agents</a>.</p>
+
+<h2>Share the package list</h2>
+
+<p>When you need to match your dev environment with the production one, or
+ensure dependency similarity between multiple nodes you need the
+list of already installed packages.</p>
+
+<p>In this release Difio adds a new button labeled <em>Package List</em> which exports
+all installed dependencies as plain text. The format is name==version.
+You can share this list with other developers as needed.</p>
+
+<h2>Minor improvements and bug fixes</h2>
+
+<p>We have also done lots of minor improvements and fixes to our website.
+They are invisible to the naked eye so no need to tell you more :).</p>
+
+<p>We encourage developers from all backgrounds and languages to <a href="http://www.dif.io/register/">register</a>
+their applications and send us their feedback via <a href="https://github.com/difio/bugs/issues/new">GitHub</a>
+or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Difio Adds Initial Support for cloudControl]]></title>
@@ -105,35 +172,6 @@ See <a href="http://www.dif.io/register/">how to register applications</a> page 
 <p>We encourage developers from all backgrounds and languages to <a href="http://www.dif.io/register/">register</a>
 their applications and send us their feedback via <a href="https://github.com/difio/bugs/issues/new">GitHub</a>
 or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Monupco is now called Difio]]></title>
-    <link href="http://dif.io/blog/2012/07/11/monupco-is-now-called-difio/"/>
-    <updated>2012-07-11T13:55:00+03:00</updated>
-    <id>http://dif.io/blog/2012/07/11/monupco-is-now-called-difio</id>
-    <content type="html"><![CDATA[<p>We are pleased to announce that our updates monitoring service previously called
-Monupco has a new name. It is now called Difio and lives at <a href="http://www.dif.io">http://www.dif.io</a>.</p>
-
-<p>All data and user accounts have been migrated. Old web addreses have been updated
-to redirect to the new address. You will see the changes in effect after the DNS
-system propagates the new values across the world.</p>
-
-<p>We kindly ask those of you, who are using our registration agents to register their
-applications to the service to start using the new agents which can be found on
-<a href="http://www.dif.io/register/">this page</a>. If you have imported you applications manually,
-no action is needed.</p>
-
-<p>New data and updates will be published under the <a href="http://www.dif.io">http://www.dif.io</a> domain. Please
-update your bookmarks. Email notifications will continue to work and will contain the
-new addresses as well.</p>
-
-<p>We have updated our Twitter account as well. Please follow <a href="http://twitter.com/DifioNews">@DifioNews</a>
-for the latest updates.</p>
-
-<p>Along all these changes we have announced our public beta availability. For more information
-please go to <a href="http://dif.io/blog/2012/07/11/difio-1.6-public-beta-release-announcement">http://dif.io/blog/2012/07/11/difio-1.6-public-beta-release-announcement</a></p>
 ]]></content>
   </entry>
   
