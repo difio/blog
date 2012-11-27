@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us" xmlns:fb="https://www.facebook.com/2008/fbml" id="html-main">
 <head>
-  <title>Difio 1.9 Release Announcement - Difio</title>
+  <title>Difio Adds Application History Tracking - Difio</title>
   
   
 
@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   
-  <link rel="canonical" href="http://dif.io/blog/2012/11/14/difio-1.9-release-announcement" />
+  <link rel="canonical" href="http://dif.io/blog/2012/11/27/difio-adds-application-history-tracking" />
   <link href="/blog/favicon.png" rel="icon" />
   <script src="/blog/javascripts/modernizr-2.0.js" type="text/javascript"></script>
   <script src="/blog/javascripts/ender.js" type="text/javascript"></script>
@@ -20,7 +20,7 @@
   <link href="/blog/atom.xml" rel="alternate" title="Difio" type="application/atom+xml" />
   <!-- OpenGraph -->
 <meta property="og:image" content="//d3h3t4beeg8ypi.cloudfront.net/static/v6/i/72.png" />
-<meta property="og:title" content="Difio 1.9 Release Announcement" />
+<meta property="og:title" content="Difio Adds Application History Tracking" />
 <meta property="og:site_name" content="Difio" />
 
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css' />
@@ -64,7 +64,7 @@
             <div style="float: left; width: 100%">
                     
         
-            <h2>Difio 1.9 Release Announcement</h2>
+            <h2>Difio Adds Application History Tracking</h2>
         
     
 
@@ -86,7 +86,7 @@
 
 
 
-  Nov 14<span>th</span>, 2012
+  Nov 27<span>th</span>, 2012
 
 
 
@@ -95,61 +95,27 @@
     
 
     
-            <div class="entry-content"><p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce version 1.9
-of our dependencies monitoring service. Difio keeps track of application
+            <div class="entry-content"><p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce
+support for tracking application history. Difio keeps track of application
 dependencies and tells you when they change. We let you inspect the
 changes and make informed decision when or what to upgrade.</p>
 
-<p>This release includes several new features and website updates.</p>
+<p>Our team has added a new feature to track changes in the list of
+dependencies used by applications. Every time you upgrade, add or remove a
+package from your application dependencies Difio creates a history record.
+As always, don&#8217;t forget to re-run the registration script or to manually refresh
+your apps after changing the dependencies!</p>
 
-<h2>API diff</h2>
+<p>Every application starts with a single history record, reflecting its latest state.
+Later you can review your app history and revert to previously used versions
+for example. Difio is planning to add more goodies to the history page in a future
+release. If you have an idea and want us to implement it, please post it on the
+<a href="http://www.dif.io/features/#ideas">ideas dashboard</a>!</p>
 
-<p>The <em>API diff</em> feature is exploring packages source code and builds their
-API definitions. Then definitions between your currently installed package
-and the latest upstream version are compared. Changes are presented as a
-colored diff format for better readability.</p>
+<p>This new functionality is accessible on the application details view via the
+<em>Last check-in</em> hyperlink, as shown below.</p>
 
-<p><em>API diff</em> is accessible through the main update view, next to changelog,
-commit log and bugs list as shown below:</p>
-
-<p><img src="/blog/images/api_diff.png" title="API diff example" alt="API diff example" /></p>
-
-<p><em>API diff</em> is initially available only for Python. For Python we support
-detection of class definitions, function definitions and decorators.</p>
-
-<p>Example showing no API changes can be seen with a recent
-<a href="http://www.dif.io/updates/MySQL-python-1.2.4b5/MySQL-python-1.2.4c1/8439/">MySQL-python release</a>.</p>
-
-<p>Example showing new classes being added and some functions changing can be
-seen with a recent
-<a href="http://www.dif.io/updates/django-social-auth-0.7.7/django-social-auth-0.7.9/8791/">django-social-auth release</a>.</p>
-
-<p><em>API diff</em> support for other languages will be added in future releases!</p>
-
-<h2>Refresh manually imported apps</h2>
-
-<p>It is now possible to refresh the dependency list for manually imported applications.
-Simply click the <em>Refresh</em> button as shown below and import the dependency list again.</p>
-
-<p><img src="/blog/images/refresh_app.png" title="Refresh button" alt="Refresh button" /></p>
-
-<p>The refresh functionality has always been present for all of our PaaS
-<a href="http://www.dif.io/register/">registration agents</a>.</p>
-
-<h2>Share the package list</h2>
-
-<p>When you need to match your dev environment with the production one, or
-ensure dependency similarity between multiple nodes you need the
-list of already installed packages.</p>
-
-<p>In this release Difio adds a new button labeled <em>Package List</em> which exports
-all installed dependencies as plain text. The format is name==version.
-You can share this list with other developers as needed.</p>
-
-<h2>Minor improvements and bug fixes</h2>
-
-<p>We have also done lots of minor improvements and fixes to our website.
-They are invisible to the naked eye so no need to tell you more :).</p>
+<p><img src="/blog/images/apphistory.png" title="Link to history page" alt="Link to history page" /></p>
 
 <p>We encourage developers from all backgrounds and languages to <a href="http://www.dif.io/register/">register</a>
 their applications and send us their feedback via <a href="https://github.com/difio/bugs/issues/new">GitHub</a>
@@ -162,7 +128,7 @@ or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/api/'>API</a>, <a class='category' href='/blog/categories/api-diff/'>API diff</a>, <a class='category' href='/blog/categories/news/'>News</a>
+    <a class='category' href='/blog/categories/news/'>News</a>
   
 </span>
 
@@ -175,7 +141,7 @@ or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
     
         <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://dif.io/blog/2012/11/14/difio-1.9-release-announcement/" data-via="DifioNews" data-counturl="http://dif.io/blog/2012/11/14/difio-1.9-release-announcement/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://dif.io/blog/2012/11/27/difio-adds-application-history-tracking/" data-via="DifioNews" data-counturl="http://dif.io/blog/2012/11/27/difio-adds-application-history-tracking/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -188,11 +154,9 @@ or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
     
 
     
-        <a style="float: left;" href="/blog/2012/11/05/difio-adds-initial-support-for-cloudcontrol/" title="Previous Post: Difio Adds Initial Support for cloudControl">&laquo; Difio Adds Initial Support for cloudControl</a>
+        <a style="float: left;" href="/blog/2012/11/14/difio-1.9-release-announcement/" title="Previous Post: Difio 1.9 Release Announcement">&laquo; Difio 1.9 Release Announcement</a>
     
 
-    
-        <a style="float: right;" href="/blog/2012/11/27/difio-adds-application-history-tracking/" title="next Post: Difio Adds Application History Tracking">Difio Adds Application History Tracking &raquo;</a>
     
   </div>
 
@@ -262,8 +226,8 @@ or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://dif.io/blog/2012/11/14/difio-1.9-release-announcement/';
-        var disqus_url = 'http://dif.io/blog/2012/11/14/difio-1.9-release-announcement/';
+        var disqus_identifier = 'http://dif.io/blog/2012/11/27/difio-adds-application-history-tracking/';
+        var disqus_url = 'http://dif.io/blog/2012/11/27/difio-adds-application-history-tracking/';
         var disqus_script = 'embed.js';
       
     (function () {

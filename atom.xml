@@ -4,7 +4,7 @@
   <title><![CDATA[Difio]]></title>
   <link href="http://dif.io/blog/atom.xml" rel="self"/>
   <link href="http://dif.io/blog/"/>
-  <updated>2012-11-14T11:09:10+02:00</updated>
+  <updated>2012-11-27T23:26:51+02:00</updated>
   <id>http://dif.io/blog/</id>
   <author>
     <name><![CDATA[Difio Team]]></name>
@@ -12,6 +12,39 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Difio Adds Application History Tracking]]></title>
+    <link href="http://dif.io/blog/2012/11/27/difio-adds-application-history-tracking/"/>
+    <updated>2012-11-27T23:04:00+02:00</updated>
+    <id>http://dif.io/blog/2012/11/27/difio-adds-application-history-tracking</id>
+    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce
+support for tracking application history. Difio keeps track of application
+dependencies and tells you when they change. We let you inspect the
+changes and make informed decision when or what to upgrade.</p>
+
+<p>Our team has added a new feature to track changes in the list of
+dependencies used by applications. Every time you upgrade, add or remove a
+package from your application dependencies Difio creates a history record.
+As always, don&#8217;t forget to re-run the registration script or to manually refresh
+your apps after changing the dependencies!</p>
+
+<p>Every application starts with a single history record, reflecting its latest state.
+Later you can review your app history and revert to previously used versions
+for example. Difio is planning to add more goodies to the history page in a future
+release. If you have an idea and want us to implement it, please post it on the
+<a href="http://www.dif.io/features/#ideas">ideas dashboard</a>!</p>
+
+<p>This new functionality is accessible on the application details view via the
+<em>Last check-in</em> hyperlink, as shown below.</p>
+
+<p><img src="http://dif.io/blog/images/apphistory.png" title="Link to history page" alt="Link to history page" /></p>
+
+<p>We encourage developers from all backgrounds and languages to <a href="http://www.dif.io/register/">register</a>
+their applications and send us their feedback via <a href="https://github.com/difio/bugs/issues/new">GitHub</a>
+or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Difio 1.9 Release Announcement]]></title>
@@ -1140,74 +1173,6 @@ With OpenShift this is easy and fast. Here&#8217;s how:</p>
 modify your database connection settings at this point and start adding new features.</p></li>
 </ol>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Difio on OpenShift Express]]></title>
-    <link href="http://dif.io/blog/2012/02/09/difio-on-openshift-express/"/>
-    <updated>2012-02-09T18:48:00+02:00</updated>
-    <id>http://dif.io/blog/2012/02/09/difio-on-openshift-express</id>
-    <content type="html"><![CDATA[<p><a href="http://www.dif.io">Difio</a> stands for Monitor Updates In The Cloud.
-As the name suggests this is a service which provides updates information
-for applications hosted in a PaaS environment. If you are a developer or
-a sysadmin knowing when and what to upgrade will make your life easier.</p>
-
-<p>Difio will generate a human friendly description of changes between the
-installed package version and the latest one. Currently a <a href="https://github.com/difio/difio-openshift-python">client
-side tool</a> for
-Python applications on OpenShift is available and
-others will follow soon.</p>
-
-<p>Difio started with a local SQLite database which was the fastest way to get up
-and running. At present the database layer is powered by MySQL and the intention
-is to switch to NoSQL at some point. It is written in Python.</p>
-
-<p>Difio is split into several parts:</p>
-
-<ul>
-<li>Management console - the interface with which users interact.
-It is hosted on <a href="http://openshift.redhat.com/">OpenShift</a> Express.</li>
-<li>Website - static HTML website which is periodically updated by a
-<a href="http://celeryproject.org/">Celery</a> task.</li>
-<li>Blog - powered by <a href="http://octopress.org">Octopress</a>. Together with
-the website this is hosted on GitHub.</li>
-</ul>
-
-
-<p>All source code of Difio is managed with git and &#8216;git push&#8217; is simply a
-rock star. Combining git + ssh keys made it possible to programatically commit
-and push when necessary.</p>
-
-<p>The application uses Markdown extensively. All blog and website pages
-and multi-line text entries into the database are rendered as Markdown.
-This makes entering and editing text very easy.</p>
-
-<p>While developing Difio I didn&#8217;t want to force users to remember yet another
-username and password nor store them into the database. The solution is no passwords required!
-Instead Difio uses popular social networks credentials and limits the information
-stored in database to the bare minimum.</p>
-
-<p>Difio has recently <a href="http://dif.io/blog/2012/02/06/difio-1.1-release-announcement/">announced</a>
-its first Alpha release. The following weeks will see development for Ruby, PHP and Perl packages
-and the corresponding client side tools for these catridges on OpenShift.
-Java and Node.js are also under investigation.</p>
-
-<p>Once these popular languages and package types are supported, client side tools
-for other PaaS vendors will follow. On the radar are requests for:</p>
-
-<ul>
-<li>Heroku</li>
-<li>Engine Yard</li>
-<li>AppFog</li>
-<li>Google Apps Engine</li>
-<li>SalesForce</li>
-<li>DotCloud</li>
-</ul>
-
-
-<p>If you&#8217;re already excited please follow @DifioNews on <a href="https://twitter.com/DifioNews">Twitter</a> and
-<a href="https://github.com/difio">GitHub</a> or <a href="https://difio-otb.rhcloud.com/applications/mine/">get started</a> today!</p>
 ]]></content>
   </entry>
   

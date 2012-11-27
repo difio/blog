@@ -4,7 +4,7 @@
   <title><![CDATA[Category: News | Difio]]></title>
   <link href="http://dif.io/blog/categories/news/atom.xml" rel="self"/>
   <link href="http://dif.io/blog/"/>
-  <updated>2012-11-14T11:09:10+02:00</updated>
+  <updated>2012-11-27T23:26:51+02:00</updated>
   <id>http://dif.io/blog/</id>
   <author>
     <name><![CDATA[Difio Team]]></name>
@@ -12,6 +12,39 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Difio Adds Application History Tracking]]></title>
+    <link href="http://dif.io/blog/2012/11/27/difio-adds-application-history-tracking/"/>
+    <updated>2012-11-27T23:04:00+02:00</updated>
+    <id>http://dif.io/blog/2012/11/27/difio-adds-application-history-tracking</id>
+    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce
+support for tracking application history. Difio keeps track of application
+dependencies and tells you when they change. We let you inspect the
+changes and make informed decision when or what to upgrade.</p>
+
+<p>Our team has added a new feature to track changes in the list of
+dependencies used by applications. Every time you upgrade, add or remove a
+package from your application dependencies Difio creates a history record.
+As always, don't forget to re-run the registration script or to manually refresh
+your apps after changing the dependencies!</p>
+
+<p>Every application starts with a single history record, reflecting its latest state.
+Later you can review your app history and revert to previously used versions
+for example. Difio is planning to add more goodies to the history page in a future
+release. If you have an idea and want us to implement it, please post it on the
+<a href="http://www.dif.io/features/#ideas">ideas dashboard</a>!</p>
+
+<p>This new functionality is accessible on the application details view via the
+<em>Last check-in</em> hyperlink, as shown below.</p>
+
+<p><img src="/images/apphistory.png" title="Link to history page" alt="Link to history page" /></p>
+
+<p>We encourage developers from all backgrounds and languages to <a href="http://www.dif.io/register/">register</a>
+their applications and send us their feedback via <a href="https://github.com/difio/bugs/issues/new">GitHub</a>
+or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Difio 1.9 Release Announcement]]></title>
@@ -148,28 +181,6 @@ programming languages. Previously <em>Heroku</em> applications could be register
 manually but now this is automated and more convenient.</p>
 
 <p>We encourage developers who use <em>Heroku</em> to <a href="http://www.dif.io/register/">register</a>
-their applications and send us their feedback via <a href="https://github.com/difio/bugs/issues/new">GitHub</a>
-or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Difio 1.7 Release Announcement]]></title>
-    <link href="http://dif.io/blog/2012/07/31/difio-1.7-release-announcement/"/>
-    <updated>2012-07-31T21:50:00+03:00</updated>
-    <id>http://dif.io/blog/2012/07/31/difio-1.7-release-announcement</id>
-    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce version 1.7
-of our updates monitoring service. Difio provides insight of available
-updates for open source components. It lets you inspect changes and take
-informed decision when or what to upgrade. This improves software life cycle
-planning and minimizes possible regressions and downtime.</p>
-
-<p>This release adds support for Java! Available immediately is support for Java packages
-from <a href="http://search.maven.org">Maven Central</a>. We provide manual import capability as
-well as registration script for <a href="http://openshift.redhat.com">OpenShift</a> JBoss cartridges.
-See <a href="http://www.dif.io/register/">how to register applications</a> page for more information.</p>
-
-<p>We encourage developers from all backgrounds and languages to <a href="http://www.dif.io/register/">register</a>
 their applications and send us their feedback via <a href="https://github.com/difio/bugs/issues/new">GitHub</a>
 or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
 ]]></content>
