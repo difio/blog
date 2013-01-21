@@ -22,7 +22,7 @@ Every application starts with a single history record, reflecting its latest sta
 Later you can review your app history and revert to previously used versions
 for example. Difio is planning to add more goodies to the history page in a future
 release. If you have an idea and want us to implement it, please post it on the
-[ideas dashboard](http://www.dif.io/features/#ideas)!
+[ideas dashboard](http://www.dif.io/#ideas)!
 
 
 This new functionality is accessible on the application details view via the
