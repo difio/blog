@@ -22,5 +22,35 @@
         </div>
     </div>
 
-    <div class="signin" style="width: 115px;"><a href="http://www.dif.io/register/" class="button light_blue small">register apps</a></div>
+    <div class="signin" style="width: 115px;"><a href="#" onclick='dijit.byId("dlgRegister").show()' class="button light_blue small">register apps</a></div>
+
+<div id="dlgRegister" data-dojo-type="dojox.widget.Dialog" class="claro dialog" dimensions="[410,115]" style="display: none; background-color: inherit;">
+    <table style="float:left;margin-left: 10px;">
+        <tr>
+            <th colspan="6">Manual import</th>
+        </tr>
+        <tr>
+            <th class="center">Java</th>
+            <th class="center">Node.js</th>
+            <th class="center">Perl</th>
+            <th class="center">PHP</th>
+            <th class="center">Python</th>
+            <th class="center">Ruby</th>
+        </tr>
+        <tr>
+            <td class="center"><a href="https://difio-otb.rhcloud.com/application/import/mvn-dependency-list/"><img src="//d3h3t4beeg8ypi.cloudfront.net/static/v25/i/s/ok.png" alt="YES" /></a></td>
+            <td class="center"><a href="https://difio-otb.rhcloud.com/application/import/npm-ls/"><img src="//d3h3t4beeg8ypi.cloudfront.net/static/v25/i/s/ok.png" alt="YES" /></a></td>
+            <td class="center"><a href="https://difio-otb.rhcloud.com/application/import/perllocal.pod/"><img src="//d3h3t4beeg8ypi.cloudfront.net/static/v25/i/s/ok.png" alt="YES" /></a></td>
+            <td class="center"><img src="//d3h3t4beeg8ypi.cloudfront.net/static/v25/i/s/error.png" alt="NO" /></td>
+            <td class="center"><a href="https://difio-otb.rhcloud.com/application/import/pip-freeze/"><img src="//d3h3t4beeg8ypi.cloudfront.net/static/v25/i/s/ok.png" alt="YES" /></a></td>
+            <td class="center"><a href="https://difio-otb.rhcloud.com/application/import/bundle-list/"><img src="//d3h3t4beeg8ypi.cloudfront.net/static/v25/i/s/ok.png" alt="YES" /></a></td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                To register PaaS based applications <a href="http://www.dif.io/register/">see the instructions</a>.
+            </td>
+        </tr>
+    </table>
+</div>
+
 </div>
