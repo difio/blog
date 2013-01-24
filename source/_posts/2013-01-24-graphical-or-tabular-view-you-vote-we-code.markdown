@@ -23,7 +23,7 @@ more detailed information about changes between the two versions. By default onl
 available updates are shown but you can display all installed packages as well.
 
 
-We also have a history page which holds a snapshot of your installed depednencies
+We also have a history page which holds a snapshot of your installed dependencies
 whenever they change. It looks like this:
 
 ![History records](/images/history_records.png "History records")
@@ -37,12 +37,12 @@ any version release history nor how does your application relate to that.
 Graphical View
 --------------
 
-Our proposal is to implement a graphical view as shown on the mockup below:
+Our proposal is to implement a graphical view as shown on the mock-up below:
 
 ![Graphical view](/images/app_graph.png "Graphical view")
 
 
-On the verical axis are all the dependencies used by your application. By default only outdated
+On the vertical axis are all the dependencies used by your application. By default only outdated
 ones are shown, sorted by their name for readability.
 
 On the horizontal axis are all available versions for that particular package shown as markers.
@@ -64,7 +64,8 @@ You Vote, We Code
 -----------------
 
 The ball is yours now! If this page gets over 50 tweets, comments, shares or likes we are going to implement this in [Difio](http://www.dif.io).
-A breakdown of features will be posted in the comments below. You can vote up or down for any of them. 
+A breakdown of features will be posted in the comments below. Please vote up or down for any of them.
+Features that get promoted will be implemented.
 
 If you have any other ideas or suggestions please let us know. You can use the comments form or submit them
 via [GitHub](https://github.com/difio/bugs/issues/new) or [Twitter](https://twitter.com/DifioNews).
