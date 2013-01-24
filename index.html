@@ -126,6 +126,97 @@
                 
                     
         
+            <h2><a href="/blog/2013/01/24/graphical-or-tabular-view-you-vote-we-code/">Graphical or Tabular View? You Vote, We Code</a></h2>
+        
+
+        
+            
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Difio Team</span></span>
+@
+            
+
+
+
+
+
+
+
+
+  Jan 24<span>th</span>, 2013
+
+
+
+            <br /><br />
+        
+    
+
+    
+        <div class="entry-content"><p>Hello guys! We haven&#8217;t posted in a while and we&#8217;re sorry for this. Here&#8217;s an idea which is
+going around in our heads. Let us know what do you think.</p>
+
+<h2>Tabular View</h2>
+
+<p>Currently when you log into the <a href="https://difio-otb.rhcloud.com/applications/mine/">application dashboard</a>
+and navigate to the details view of each application you see this:</p>
+
+<p><img src="/blog/images/appdetails.png" title="Tabular view" alt="Tabular view" /></p>
+
+<p>The installed packages are on the left while new versions are on the right. The links point to
+more detailed information about changes between the two versions. By default only the
+available updates are shown but you can display all installed packages as well.</p>
+
+<p>We also have a history page which holds a snapshot of your installed dependencies
+whenever they change. It looks like this:</p>
+
+<p><img src="/blog/images/history_records.png" title="History records" alt="History records" /></p>
+
+<p>These two pages inform you about the latest and greatest versions
+and which ones you have been using in the past. However they don&#8217;t show you
+any version release history nor how does your application relate to that.</p>
+
+<h2>Graphical View</h2>
+
+<p>Our proposal is to implement a graphical view as shown on the mock-up below:</p>
+
+<p><img src="/blog/images/app_graph.png" title="Graphical view" alt="Graphical view" /></p>
+
+<p>On the vertical axis are all the dependencies used by your application. By default only outdated
+ones are shown, sorted by their name for readability.</p>
+
+<p>On the horizontal axis are all available versions for that particular package shown as markers.
+A tooltip shows you the package name and version. Density and scale is based on release dates.
+Zoom will help you investigate more closely.</p>
+
+<p>The marker or the tooltip can be a link to the standard page where these two versions are compared and analyzed.
+The marker icon can be left as is or be one of the icons representing Low, Medium or High change rate.</p>
+
+<p>Individual packages can be turned on or off of course.</p>
+
+<p>Application state is shown as a line connecting the versions you have installed. Previous states, where dependency
+versions were different can be represented as similar lines on the left. The leftmost being the oldest history record.
+State lines can also be turned on or off if the view gets too crowded.</p>
+
+<h2>You Vote, We Code</h2>
+
+<p>The ball is yours now! If this page gets over 50 tweets, comments, shares or likes we are going to implement this in <a href="http://www.dif.io">Difio</a>.
+A breakdown of features will be posted in the comments below. Please vote up or down for any of them.
+Features that get promoted will be implemented.</p>
+
+<p>If you have any other ideas or suggestions please let us know. You can use the comments form or submit them
+via <a href="https://github.com/difio/bugs/issues/new">GitHub</a> or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
+</div>
+        
+        
+    
+
+    
+
+            
+                
+                    
+        
             <h2><a href="/blog/2012/11/27/difio-adds-application-history-tracking/">Difio Adds Application History Tracking</a></h2>
         
 
@@ -665,74 +756,6 @@ their applications and send us their feedback via <a href="https://github.com/di
 or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
 
 <p><a href="https://difio-otb.rhcloud.com/applications/mine/">Give it a try</a></p>
-</div>
-        
-        
-    
-
-    
-
-            
-                
-                    
-        
-            <h2><a href="/blog/2012/06/04/difio-1.5-release-announcement/">Difio 1.5 Release Announcement</a></h2>
-        
-
-        
-            
-  
-
-<span class="byline author vcard">Posted by <span class="fn">Difio Team</span></span>
-@
-            
-
-
-
-
-
-
-
-
-  Jun 4<span>th</span>, 2012
-
-
-
-            <br /><br />
-        
-    
-
-    
-        <div class="entry-content"><p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce version 1.5
-of our updates monitoring service. Difio provides insight of available
-updates for open source components. It lets you inspect changes and take
-informed decision when or what to upgrade. This improves software life cycle
-planning and minimizes possible regressions and downtime.</p>
-
-<p>This release adds support for <a href="http://pear.php.net/">PHP PEAR</a> packages and
-new registration agents for <a href="http://dotcloud.com">dotCloud</a> and
-<a href="http://openshift.redhat.com">OpenShift</a> PHP applications. See
-<a href="http://www.dif.io/register/">how to register applications</a> page for more information.
-Currently only packages from <a href="http://pear.php.net">http://pear.php.net</a> channel are supported.
-We&#8217;re working on enabling additional channels like <a href="http://pecl.php.net">PECL</a>
-and self hosted PEAR channels.</p>
-
-<p>In addition to popular package index directories there are many projects which
-are distributed directly and not via package index. We&#8217;ve made a first step towards
-supporting such projects. This release adds support for projects which are
-distributed directly from <a href="http://github.com">GitHub</a>. At the moment support is limited
-to projects which use tags.</p>
-
-<p>Our web site now supports search functionality via Google custom search.</p>
-
-<p>In the next releases we&#8217;re going to add registration agents for more cloud/PaaS vendors
-and enable manual import of packages for those who do not work in the clouds. Our team
-is working on a number of website improvements to make it faster and easier to use.
-In addition to that we&#8217;re also working on enabling e-mail and SMS notifications so
-stay tuned!</p>
-
-<p><a href="https://difio-otb.rhcloud.com/applications/mine/">Give it a try</a>
-or <a href="https://twitter.com/DifioNews">follow us</a> on Twitter for more news.</p>
 </div>
         
         

@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us" xmlns:fb="https://www.facebook.com/2008/fbml" id="html-main">
 <head>
-  <title>Difio Adds Application History Tracking - Difio</title>
+  <title>Graphical or Tabular View? You Vote, We Code - Difio</title>
   
   
 
@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   
-  <link rel="canonical" href="http://dif.io/blog/2012/11/27/difio-adds-application-history-tracking" />
+  <link rel="canonical" href="http://dif.io/blog/2013/01/24/graphical-or-tabular-view-you-vote-we-code" />
   <link href="/blog/favicon.png" rel="icon" />
   <script src="/blog/javascripts/modernizr-2.0.js" type="text/javascript"></script>
   <script src="/blog/javascripts/ender.js" type="text/javascript"></script>
@@ -20,7 +20,7 @@
   <link href="http://feeds.feedburner.com/difio/blog" rel="alternate" title="Difio" type="application/atom+xml" />
   <!-- OpenGraph -->
 <meta property="og:image" content="//d3h3t4beeg8ypi.cloudfront.net/static/v6/i/72.png" />
-<meta property="og:title" content="Difio Adds Application History Tracking" />
+<meta property="og:title" content="Graphical or Tabular View? You Vote, We Code" />
 <meta property="og:site_name" content="Difio" />
 
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css' />
@@ -123,7 +123,7 @@
             <div style="float: left; width: 100%">
                     
         
-            <h2>Difio Adds Application History Tracking</h2>
+            <h2>Graphical or Tabular View? You Vote, We Code</h2>
         
     
 
@@ -145,7 +145,7 @@
 
 
 
-  Nov 27<span>th</span>, 2012
+  Jan 24<span>th</span>, 2013
 
 
 
@@ -154,31 +154,59 @@
     
 
     
-            <div class="entry-content"><p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce
-support for tracking application history. Difio keeps track of application
-dependencies and tells you when they change. We let you inspect the
-changes and make informed decision when or what to upgrade.</p>
+            <div class="entry-content"><p>Hello guys! We haven&#8217;t posted in a while and we&#8217;re sorry for this. Here&#8217;s an idea which is
+going around in our heads. Let us know what do you think.</p>
 
-<p>Our team has added a new feature to track changes in the list of
-dependencies used by applications. Every time you upgrade, add or remove a
-package from your application dependencies Difio creates a history record.
-As always, don&#8217;t forget to re-run the registration script or to manually refresh
-your apps after changing the dependencies!</p>
+<h2>Tabular View</h2>
 
-<p>Every application starts with a single history record, reflecting its latest state.
-Later you can review your app history and revert to previously used versions
-for example. Difio is planning to add more goodies to the history page in a future
-release. If you have an idea and want us to implement it, please post it on the
-<a href="http://www.dif.io/#ideas">ideas dashboard</a>!</p>
+<p>Currently when you log into the <a href="https://difio-otb.rhcloud.com/applications/mine/">application dashboard</a>
+and navigate to the details view of each application you see this:</p>
 
-<p>This new functionality is accessible on the application details view via the
-<em>Last check-in</em> hyperlink, as shown below.</p>
+<p><img src="/blog/images/appdetails.png" title="Tabular view" alt="Tabular view" /></p>
 
-<p><img src="/blog/images/apphistory.png" title="Link to history page" alt="Link to history page" /></p>
+<p>The installed packages are on the left while new versions are on the right. The links point to
+more detailed information about changes between the two versions. By default only the
+available updates are shown but you can display all installed packages as well.</p>
 
-<p>We encourage developers from all backgrounds and languages to <a href="http://www.dif.io/register/">register</a>
-their applications and send us their feedback via <a href="https://github.com/difio/bugs/issues/new">GitHub</a>
-or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
+<p>We also have a history page which holds a snapshot of your installed dependencies
+whenever they change. It looks like this:</p>
+
+<p><img src="/blog/images/history_records.png" title="History records" alt="History records" /></p>
+
+<p>These two pages inform you about the latest and greatest versions
+and which ones you have been using in the past. However they don&#8217;t show you
+any version release history nor how does your application relate to that.</p>
+
+<h2>Graphical View</h2>
+
+<p>Our proposal is to implement a graphical view as shown on the mock-up below:</p>
+
+<p><img src="/blog/images/app_graph.png" title="Graphical view" alt="Graphical view" /></p>
+
+<p>On the vertical axis are all the dependencies used by your application. By default only outdated
+ones are shown, sorted by their name for readability.</p>
+
+<p>On the horizontal axis are all available versions for that particular package shown as markers.
+A tooltip shows you the package name and version. Density and scale is based on release dates.
+Zoom will help you investigate more closely.</p>
+
+<p>The marker or the tooltip can be a link to the standard page where these two versions are compared and analyzed.
+The marker icon can be left as is or be one of the icons representing Low, Medium or High change rate.</p>
+
+<p>Individual packages can be turned on or off of course.</p>
+
+<p>Application state is shown as a line connecting the versions you have installed. Previous states, where dependency
+versions were different can be represented as similar lines on the left. The leftmost being the oldest history record.
+State lines can also be turned on or off if the view gets too crowded.</p>
+
+<h2>You Vote, We Code</h2>
+
+<p>The ball is yours now! If this page gets over 50 tweets, comments, shares or likes we are going to implement this in <a href="http://www.dif.io">Difio</a>.
+A breakdown of features will be posted in the comments below. Please vote up or down for any of them.
+Features that get promoted will be implemented.</p>
+
+<p>If you have any other ideas or suggestions please let us know. You can use the comments form or submit them
+via <a href="https://github.com/difio/bugs/issues/new">GitHub</a> or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
 </div>
     
 
@@ -187,7 +215,7 @@ or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/news/'>News</a>
+    <a class='category' href='/blog/categories/ideas/'>ideas</a>, <a class='category' href='/blog/categories/polls/'>polls</a>
   
 </span>
 
@@ -213,11 +241,9 @@ or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
     
 
     
-        <a style="float: left;" href="/blog/2012/11/14/difio-1.9-release-announcement/" title="Previous Post: Difio 1.9 Release Announcement">&laquo; Difio 1.9 Release Announcement</a>
+        <a style="float: left;" href="/blog/2012/11/27/difio-adds-application-history-tracking/" title="Previous Post: Difio Adds Application History Tracking">&laquo; Difio Adds Application History Tracking</a>
     
 
-    
-        <a style="float: right;" href="/blog/2013/01/24/graphical-or-tabular-view-you-vote-we-code/" title="next Post: Graphical or Tabular View? You Vote, We Code">Graphical or Tabular View? You Vote, We Code &raquo;</a>
     
   </div>
 
@@ -284,8 +310,8 @@ or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://dif.io/blog/2012/11/27/difio-adds-application-history-tracking/';
-        var disqus_url = 'http://dif.io/blog/2012/11/27/difio-adds-application-history-tracking/';
+        var disqus_identifier = 'http://dif.io/blog/2013/01/24/graphical-or-tabular-view-you-vote-we-code/';
+        var disqus_url = 'http://dif.io/blog/2013/01/24/graphical-or-tabular-view-you-vote-we-code/';
         var disqus_script = 'embed.js';
       
     (function () {

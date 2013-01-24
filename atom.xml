@@ -4,7 +4,7 @@
   <title><![CDATA[Difio]]></title>
   <link href="http://dif.io/blog/atom.xml" rel="self"/>
   <link href="http://dif.io/blog/"/>
-  <updated>2013-01-22T14:11:40+02:00</updated>
+  <updated>2013-01-24T15:59:47+02:00</updated>
   <id>http://dif.io/blog/</id>
   <author>
     <name><![CDATA[Difio Team]]></name>
@@ -12,6 +12,67 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Graphical or Tabular View? You Vote, We Code]]></title>
+    <link href="http://dif.io/blog/2013/01/24/graphical-or-tabular-view-you-vote-we-code/"/>
+    <updated>2013-01-24T14:43:00+02:00</updated>
+    <id>http://dif.io/blog/2013/01/24/graphical-or-tabular-view-you-vote-we-code</id>
+    <content type="html"><![CDATA[<p>Hello guys! We haven&#8217;t posted in a while and we&#8217;re sorry for this. Here&#8217;s an idea which is
+going around in our heads. Let us know what do you think.</p>
+
+<h2>Tabular View</h2>
+
+<p>Currently when you log into the <a href="https://difio-otb.rhcloud.com/applications/mine/">application dashboard</a>
+and navigate to the details view of each application you see this:</p>
+
+<p><img src="http://dif.io/blog/images/appdetails.png" title="Tabular view" alt="Tabular view" /></p>
+
+<p>The installed packages are on the left while new versions are on the right. The links point to
+more detailed information about changes between the two versions. By default only the
+available updates are shown but you can display all installed packages as well.</p>
+
+<p>We also have a history page which holds a snapshot of your installed dependencies
+whenever they change. It looks like this:</p>
+
+<p><img src="http://dif.io/blog/images/history_records.png" title="History records" alt="History records" /></p>
+
+<p>These two pages inform you about the latest and greatest versions
+and which ones you have been using in the past. However they don&#8217;t show you
+any version release history nor how does your application relate to that.</p>
+
+<h2>Graphical View</h2>
+
+<p>Our proposal is to implement a graphical view as shown on the mock-up below:</p>
+
+<p><img src="http://dif.io/blog/images/app_graph.png" title="Graphical view" alt="Graphical view" /></p>
+
+<p>On the vertical axis are all the dependencies used by your application. By default only outdated
+ones are shown, sorted by their name for readability.</p>
+
+<p>On the horizontal axis are all available versions for that particular package shown as markers.
+A tooltip shows you the package name and version. Density and scale is based on release dates.
+Zoom will help you investigate more closely.</p>
+
+<p>The marker or the tooltip can be a link to the standard page where these two versions are compared and analyzed.
+The marker icon can be left as is or be one of the icons representing Low, Medium or High change rate.</p>
+
+<p>Individual packages can be turned on or off of course.</p>
+
+<p>Application state is shown as a line connecting the versions you have installed. Previous states, where dependency
+versions were different can be represented as similar lines on the left. The leftmost being the oldest history record.
+State lines can also be turned on or off if the view gets too crowded.</p>
+
+<h2>You Vote, We Code</h2>
+
+<p>The ball is yours now! If this page gets over 50 tweets, comments, shares or likes we are going to implement this in <a href="http://www.dif.io">Difio</a>.
+A breakdown of features will be posted in the comments below. Please vote up or down for any of them.
+Features that get promoted will be implemented.</p>
+
+<p>If you have any other ideas or suggestions please let us know. You can use the comments form or submit them
+via <a href="https://github.com/difio/bugs/issues/new">GitHub</a> or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Difio Adds Application History Tracking]]></title>
@@ -1133,46 +1194,6 @@ hooks. In this case you may want to ping us for some help.</p></li>
 programming language. Sent us the code for review and we will add it to our GitHub channel.</p>
 
 <p>For more details you may take a look at <a href="https://github.com/difio/difio-openshift-python">https://github.com/difio/difio-openshift-python</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Spinning-up a development instance on OpenShift Express]]></title>
-    <link href="http://dif.io/blog/2012/02/10/spinning-up-a-development-instance-on-openshift-express/"/>
-    <updated>2012-02-10T21:19:00+02:00</updated>
-    <id>http://dif.io/blog/2012/02/10/spinning-up-a-development-instance-on-openshift-express</id>
-    <content type="html"><![CDATA[<p><a href="http://www.dif.io">Difio</a> is hosted on <a href="http://openshift.redhat.com">OpenShift</a>.
-During development we often need to spin-up another copy of Difio to use for testing and development.
-With OpenShift this is easy and fast. Here&#8217;s how:</p>
-
-<ol>
-<li><p>Create another application on OpenShift. This will be your development instance.</p>
-
-<pre><code> rhc-create-app -a myappdevel -t python-2.6
-</code></pre></li>
-<li><p>Find out the git URL for the production application:</p>
-
-<pre><code> $ rhc-user-info
- Application Info
- ================
- myapp
-     Framework: python-2.6
-      Creation: 2012-02-10T12:39:53-05:00
-          UUID: 723f0331e17041e8b34228f87a6cf1f5
-       Git URL: ssh://723f0331e17041e8b34228f87a6cf1f5@myapp-mydomain.rhcloud.com/~/git/myapp.git/
-    Public URL: http://myapp-mydomain.rhcloud.com/
-</code></pre></li>
-<li><p>Push the current code base from the production instance to devel instance:</p>
-
-<pre><code> cd myappdevel
- git remote add production -m master ssh://723f0331e17041e8b34228f87a6cf1f5@myapp-mydomain.rhcloud.com/~/git/myapp.git/
- git pull -s recursive -X theirs production master
- git push
-</code></pre></li>
-<li><p>Now your <code>myappdevel</code> is the same as your production instance. You will probably want to
-modify your database connection settings at this point and start adding new features.</p></li>
-</ol>
-
 ]]></content>
   </entry>
   
