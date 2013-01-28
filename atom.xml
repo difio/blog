@@ -4,7 +4,7 @@
   <title><![CDATA[Difio]]></title>
   <link href="http://dif.io/blog/atom.xml" rel="self"/>
   <link href="http://dif.io/blog/"/>
-  <updated>2013-01-24T15:59:47+02:00</updated>
+  <updated>2013-01-28T21:43:59+02:00</updated>
   <id>http://dif.io/blog/</id>
   <author>
     <name><![CDATA[Difio Team]]></name>
@@ -12,6 +12,26 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[SofiaValley Writes About Difio]]></title>
+    <link href="http://dif.io/blog/2013/01/28/sofiavalley-writes-about-difio/"/>
+    <updated>2013-01-28T21:35:00+02:00</updated>
+    <id>http://dif.io/blog/2013/01/28/sofiavalley-writes-about-difio</id>
+    <content type="html"><![CDATA[<p><a href="http://sofiavalley.com">SofiaValley</a> is a Bulgarian blog focused on the
+IT life in the Sofia valley :). Today they announced a new section called
+SV startups which will be focusing on startups and interesting projects in
+the region.</p>
+
+<p>We are happy that Difio is the first startup to be featured on their website
+and hope that there will be many others. Kudos to SofiaValley!</p>
+
+<p>You can read the actual article in <a href="http://sofiavalley.com/sv-startups-difio/">Bulgarian</a>
+or try the
+<a href="http://translate.google.com/translate?sl=bg&amp;tl=en&amp;js=n&amp;prev=_t&amp;hl=en&amp;ie=UTF-8&amp;eotf=1&amp;u=http%3A%2F%2Fsofiavalley.com%2Fsv-startups-difio%2F">English translation</a>
+by Google Translate (it&#8217;s pretty accurate).</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Graphical or Tabular View? You Vote, We Code]]></title>
@@ -1063,137 +1083,6 @@ client side tools to more vendors. Stay <a href="https://twitter.com/DifioNews">
 want to miss the announcement.</p>
 
 <p><a href="https://difio-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try Now</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to write a registration agent for Difio]]></title>
-    <link href="http://dif.io/blog/2012/02/11/how-to-write-registration-agent-for-difio/"/>
-    <updated>2012-02-11T00:32:00+02:00</updated>
-    <id>http://dif.io/blog/2012/02/11/how-to-write-registration-agent-for-difio</id>
-    <content type="html"><![CDATA[<p><a href="http://www.dif.io">Difio</a> is aiming to support a broad range of PaaS and
-cloud vendors but that takes time. If your favorite PaaS platform is not
-already supported here&#8217;s how you can help.</p>
-
-<p>The registration agent is very simple and serves only a single purpose -
-to build a list of installed software and send it to the server.</p>
-
-<p>Some general considerations first:</p>
-
-<ul>
-<li><p>Your code should be open source! Preferably licensed under the MIT or BSD license;</p></li>
-<li><p>Whenever possible use the native programming language for the platform - if writing
-an agent for PHP PaaS use PHP, if writing for Node.JS use JavaScript, etc;</p></li>
-<li><p>All registration agents are bundled as packages so that they can install natively
-on the platform. For Python it is a package from PyPI, for PHP it will be a PEAR package,
-etc. Develop your agent as a package;</p></li>
-<li><p>Naming convention for registration agent is <strong>difio-&lt;vendor>-&lt;language></strong>. For example
-<code>difio-openshift-python</code>, <code>difio-dotcloud-nodejs</code>. If you have common code,
-for example the package management part, it can be split into separate module named
-<strong>common-&lt;language>-difio</strong>.</p></li>
-<li><p>Registration agents are specific to vendor and programming language. This is because
-different PaaS vendors provide the information in a different way. This makes code easier
-to maintain and easier for end-users to find the proper registration agent later;</p></li>
-<li><p>Vendor ID and package type ID numbers are unique. It is important to use the correct IDs.
-They allow proper identification of applications and packages stored in the database.
-Different types of data also require different processing. Tell us for which vendor/language
-you would like to contribute a registration agent and we will reserve the IDs for you;</p></li>
-<li><p>We will also setup a development server so you can safely test the application
-registration/update process. Just let us know you need one.</p></li>
-</ul>
-
-
-<p>Once you have the ID allocation and development server you can start writing some code.</p>
-
-<ul>
-<li><p>Your code should create the following data structure:</p>
-
-<pre><code>  {
-      'user_id'    : integer,
-      'app_name'   : string,
-      'app_uuid'   : string,
-      'app_type'   : string,
-      'app_url'    : string,
-      'app_vendor' : integer,
-      'pkg_type'   : integer,
-      'installed'  : list of {'n' : string, 'v' : string, 't' : integer}
-  }
-</code></pre></li>
-</ul>
-
-
-<p>Fields are defined as follow:</p>
-
-<ul>
-<li><p>user_id - integer - the ID of the user at Difio website. All applications registered under
-the same user_id will be visible only to that user. You can view your UserID
-<a href="https://difio-otb.rhcloud.com/profiles/mine/">here</a>. It is important that this value is not
-hard-coded but read from ENV variable or a text file. The user will configure the proper
-value when installing the registration agent into their application;</p></li>
-<li><p>app_name - string - the name of the application. This is used to identify the application in the
-web interface. The value is usually available from ENV variable;</p></li>
-<li><p>app_uuid - string - a unique identifier of the application on the cloud platform. Some platforms
-do not provide a real UUID. In such case you may use any unique string, for example $username-$appname;</p></li>
-<li><p>app_type - string - type of the application, e.g. Python, Ruby, etc. Used for visualization in the
-web interface. Some cloud vendors store this in ENV variable;</p></li>
-<li><p>app_url - string - the URL at which the application can be accessed including the protocol part (http://).
-Should be available from ENV;</p></li>
-<li><p>app_vendor - integer - the vendor ID reserved by Difio. This is used for proper identification
-of applications in the web console and for processing purposes;</p></li>
-<li><p>pkg_type - integer - the package type ID reserved by Difio. This is used to properly process
-package information and find new versions and updates. If the cloud platform allows only a single
-type of packages to be installed into the application then use this variable. If you can install
-multiple package types (e.g. Python and Ruby) then you can set this on a per-package basis;</p></li>
-<li><p>installed - a list of {&#8216;n&#8217; : string, &#8216;v&#8217; : string, &#8216;t&#8217; : integer} elements, where:</p>
-
-<ul>
-<li><p>n - string - package name as identified by a native package management tool (e.g. gem, pip, etc);</p></li>
-<li><p>v - string - package version;</p></li>
-<li><p>t - integer (optional) - package type ID reserved by Difio. Define it here is multiple
-package types are allowed and the current package is different from <code>pkg_type</code>.</p></li>
-</ul>
-</li>
-<li><p>In some cloud platforms your application will be considered as a package and listed in the database
-as well. You may use an ENV variable to ignore this name and not include it in the list;</p></li>
-<li><p>The defined structure is converted into JSON format and URL escaped;</p></li>
-<li><p>Assign the escaped JSON string to the <code>json_data</code> POST variable;</p></li>
-<li><p>Send a POST request to https://$devel-server-url/application/register/;</p></li>
-<li><p>When sending the request make sure to include a <code>User-agent</code> header. The <code>User-agent</code>
-string must follow the format:</p>
-
-<pre><code>  difio-&lt;vendor&gt;-&lt;language&gt;/&lt;version&gt;
-</code></pre></li>
-<li><p>If using common packages include them in the <code>User-agent</code> string as follows:</p>
-
-<pre><code>  difio-&lt;vendor&gt;-&lt;language&gt;/&lt;version&gt; common-&lt;language&gt;-difio/&lt;version&gt;
-</code></pre>
-
-<p>For more information about <code>User-aget</code> string format click
-<a href="http://en.wikipedia.org/wiki/User_agent#Format">here</a>.</p></li>
-<li><p>If everything went fine you will receive a 200 status code and response in JSON format:</p>
-
-<pre><code>  {
-      'message' : string,
-      'exit_code' : integer
-  }
-</code></pre>
-
-<ul>
-<li><p>message - holds any pass/fail messages;</p></li>
-<li><p>exit_code - non 0 in case of failure.</p></li>
-</ul>
-</li>
-<li><p>Add a README file with instructions how to install. Pay attention to end-user configuration
-settings and proper execution of the tool. The best place to place a call to
-the registration script is a post_deploy/post_install hook. Some cloud platforms do not offer
-hooks. In this case you may want to ping us for some help.</p></li>
-</ul>
-
-
-<p>Congratulations! You have just written a registration agent for your favorite PaaS and
-programming language. Sent us the code for review and we will add it to our GitHub channel.</p>
-
-<p>For more details you may take a look at <a href="https://github.com/difio/difio-openshift-python">https://github.com/difio/difio-openshift-python</a>.</p>
 ]]></content>
   </entry>
   
