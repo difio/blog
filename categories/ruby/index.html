@@ -24,7 +24,7 @@
 <meta property="og:site_name" content="Difio" />
 
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css' />
-<link type="text/css" rel="stylesheet" media="screen" href="//d3h3t4beeg8ypi.cloudfront.net/static/v25/css/style.css" />
+<link type="text/css" rel="stylesheet" media="screen" href="//d3h3t4beeg8ypi.cloudfront.net/static/v34/css/style.css" />
 <link href="/blog/stylesheets/fonts.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
 <style type="text/css">
@@ -32,7 +32,7 @@
 @import "//ajax.googleapis.com/ajax/libs/dojo/1.7.2/dojox/widget/Dialog/Dialog.css";
 </style>
 <script src="//ajax.googleapis.com/ajax/libs/dojo/1.7.2/dojo/dojo.js" data-dojo-config="'async':true,'parseOnLoad':true" type="text/javascript"></script>
-<script type="text/javascript" src="//d3h3t4beeg8ypi.cloudfront.net/static/v25/js/dojo/require_dialog.js"></script>
+<script type="text/javascript" src="//d3h3t4beeg8ypi.cloudfront.net/static/v34/js/dojo/require_dialog.js"></script>
 
   
   <script type="text/javascript">
@@ -62,7 +62,7 @@
         <!-- latest updates feed -->
         <div style="width: 40px; display:inline-block; position: relative; top: -1px;">
             <a href="http://feeds.feedburner.com/difio/blog">
-                <img src="//d3h3t4beeg8ypi.cloudfront.net/static/v25/i/rss.png" width="22" height="22" alt="RSS" title="Subscribe via RSS"/>
+                <img src="//d3h3t4beeg8ypi.cloudfront.net/static/v34/i/rss.png" width="22" height="22" alt="RSS" title="Subscribe via RSS"/>
             </a>
         </div>
 
@@ -78,10 +78,18 @@
         </div>
     </div>
 
-    <div class="signin" style="width: 115px;"><a href="#" onclick='dijit.byId("dlgRegister").show()' class="button light_blue small">register apps</a></div>
+    <div class="signin" style="width: 115px;"><a href="#" onclick='dijit.byId("dlgRegister").show()' class="button light_blue small">get started</a></div>
 
-<div id="dlgRegister" data-dojo-type="dojox.widget.Dialog" class="claro dialog" dimensions="[410,115]" style="display: none; background-color: inherit;">
+<div id="dlgRegister" data-dojo-type="dojox.widget.Dialog" class="claro dialog" dimensions="[410,220]" style="display: none; background-color: inherit;">
     <table style="float:left;margin-left: 10px;">
+        <tr>
+            <td colspan="6" style="text-align: left;">
+Go to the <a href="https://difio-otb.rhcloud.com/dashboard/follow/">dashboard</a> and select which packages/versions to follow
+with a few clicks!
+<br/><br/>
+Otherwise use the links below to import your application dependencies.
+            </td>
+        </tr>
         <tr>
             <th colspan="6">Manual import</th>
         </tr>
@@ -94,12 +102,12 @@
             <th class="center">Ruby</th>
         </tr>
         <tr>
-            <td class="center"><a href="https://difio-otb.rhcloud.com/application/import/mvn-dependency-list/"><img src="//d3h3t4beeg8ypi.cloudfront.net/static/v25/i/s/ok.png" alt="YES" /></a></td>
-            <td class="center"><a href="https://difio-otb.rhcloud.com/application/import/npm-ls/"><img src="//d3h3t4beeg8ypi.cloudfront.net/static/v25/i/s/ok.png" alt="YES" /></a></td>
-            <td class="center"><a href="https://difio-otb.rhcloud.com/application/import/perllocal.pod/"><img src="//d3h3t4beeg8ypi.cloudfront.net/static/v25/i/s/ok.png" alt="YES" /></a></td>
-            <td class="center"><img src="//d3h3t4beeg8ypi.cloudfront.net/static/v25/i/s/error.png" alt="NO" /></td>
-            <td class="center"><a href="https://difio-otb.rhcloud.com/application/import/pip-freeze/"><img src="//d3h3t4beeg8ypi.cloudfront.net/static/v25/i/s/ok.png" alt="YES" /></a></td>
-            <td class="center"><a href="https://difio-otb.rhcloud.com/application/import/bundle-list/"><img src="//d3h3t4beeg8ypi.cloudfront.net/static/v25/i/s/ok.png" alt="YES" /></a></td>
+            <td class="center"><a href="https://difio-otb.rhcloud.com/application/import/mvn-dependency-list/"><img src="//d3h3t4beeg8ypi.cloudfront.net/static/v34/i/s/ok.png" alt="YES" /></a></td>
+            <td class="center"><a href="https://difio-otb.rhcloud.com/application/import/npm-ls/"><img src="//d3h3t4beeg8ypi.cloudfront.net/static/v34/i/s/ok.png" alt="YES" /></a></td>
+            <td class="center"><a href="https://difio-otb.rhcloud.com/application/import/perllocal.pod/"><img src="//d3h3t4beeg8ypi.cloudfront.net/static/v34/i/s/ok.png" alt="YES" /></a></td>
+            <td class="center"><img src="//d3h3t4beeg8ypi.cloudfront.net/static/v34/i/s/error.png" alt="NO" /></td>
+            <td class="center"><a href="https://difio-otb.rhcloud.com/application/import/pip-freeze/"><img src="//d3h3t4beeg8ypi.cloudfront.net/static/v34/i/s/ok.png" alt="YES" /></a></td>
+            <td class="center"><a href="https://difio-otb.rhcloud.com/application/import/bundle-list/"><img src="//d3h3t4beeg8ypi.cloudfront.net/static/v34/i/s/ok.png" alt="YES" /></a></td>
         </tr>
         <tr>
             <td colspan="6">
