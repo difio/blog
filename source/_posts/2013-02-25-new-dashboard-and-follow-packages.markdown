@@ -43,7 +43,7 @@ followed manually.
 
 It is highly recommended to follow a particular version, not only the package name.
 If a user decides to follow only package name, but not versions, Difio will not be
-able to generate change analisys reports because there's no
+able to generate change analysis reports because there's no
 basis to compare to. In this case the user will be able to see only the latest
 releases news stream.
 
