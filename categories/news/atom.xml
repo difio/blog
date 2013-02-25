@@ -4,7 +4,7 @@
   <title><![CDATA[Category: News | Difio]]></title>
   <link href="http://dif.io/blog/categories/news/atom.xml" rel="self"/>
   <link href="http://dif.io/blog/"/>
-  <updated>2013-02-25T00:17:41+02:00</updated>
+  <updated>2013-02-25T12:31:36+02:00</updated>
   <id>http://dif.io/blog/</id>
   <author>
     <name><![CDATA[Difio Team]]></name>
@@ -12,6 +12,72 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[New Dashboard and Follow Packages Functionality]]></title>
+    <link href="http://dif.io/blog/2013/02/25/new-dashboard-and-follow-packages/"/>
+    <updated>2013-02-25T11:55:00+02:00</updated>
+    <id>http://dif.io/blog/2013/02/25/new-dashboard-and-follow-packages</id>
+    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce our new dashboard
+and the ability to follow packages without registering applications. Read
+below for more information.</p>
+
+<p><strong>Latest Releases</strong></p>
+
+<p><img src="/images/new_dashboard/releases.png" title="Latest Releases" alt="Latest Releases" /></p>
+
+<p>The default dashboard page is showing a news stream of all latest releases
+for packages the user is following or using inside applications.</p>
+
+<p><strong>Change History</strong></p>
+
+<p><img src="/images/new_dashboard/change_history.png" title="Change History" alt="Change History" /></p>
+
+<p>This page is showing a news stream of change analysis between multiple package
+versions that the user is following or using inside applications. As shown in this
+example the user is following <code>bundler-1.2.1</code> and <code>bundler-1.2.3</code> while the latest
+available is <code>bundler-1.3.0</code> and <code>bundler-1.2.5</code>.</p>
+
+<p><strong>Follow Packages</strong></p>
+
+<p><img src="/images/new_dashboard/follow.png" title="Follow Packages" alt="Follow Packages" /></p>
+
+<p>A new page to view and search packages is now available. Users can follow or unfollow
+any packages and versions they want through the buttons. Simple color codes
+distinguish between different states: green - user is following version;
+gray - version is used inside registered application; transparent - not following version.
+Versions which are used inside applications can only be removed/unfollowed by deleting
+the entire application, or deleting the package from the application.
+For example <code>Pygments-1.5</code> is been used in an application, but <code>Pygments-1.6</code> is been
+followed manually.</p>
+
+<p>It is highly recommended to follow a particular version, not only the package name.
+If a user decides to follow only package name, but not versions, Difio will not be
+able to generate change analysis reports because there's no
+basis to compare to. In this case the user will be able to see only the latest
+releases news stream.</p>
+
+<p><strong>Applications</strong></p>
+
+<p>This page is showing all registered applications for which Difio is monitoring dependencies.
+This page has been available previously and also includes the improvements
+<a href="/blog/2013/02/21/new-look-feel-application-info-pages/">announced last week</a>.
+Small speed improvements have been made to this page as well.</p>
+
+<p><strong>Invite Friends</strong></p>
+
+<p>This is an interactive dialog which allows you to invite your fellows to try Difio.
+It only asks for the email addresses of your friends and sends them an invitation.
+We do not keep track of these addresses nor send any spam to them.</p>
+
+<hr />
+
+<p>We encourage developers from all supported backgrounds and
+languages to <a href="https://difio-otb.rhcloud.com/dashboard/follow/">start following packages</a>
+and send us their feedback via <a href="https://github.com/difio/bugs/issues/new">GitHub</a>
+or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[New Look and Feel for Application Info Pages]]></title>
@@ -173,30 +239,6 @@ programming languages. Difio is working together with <em>cloudControl</em> to a
 for Java and PHP as well, so stay tuned!</p>
 
 <p>We encourage developers who use <em>cloudControl</em> to <a href="http://www.dif.io/register/">register</a>
-their applications and send us their feedback via <a href="https://github.com/difio/bugs/issues/new">GitHub</a>
-or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Difio 1.8 Release Announcement]]></title>
-    <link href="http://dif.io/blog/2012/10/24/difio-1.8-release-announcement/"/>
-    <updated>2012-10-24T22:27:00+03:00</updated>
-    <id>http://dif.io/blog/2012/10/24/difio-1.8-release-announcement</id>
-    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce version 1.8
-of our updates monitoring service. Difio provides insight of available
-updates for open source components. It lets you inspect changes and take
-informed decision when or what to upgrade. This improves software life cycle
-planning and minimizes possible regressions and downtime.</p>
-
-<p>This release changes our email notification subsystem. Users are now able to
-select between daily and weekly notification. Daily digest is the default value.
-If you want to change it, please login to your
-<a href="https://difio-otb.rhcloud.com/profiles/mine/">profile</a>.
-Email format has also changed. Messages now list URLs for all updates
-released since the last notification which are relevant to your applications.</p>
-
-<p>We encourage developers from all backgrounds and languages to <a href="http://www.dif.io/register/">register</a>
 their applications and send us their feedback via <a href="https://github.com/difio/bugs/issues/new">GitHub</a>
 or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
 ]]></content>

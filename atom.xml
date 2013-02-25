@@ -4,7 +4,7 @@
   <title><![CDATA[Difio]]></title>
   <link href="http://dif.io/blog/atom.xml" rel="self"/>
   <link href="http://dif.io/blog/"/>
-  <updated>2013-02-25T00:17:41+02:00</updated>
+  <updated>2013-02-25T12:31:36+02:00</updated>
   <id>http://dif.io/blog/</id>
   <author>
     <name><![CDATA[Difio Team]]></name>
@@ -12,6 +12,72 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[New Dashboard and Follow Packages Functionality]]></title>
+    <link href="http://dif.io/blog/2013/02/25/new-dashboard-and-follow-packages/"/>
+    <updated>2013-02-25T11:55:00+02:00</updated>
+    <id>http://dif.io/blog/2013/02/25/new-dashboard-and-follow-packages</id>
+    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce our new dashboard
+and the ability to follow packages without registering applications. Read
+below for more information.</p>
+
+<p><strong>Latest Releases</strong></p>
+
+<p><img src="http://dif.io/blog/images/new_dashboard/releases.png" title="Latest Releases" alt="Latest Releases" /></p>
+
+<p>The default dashboard page is showing a news stream of all latest releases
+for packages the user is following or using inside applications.</p>
+
+<p><strong>Change History</strong></p>
+
+<p><img src="http://dif.io/blog/images/new_dashboard/change_history.png" title="Change History" alt="Change History" /></p>
+
+<p>This page is showing a news stream of change analysis between multiple package
+versions that the user is following or using inside applications. As shown in this
+example the user is following <code>bundler-1.2.1</code> and <code>bundler-1.2.3</code> while the latest
+available is <code>bundler-1.3.0</code> and <code>bundler-1.2.5</code>.</p>
+
+<p><strong>Follow Packages</strong></p>
+
+<p><img src="http://dif.io/blog/images/new_dashboard/follow.png" title="Follow Packages" alt="Follow Packages" /></p>
+
+<p>A new page to view and search packages is now available. Users can follow or unfollow
+any packages and versions they want through the buttons. Simple color codes
+distinguish between different states: green - user is following version;
+gray - version is used inside registered application; transparent - not following version.
+Versions which are used inside applications can only be removed/unfollowed by deleting
+the entire application, or deleting the package from the application.
+For example <code>Pygments-1.5</code> is been used in an application, but <code>Pygments-1.6</code> is been
+followed manually.</p>
+
+<p>It is highly recommended to follow a particular version, not only the package name.
+If a user decides to follow only package name, but not versions, Difio will not be
+able to generate change analysis reports because there&#8217;s no
+basis to compare to. In this case the user will be able to see only the latest
+releases news stream.</p>
+
+<p><strong>Applications</strong></p>
+
+<p>This page is showing all registered applications for which Difio is monitoring dependencies.
+This page has been available previously and also includes the improvements
+<a href="http://dif.io/blog/blog/2013/02/21/new-look-feel-application-info-pages/">announced last week</a>.
+Small speed improvements have been made to this page as well.</p>
+
+<p><strong>Invite Friends</strong></p>
+
+<p>This is an interactive dialog which allows you to invite your fellows to try Difio.
+It only asks for the email addresses of your friends and sends them an invitation.
+We do not keep track of these addresses nor send any spam to them.</p>
+
+<hr />
+
+<p>We encourage developers from all supported backgrounds and
+languages to <a href="https://difio-otb.rhcloud.com/dashboard/follow/">start following packages</a>
+and send us their feedback via <a href="https://github.com/difio/bugs/issues/new">GitHub</a>
+or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[New Look and Feel for Application Info Pages]]></title>
@@ -987,108 +1053,6 @@ unzipping the archive and poking through the files. I wanted a shell. Here&#8217
 
 <p>For an insight of available updates to you OpenShift applications give
 Difio a <a href="https://difio-otb.rhcloud.com/applications/mine/">try</a>!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to update dependencies on OpenShift]]></title>
-    <link href="http://dif.io/blog/2012/02/18/how-to-update-dependencies-on-openshift/"/>
-    <updated>2012-02-18T01:00:00+02:00</updated>
-    <id>http://dif.io/blog/2012/02/18/how-to-update-dependencies-on-openshift</id>
-    <content type="html"><![CDATA[<p>If you are already running some cool application on <a href="http://openshift.redhat.com">OpenShift</a>
-it could be the case that you have to update some of the packages installed as dependencies.
-Here is an example for an application using the python-2.6 cartridge.</p>
-
-<h2>Pull latest upstream packages</h2>
-
-<p>The most simple method is to update everything to the latest upstream versions.</p>
-
-<ol>
-<li><p>Backup! Backup! Backup!</p>
-
-<pre><code> rhc-snapshot -a mycoolapp
- mv mycoolapp.tar.gz mycoolapp-backup-before-update.tar.gz
-</code></pre></li>
-<li><p>If you haven&#8217;t specified any particular version in <code>setup.py</code> it will
-look like this:</p>
-
-<pre><code>  ...
-  install_requires=[
-                  'difio-openshift-python',
-                  'MySQL-python',
-                  'Markdown',
-                 ],
-  ...
-</code></pre></li>
-<li><p>To update simply push to OpenShift instructing it to rebuild your virtualenv:</p>
-
-<pre><code> cd mycoolapp/
- touch .openshift/markers/force_clean_build
- git add .openshift/markers/force_clean_build
- git commit -m "update to latest upstream"
- git push
-</code></pre></li>
-</ol>
-
-
-<p>Voila! The environment hosting your application is rebuilt from scratch.</p>
-
-<h2>Keeping some packages unchanged</h2>
-
-<p>Suppose that before the update you have <code>Markdown-2.0.1</code> and you want to keep it!
-This is easily solved by adding versioned dependency to <code>setup.py</code></p>
-
-<pre><code>    -       'Markdown',
-    +       'Markdown==2.0.1',
-</code></pre>
-
-<p>If you do that OpenShift will install the same <code>Markdown</code> version when rebuilding your
-application. Everything else will use the latest available versions.</p>
-
-<p><strong>Note:</strong> after the update it&#8217;s recommended that you remove the
-<code>.openshift/markers/force_clean_build</code> file. This will speed up the push/build process
-and will not surprise you with unwanted changes.</p>
-
-<h2>Update only selected packages</h2>
-
-<p>Unless your application is really simple or you have tested the updates, I suspect that
-you want to update only selected packages. This can be done without rebuilding the whole
-virtualenv. Use versioned dependencies in <code>setup.py</code> :</p>
-
-<pre><code>    -       'Markdown==2.0.1',
-    -       'django-countries',
-    +       'Markdown&gt;=2.1',
-    +       'django-countries&gt;=1.1.2',
-</code></pre>
-
-<p>No need for <code>force_clean_build</code> this time. Just</p>
-
-<pre><code>    git commit &amp;&amp; git push
-</code></pre>
-
-<p>At the time of writing my application was using <code>Markdown-2.0.1</code> and <code>django-countries-1.0.5</code>.
-Then it updated to <code>Markdown-2.1.1</code> and <code>django-countires-1.1.2</code> which also happened to be
-the latest versions.</p>
-
-<p><strong>Note:</strong> this will not work without <code>force_clean_build</code></p>
-
-<pre><code>    -       'django-countries==1.0.5',
-    +       'django-countries',
-</code></pre>
-
-<h2>Warning</h2>
-
-<p>OpenShift uses a local mirror of <a href="http://pypi.python.org">Python Package Index</a>.
-It seems to be updated every 24 hours or so. Have this in mind if you want to update
-to a package that was just released. It will not work!</p>
-
-<hr />
-
-<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Difio&#8217;s founder and lead developer!</p>
-
-<p>For an insight of available updates to you OpenShift applications give
-Difio a <a href="https://difio-otb.rhcloud.com/applications/mine/">try</a>!
-It keeps generating new <a href="http://www.dif.io">updates</a> every day!</p>
 ]]></content>
   </entry>
   
