@@ -4,7 +4,7 @@
   <title><![CDATA[Difio]]></title>
   <link href="http://dif.io/blog/atom.xml" rel="self"/>
   <link href="http://dif.io/blog/"/>
-  <updated>2013-03-05T14:53:43+02:00</updated>
+  <updated>2013-03-06T11:22:35+02:00</updated>
   <id>http://dif.io/blog/</id>
   <author>
     <name><![CDATA[Difio Team]]></name>
@@ -12,6 +12,64 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Improved Support for PHP]]></title>
+    <link href="http://dif.io/blog/2013/03/06/improved-support-for-php/"/>
+    <updated>2013-03-06T11:05:00+02:00</updated>
+    <id>http://dif.io/blog/2013/03/06/improved-support-for-php</id>
+    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce improved support
+for the PHP programming language and the
+<a href="http://getcomposer.org">Composer</a> dependency management tool.</p>
+
+<p>Previously only PHP PEAR packages were supported and it was not possible
+to manually import a list of packages. Starting today, these issues have been
+fixed.</p>
+
+<p>At the moment Difio supports three upstream sources for PHP packages:</p>
+
+<ul>
+<li><a href="https://packagist.org/">https://packagist.org/</a></li>
+<li><a href="http://pear.php.net/">http://pear.php.net/</a></li>
+<li><a href="http://pear2.php.net/">http://pear2.php.net/</a></li>
+</ul>
+
+
+<p>Users are now able to manually import package list from their PHP applications
+using Composer.</p>
+
+<p>To register PHP apps go to
+<a href="https://difio-otb.rhcloud.com/application/import/composer-show/?">https://difio-otb.rhcloud.com/application/import/composer-show/?</a>
+and paste the output of <code>php composer.phar show --installed</code> command.</p>
+
+<p>For example:</p>
+
+<pre><code>$ ./composer.phar show --installed
+doctrine/common                              2.3.0   Common Library for Doctrine projects
+imagine/Imagine                              v0.4.1  Image processing for PHP 5.3
+pear-pear.php.net/HTTP_Request2              2.1.1   PHP5 rewrite of HTTP_Request package ...
+pear-pear.php.net/XML_Util                   1.2.1   Selection of methods that are often needed when working with XML documents ...
+pear-pear2.php.net/PEAR2_Cache_SHM           0.1.0   Allows you to share data across requests as long as the PHP process is running. ...
+pear-pear2.php.net/PEAR2_Text_Markdown       0.1.0   This is a port of Solar_Markdown.
+psr/log                                      1.0.0   Common interface for logging libraries
+symfony/symfony                              v2.2.0  The Symfony PHP framework
+twig/twig                                    v1.12.2 Twig, the flexible, fast, and secure template language for PHP
+</code></pre>
+
+<p>This application contains packages from the three different sources and they
+will be properly parsed and recognized by Difio.</p>
+
+<h2>What&#8217;s next</h2>
+
+<p>Difio is constantly working on improving the service. We are now looking into
+API diff support for PHP among other things, so stay tuned!
+In the mean time
+<a href="https://difio-otb.rhcloud.com/dashboard/follow/">start following packages</a>,
+invite your friends and send us your feedback via
+<a href="https://github.com/difio/bugs/issues/new">GitHub</a>
+or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[New Dashboard and Follow Packages Functionality]]></title>
@@ -987,65 +1045,6 @@ progress. Luckily <em>Difio</em> doesn&#8217;t use this sort of job scheduling f
 <p><em>Difio</em> is scheduling periodic tasks from OpenShift cron for a few days already.
 It seems to work reliably and with no issues. One less component to maintain and worry about.
 More time to write code.</p>
-
-<hr />
-
-<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Difio&#8217;s founder and lead developer!</p>
-
-<p>For an insight of available updates to you OpenShift applications give
-Difio a <a href="https://difio-otb.rhcloud.com/applications/mine/">try</a>!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to get to the OpenShift shell]]></title>
-    <link href="http://dif.io/blog/2012/03/09/how-to-get-to-the-openshift-shell/"/>
-    <updated>2012-03-09T21:43:00+02:00</updated>
-    <id>http://dif.io/blog/2012/03/09/how-to-get-to-the-openshift-shell</id>
-    <content type="html"><![CDATA[<p>I wanted to examine the Perl environment on OpenShift and got tired of making snapshots,
-unzipping the archive and poking through the files. I wanted a shell. Here&#8217;s how to get one.</p>
-
-<ol>
-<li><p>Get the application info first</p>
-
-<pre><code> $ rhc-domain-info 
- Password: 
- Application Info
- ================
- myapp
-     Framework: perl-5.10
-      Creation: 2012-03-08T13:34:46-04:00
-          UUID: 8946b976ad284cf5b2401caf736186bd
-       Git URL: ssh://8946b976ad284cf5b2401caf736186bd@myapp-mydomain.rhcloud.com/~/git/myapp.git/
-    Public URL: http://myapp-mydomain.rhcloud.com/
-
-  Embedded: 
-       None
-</code></pre></li>
-<li><p>The Git URL has your username and host</p></li>
-<li><p>Now just ssh into the application</p>
-
-<pre><code> $ ssh 8946b976ad284cf5b2401caf736186bd@myapp-mydomain.rhcloud.com
-
-     Welcome to OpenShift shell
-
-     This shell will assist you in managing OpenShift applications.
-
-     !!! IMPORTANT !!! IMPORTANT !!! IMPORTANT !!!
-     Shell access is quite powerful and it is possible for you to
-     accidentally damage your application.  Proceed with care!
-     If worse comes to worst, destroy your application with 'rhc app destroy'
-     and recreate it
-     !!! IMPORTANT !!! IMPORTANT !!! IMPORTANT !!!
-
-     Type "help" for more info.
-
- [myapp-mydomain.rhcloud.com ~]\&gt; 
-</code></pre></li>
-</ol>
-
-
-<p><strong>Voila!</strong></p>
 
 <hr />
 

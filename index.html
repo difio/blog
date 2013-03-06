@@ -135,6 +135,94 @@ Otherwise use the links below to import your application dependencies.
                 
                     
         
+            <h2><a href="/blog/2013/03/06/improved-support-for-php/">Improved Support for PHP</a></h2>
+        
+
+        
+            
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Difio Team</span></span>
+@
+            
+
+
+
+
+
+
+
+
+  Mar 6<span>th</span>, 2013
+
+
+
+            <br /><br />
+        
+    
+
+    
+        <div class="entry-content"><p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce improved support
+for the PHP programming language and the
+<a href="http://getcomposer.org">Composer</a> dependency management tool.</p>
+
+<p>Previously only PHP PEAR packages were supported and it was not possible
+to manually import a list of packages. Starting today, these issues have been
+fixed.</p>
+
+<p>At the moment Difio supports three upstream sources for PHP packages:</p>
+
+<ul>
+<li><a href="https://packagist.org/">https://packagist.org/</a></li>
+<li><a href="http://pear.php.net/">http://pear.php.net/</a></li>
+<li><a href="http://pear2.php.net/">http://pear2.php.net/</a></li>
+</ul>
+
+
+<p>Users are now able to manually import package list from their PHP applications
+using Composer.</p>
+
+<p>To register PHP apps go to
+<a href="https://difio-otb.rhcloud.com/application/import/composer-show/?">https://difio-otb.rhcloud.com/application/import/composer-show/?</a>
+and paste the output of <code>php composer.phar show --installed</code> command.</p>
+
+<p>For example:</p>
+
+<pre><code>$ ./composer.phar show --installed
+doctrine/common                              2.3.0   Common Library for Doctrine projects
+imagine/Imagine                              v0.4.1  Image processing for PHP 5.3
+pear-pear.php.net/HTTP_Request2              2.1.1   PHP5 rewrite of HTTP_Request package ...
+pear-pear.php.net/XML_Util                   1.2.1   Selection of methods that are often needed when working with XML documents ...
+pear-pear2.php.net/PEAR2_Cache_SHM           0.1.0   Allows you to share data across requests as long as the PHP process is running. ...
+pear-pear2.php.net/PEAR2_Text_Markdown       0.1.0   This is a port of Solar_Markdown.
+psr/log                                      1.0.0   Common interface for logging libraries
+symfony/symfony                              v2.2.0  The Symfony PHP framework
+twig/twig                                    v1.12.2 Twig, the flexible, fast, and secure template language for PHP
+</code></pre>
+
+<p>This application contains packages from the three different sources and they
+will be properly parsed and recognized by Difio.</p>
+
+<h2>What&#8217;s next</h2>
+
+<p>Difio is constantly working on improving the service. We are now looking into
+API diff support for PHP among other things, so stay tuned!
+In the mean time
+<a href="https://difio-otb.rhcloud.com/dashboard/follow/">start following packages</a>,
+invite your friends and send us your feedback via
+<a href="https://github.com/difio/bugs/issues/new">GitHub</a>
+or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
+</div>
+        
+        
+    
+
+    
+
+            
+                
+                    
+        
             <h2><a href="/blog/2013/02/25/new-dashboard-and-follow-packages/">New Dashboard and Follow Packages Functionality</a></h2>
         
 
@@ -759,61 +847,6 @@ is using:</p>
 
 <p>We&#8217;re especially interested in what other PaaS platforms developers are using. Please let us know
 what is your programming language and platform in the comments!</p>
-</div>
-        
-        
-    
-
-    
-
-            
-                
-                    
-        
-            <h2><a href="/blog/2012/10/01/difio-adds-support-for-heroku/">Difio Adds Support for Heroku</a></h2>
-        
-
-        
-            
-  
-
-<span class="byline author vcard">Posted by <span class="fn">Difio Team</span></span>
-@
-            
-
-
-
-
-
-
-
-
-  Oct 1<span>st</span>, 2012
-
-
-
-            <br /><br />
-        
-    
-
-    
-        <div class="entry-content"><p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce initial
-support for <a href="http://heroku.com">Heroku</a>. Difio provides insight of available
-updates for open source components. It lets you inspect changes and take
-informed decision when or what to upgrade. This improves software life cycle
-planning and minimizes possible regressions and downtime.</p>
-
-<p>We have added three new registration scripts allowing <em>Heroku</em> users to
-subscribe their applications to Difio. At the moment there is support for
-<a href="https://github.com/difio/difio-heroku-python/blob/master/README.rst">Python</a>,
-<a href="https://github.com/difio/difio-heroku-ruby/blob/master/README.md">Ruby</a> and
-<a href="https://github.com/difio/difio-heroku-nodejs/blob/master/README.md">Node.js</a>
-programming languages. Previously <em>Heroku</em> applications could be registered only
-manually but now this is automated and more convenient.</p>
-
-<p>We encourage developers who use <em>Heroku</em> to <a href="http://www.dif.io/register/">register</a>
-their applications and send us their feedback via <a href="https://github.com/difio/bugs/issues/new">GitHub</a>
-or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
 </div>
         
         
