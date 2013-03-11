@@ -4,7 +4,7 @@
   <title><![CDATA[Difio]]></title>
   <link href="http://dif.io/blog/atom.xml" rel="self"/>
   <link href="http://dif.io/blog/"/>
-  <updated>2013-03-06T11:22:35+02:00</updated>
+  <updated>2013-03-11T12:16:19+02:00</updated>
   <id>http://dif.io/blog/</id>
   <author>
     <name><![CDATA[Difio Team]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[API diff Support for Java and PHP]]></title>
+    <link href="http://dif.io/blog/2013/03/10/api-diff-support-for-java-and-php/"/>
+    <updated>2013-03-10T21:55:00+02:00</updated>
+    <id>http://dif.io/blog/2013/03/10/api-diff-support-for-java-and-php</id>
+    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce API diff support
+for Java and PHP programming languages.</p>
+
+<p>The API diff feature extracts class and method signatures and compares the
+results between an older and a newer version. If API has changed this
+is a good indicator that there were substantial changes in the new package
+version, which require through testing.</p>
+
+<p>With this release API diff becomes available for source code written in
+Java, PHP and Python. We are looking to support other languages as well.</p>
+
+<h2>What&#8217;s next</h2>
+
+<p>Difio is constantly working on improving the service. In the mean time
+<a href="https://difio-otb.rhcloud.com/dashboard/follow/">start following packages</a>,
+invite your friends and send us your feedback via
+<a href="https://github.com/difio/bugs/issues/new">GitHub</a>
+or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Improved Support for PHP]]></title>
@@ -925,133 +951,6 @@ is incorrect.</li>
 
 <p><a href="https://difio-otb.rhcloud.com/applications/mine/" class="button dark_blue small">Give It A Try</a>
 or <a href="https://twitter.com/DifioNews">follow us</a> on Twitter for more news.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[OpenShift Cron Takes Over Celerybeat]]></title>
-    <link href="http://dif.io/blog/2012/03/14/openshift-cron-takes-over-celerybeat/"/>
-    <updated>2012-03-14T20:48:00+02:00</updated>
-    <id>http://dif.io/blog/2012/03/14/openshift-cron-takes-over-celerybeat</id>
-    <content type="html"><![CDATA[<p><a href="http://celeryproject.org/"><em>Celery</em></a> is an asynchronous task queue/job queue
-based on distributed message passing. You can define tasks as Python functions,
-execute them in the background and in a periodic fashion.
-<a href="http://www.dif.io"><em>Difio</em></a> uses <em>Celery</em> for virtually everything.
-Some of the tasks are scheduled after some event takes place (like user pressed a button)
-or scheduled periodically.</p>
-
-<p><em>Celery</em> provides several components of which <em>celerybeat</em> is the periodic task scheduler.
-When combined with <a href="http://djangoproject.com"><em>Django</em></a> it gives you a very nice admin interface
-which allows periodic tasks to be added to the scheduler.</p>
-
-<h2>Why change</h2>
-
-<p><em>Difio</em> has relied on <em>celerybeat</em> for a couple of months. Back then, when <em>Difio</em> launched,
-there was no cron support for OpenShift so running <em>celerybeat</em> sounded reasonable.
-It used to run on a dedicated virtual server and for most of the time that was fine.</p>
-
-<p>There were a number of issues which <em>Difio</em> faced during its first months:</p>
-
-<ul>
-<li><p><em>celerybeat</em> would sometime die due to no free memory on the virtual instance.
-When that happened no new tasks were scheduled and data was left unprocessed.
-Let alone that higher memory instance and the processing power which comes with it
-cost extra money.</p></li>
-<li><p><em>Difio</em> is split into several components which need to have the same code base
-locally - the most important are database settings and the periodic tasks
-code. At least in one occasion <em>celerybeat</em> failed to start because of a buggy
-task code. The offending code was fixed in the application server on OpenShift but
-not properly synced to the <em>celerybeat</em> instance. Keeping code in sync is a priority
-for distributed projects which rely on <em>Celery</em>.</p></li>
-<li><p><em>Celery</em> and <em>django-celery</em> seem to be updated quite often. This poses a significant risk
-of ending up with different versions on the scheduler, worker nodes and the app server. This will
-bring the whole application to a halt if at some point a backward incompatible change is introduced
-and not properly tested and updated. Keeping infrastructure components in sync can be a big challenge
-and I try to minimize this effort as much as possible.</p></li>
-<li><p>Having to navigate to the admin pages every time I add a new task or want to change the execution
-frequency doesn&#8217;t feel very natural for a console user like myself and IMHO is less productive.
-For the record I primarily use <em>mcedit</em>. I wanted to have something more close to the
-write, commit and push work-flow.</p></li>
-</ul>
-
-
-<h2>The take over</h2>
-
-<p>It&#8217;s been some time since OpenShift
-<a href="https://www.redhat.com/openshift/community/blogs/getting-started-with-cron-jobs-on-openshift">introduced</a>
-the cron cartridge and I decided to give it a try.</p>
-
-<p>The first thing I did is to write a simple script which can execute any task from the difio.tasks module
-by piping it to the Django shell (a Python shell actually).</p>
-
-<pre><code>$ cat run_celery_task 
-
-#!/bin/bash
-#
-# Copyright (c) 2012, Alexander Todorov &lt;atodorov@nospam.otb.bg&gt;
-#
-# This script is symlinked to from the hourly/minutely, etc. directories
-#
-# SYNOPSIS
-#
-# ./run_celery_task cron_search_dates
-#
-# OR
-#
-# ln -s run_celery_task cron_search_dates
-# ./cron_search_dates
-#
-
-TASK_NAME=$1
-[ -z "$TASK_NAME" ] &amp;&amp; TASK_NAME=$(basename $0)
-
-if [ -n "$OPENSHIFT_APP_DIR" ]; then
-    source $OPENSHIFT_APP_DIR/virtenv/bin/activate
-    export PYTHON_EGG_CACHE=$OPENSHIFT_DATA_DIR/.python-eggs
-    REPO_DIR=$OPENSHIFT_REPO_DIR
-else
-    REPO_DIR=$(dirname $0)"/../../.."
-fi
-
-echo "import difio.tasks; difio.tasks.$TASK_NAME.delay()" | $REPO_DIR/wsgi/difio/manage.py shell
-</code></pre>
-
-<p>This is a multicall script which allows symlinks with different names to point to it.
-Thus to add a new task to cron I just need to make a symlink to the script from one of the
-hourly, minutely, daily, etc. directories under cron/</p>
-
-<p>The script accepts a parameter as well which allows me to execute it locally for debugging purposes
-or to schedule some tasks out of band.</p>
-
-<p>This is how it looks like on the file system:</p>
-
-<pre><code>$ ls -l .openshift/cron/hourly/
-some_task_name -&gt; ../tasks/run_celery_task
-another_task -&gt; ../tasks/run_celery_task
-</code></pre>
-
-<p>After having done these preparations I only had to embed the cron cartridge and git push to OpenShift:</p>
-
-<pre><code>rhc-ctl-app -a difio -e add-cron-1.4 &amp;&amp; git push
-</code></pre>
-
-<h2>What&#8217;s next</h2>
-
-<p>At present OpenShift can schedule your jobs every minute, hour, day, week or month and does so using the
-<em>run-parts</em> script. You can&#8217;t schedule a script to execute at 4:30 every Monday or every 45 minutes for example.
-See <a href="https://bugzilla.redhat.com/show_bug.cgi?id=803485">rhbz #803485</a> if you want to follow the
-progress. Luckily <em>Difio</em> doesn&#8217;t use this sort of job scheduling for the moment.</p>
-
-<p><em>Difio</em> is scheduling periodic tasks from OpenShift cron for a few days already.
-It seems to work reliably and with no issues. One less component to maintain and worry about.
-More time to write code.</p>
-
-<hr />
-
-<p><a href="http://about.me/atodorov"><em>Alexander Todorov</em></a> is Difio&#8217;s founder and lead developer!</p>
-
-<p>For an insight of available updates to you OpenShift applications give
-Difio a <a href="https://difio-otb.rhcloud.com/applications/mine/">try</a>!</p>
 ]]></content>
   </entry>
   
