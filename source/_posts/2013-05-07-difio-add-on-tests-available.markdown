@@ -70,6 +70,7 @@ virus tools will trigger false positives.
 test case files in some well known locations. If new version is missing tests or has less
 then severity will be VERIFY or FAIL.
 
+<a href="https://difio-otb.rhcloud.com/profiles/mine/" class="button medium dark_blue">Subscribe Now!</a>
 
 ---
 
