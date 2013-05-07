@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us" xmlns:fb="https://www.facebook.com/2008/fbml" id="html-main">
 <head>
-  <title>API diff Support for Java and PHP - Difio</title>
+  <title>Difio Add-On Tests Are Available - Difio</title>
   
   
 
@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   
-  <link rel="canonical" href="http://dif.io/blog/2013/03/10/api-diff-support-for-java-and-php" />
+  <link rel="canonical" href="http://dif.io/blog/2013/05/07/difio-add-on-tests-available" />
   <link href="/blog/favicon.png" rel="icon" />
   <script src="/blog/javascripts/modernizr-2.0.js" type="text/javascript"></script>
   <script src="/blog/javascripts/ender.js" type="text/javascript"></script>
@@ -20,7 +20,7 @@
   <link href="http://feeds.feedburner.com/difio/blog" rel="alternate" title="Difio" type="application/atom+xml" />
   <!-- OpenGraph -->
 <meta property="og:image" content="//d3h3t4beeg8ypi.cloudfront.net/static/v6/i/72.png" />
-<meta property="og:title" content="API diff Support for Java and PHP" />
+<meta property="og:title" content="Difio Add-On Tests Are Available" />
 <meta property="og:site_name" content="Difio" />
 
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css' />
@@ -132,7 +132,7 @@ Otherwise use the links below to import your application dependencies.
             <div style="float: left; width: 100%">
                     
         
-            <h2>API Diff Support for Java and PHP</h2>
+            <h2>Difio Add-On Tests Are Available</h2>
         
     
 
@@ -154,7 +154,7 @@ Otherwise use the links below to import your application dependencies.
 
 
 
-  Mar 10<span>th</span>, 2013
+  May 7<span>th</span>, 2013
 
 
 
@@ -163,18 +163,62 @@ Otherwise use the links below to import your application dependencies.
     
 
     
-            <div class="entry-content"><p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce API diff support
-for Java and PHP programming languages.</p>
+            <div class="entry-content"><p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce the general
+availability of <a href="http://www.dif.io/add-on/">add-on tests</a> which are
+designed to test and verify potential issues or
+known bugs. Add-on tests are provided as a
+<a href="https://difio-otb.rhcloud.com/profiles/mine/">subscription service</a>
+for 10 $ per month. First month is free.</p>
 
-<p>The API diff feature extracts class and method signatures and compares the
-results between an older and a newer version. If API has changed this
-is a good indicator that there were substantial changes in the new package
-version, which require through testing.</p>
+<h2>What add-on tests are available</h2>
 
-<p>With this release API diff becomes available for source code written in
-Java, PHP and Python. We are looking to support other languages as well.</p>
+<ul>
+<li><p><strong>API diff</strong> - Difio generates API definition from the package
+source code. Changes in API could be
+backward incompatible and result in application crash and runtime failures.
+API diff is currently available for <strong>Python</strong>, <strong>PHP</strong> and <strong>Java</strong>.</p></li>
+<li><p><strong>Full diff</strong> - this is the full git diff between two package versions.
+It is available for informational purposes.</p></li>
+<li><p><strong>Package Size Change</strong> - packages that change their size significantly
+can be a sign of
+a <a href="https://github.com/tschellenbach/Django-facebook/issues/262">corrupted build</a>.
+This test reports any size changes over 30%.
+See <a href="http://www.dif.io/updates/django-facebook-4.2.11/django-facebook-4.3.0/12243/">DIFIO-12243</a> for example.</p></li>
+<li><p><strong>File Size Change</strong> - inspects files which are present in both versions.
+Any size change that is both more than 20% and more than 20 KB or
+any file that changes from being zero-sized to non-zero sized, and vice-versa is reported.</p></li>
+<li><p><strong>Added non-text Files</strong> - new files are classified with libmagic.
+Any non-text file is reported.
+Bugs like <a href="https://code.djangoproject.com/ticket/19858">Django #19858</a> can
+be found with this test. For example see <a href="http://www.dif.io/updates/Django-1.4.3/Django-1.4.4/12987/">DIFIO-12987</a>.</p></li>
+<li><p><strong>Modified Files</strong> - lists all modified files. You should manually review the
+list and inspect if unwanted files were modified.</p></li>
+<li><p><strong>Added Files</strong> - lists all newly added files. New files are usually resources, tests of new
+functionality. Manually inspect to verify additions are expected.</p></li>
+<li><p><strong>Removed Files</strong> - files in packages should be removed only if properly obsoleted or
+initial inclusion was a bug. Removing modules or parts of them can break the API.</p></li>
+<li><p><strong>Renamed Files</strong> - renaming files can break API. This test lists all renames
+between two versions.</p></li>
+<li><p><strong>Permissions Change</strong> - file permissions change (Linux/UNIX only) could indicate
+security issues. In a source package without executable programs permissions should
+not change.</p></li>
+<li><p><strong>Symlinks</strong> - this test traverses the entire package tree and reports any symlinks found.
+It will report FAIL if any symlinks exist in the new package.
+For example see <a href="http://www.dif.io/updates/factory_boy-1.2.0/factory_boy-2.0.0/16005/">DIFIO-16005</a>.</p></li>
+<li><p><strong>File Types Change</strong> - this test compares file types reported by libmagic between
+two package versions. Files should not be changing their type between updates.</p></li>
+<li><p><strong>Virus Scan</strong> - a virus scan is performed on the package using the ClamAV virus scanner.
+Even though it is unlikely that packages contain viruses, it&#8217;s still important to know if anti
+virus tools will trigger false positives.</p></li>
+<li><p><strong>Test Cases</strong> - this test reports any changes in test cases. It counts the number of available
+test case files in some well known locations. If new version is missing tests or has less
+then severity will be VERIFY or FAIL.</p></li>
+</ul>
 
-<h2>What&#8217;s next</h2>
+
+<p><a href="https://difio-otb.rhcloud.com/profiles/mine/" class="button medium dark_blue">Subscribe Now!</a></p>
+
+<hr />
 
 <p>Difio is constantly working on improving the service. In the mean time
 <a href="https://difio-otb.rhcloud.com/dashboard/follow/">start following packages</a>,
@@ -215,11 +259,9 @@ or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
     
 
     
-        <a style="float: left;" href="/blog/2013/03/06/improved-support-for-php/" title="Previous Post: Improved Support for PHP">&laquo; Improved Support for PHP</a>
+        <a style="float: left;" href="/blog/2013/03/10/api-diff-support-for-java-and-php/" title="Previous Post: API diff Support for Java and PHP">&laquo; API diff Support for Java and PHP</a>
     
 
-    
-        <a style="float: right;" href="/blog/2013/05/07/difio-add-on-tests-available/" title="next Post: Difio Add-On Tests Are Available">Difio Add-On Tests Are Available &raquo;</a>
     
   </div>
 
@@ -286,8 +328,8 @@ or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://dif.io/blog/2013/03/10/api-diff-support-for-java-and-php/';
-        var disqus_url = 'http://dif.io/blog/2013/03/10/api-diff-support-for-java-and-php/';
+        var disqus_identifier = 'http://dif.io/blog/2013/05/07/difio-add-on-tests-available/';
+        var disqus_url = 'http://dif.io/blog/2013/05/07/difio-add-on-tests-available/';
         var disqus_script = 'embed.js';
       
     (function () {

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: News | Difio]]></title>
   <link href="http://dif.io/blog/categories/news/atom.xml" rel="self"/>
   <link href="http://dif.io/blog/"/>
-  <updated>2013-03-11T12:16:19+02:00</updated>
+  <updated>2013-05-08T00:30:29+03:00</updated>
   <id>http://dif.io/blog/</id>
   <author>
     <name><![CDATA[Difio Team]]></name>
@@ -12,6 +12,76 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Difio Add-On Tests Are Available]]></title>
+    <link href="http://dif.io/blog/2013/05/07/difio-add-on-tests-available/"/>
+    <updated>2013-05-07T15:03:00+03:00</updated>
+    <id>http://dif.io/blog/2013/05/07/difio-add-on-tests-available</id>
+    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce the general
+availability of <a href="http://www.dif.io/add-on/">add-on tests</a> which are
+designed to test and verify potential issues or
+known bugs. Add-on tests are provided as a
+<a href="https://difio-otb.rhcloud.com/profiles/mine/">subscription service</a>
+for 10 $ per month. First month is free.</p>
+
+<h2>What add-on tests are available</h2>
+
+<ul>
+<li><p><strong>API diff</strong> - Difio generates API definition from the package
+source code. Changes in API could be
+backward incompatible and result in application crash and runtime failures.
+API diff is currently available for <strong>Python</strong>, <strong>PHP</strong> and <strong>Java</strong>.</p></li>
+<li><p><strong>Full diff</strong> - this is the full git diff between two package versions.
+It is available for informational purposes.</p></li>
+<li><p><strong>Package Size Change</strong> - packages that change their size significantly
+can be a sign of
+a <a href="https://github.com/tschellenbach/Django-facebook/issues/262">corrupted build</a>.
+This test reports any size changes over 30%.
+See <a href="http://www.dif.io/updates/django-facebook-4.2.11/django-facebook-4.3.0/12243/">DIFIO-12243</a> for example.</p></li>
+<li><p><strong>File Size Change</strong> - inspects files which are present in both versions.
+Any size change that is both more than 20% and more than 20 KB or
+any file that changes from being zero-sized to non-zero sized, and vice-versa is reported.</p></li>
+<li><p><strong>Added non-text Files</strong> - new files are classified with libmagic.
+Any non-text file is reported.
+Bugs like <a href="https://code.djangoproject.com/ticket/19858">Django #19858</a> can
+be found with this test. For example see <a href="http://www.dif.io/updates/Django-1.4.3/Django-1.4.4/12987/">DIFIO-12987</a>.</p></li>
+<li><p><strong>Modified Files</strong> - lists all modified files. You should manually review the
+list and inspect if unwanted files were modified.</p></li>
+<li><p><strong>Added Files</strong> - lists all newly added files. New files are usually resources, tests of new
+functionality. Manually inspect to verify additions are expected.</p></li>
+<li><p><strong>Removed Files</strong> - files in packages should be removed only if properly obsoleted or
+initial inclusion was a bug. Removing modules or parts of them can break the API.</p></li>
+<li><p><strong>Renamed Files</strong> - renaming files can break API. This test lists all renames
+between two versions.</p></li>
+<li><p><strong>Permissions Change</strong> - file permissions change (Linux/UNIX only) could indicate
+security issues. In a source package without executable programs permissions should
+not change.</p></li>
+<li><p><strong>Symlinks</strong> - this test traverses the entire package tree and reports any symlinks found.
+It will report FAIL if any symlinks exist in the new package.
+For example see <a href="http://www.dif.io/updates/factory_boy-1.2.0/factory_boy-2.0.0/16005/">DIFIO-16005</a>.</p></li>
+<li><p><strong>File Types Change</strong> - this test compares file types reported by libmagic between
+two package versions. Files should not be changing their type between updates.</p></li>
+<li><p><strong>Virus Scan</strong> - a virus scan is performed on the package using the ClamAV virus scanner.
+Even though it is unlikely that packages contain viruses, it's still important to know if anti
+virus tools will trigger false positives.</p></li>
+<li><p><strong>Test Cases</strong> - this test reports any changes in test cases. It counts the number of available
+test case files in some well known locations. If new version is missing tests or has less
+then severity will be VERIFY or FAIL.</p></li>
+</ul>
+
+
+<p><a href="https://difio-otb.rhcloud.com/profiles/mine/" class="button medium dark_blue">Subscribe Now!</a></p>
+
+<hr />
+
+<p>Difio is constantly working on improving the service. In the mean time
+<a href="https://difio-otb.rhcloud.com/dashboard/follow/">start following packages</a>,
+invite your friends and send us your feedback via
+<a href="https://github.com/difio/bugs/issues/new">GitHub</a>
+or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[API diff Support for Java and PHP]]></title>
@@ -200,39 +270,6 @@ via the web interface or <a href="http://feeds.feedburner.com/difio/updates">RSS
 <p>We encourage developers from all backgrounds and
 languages to <a href="http://www.dif.io/register/">register</a> their applications and
 send us their feedback via <a href="https://github.com/difio/bugs/issues/new">GitHub</a>
-or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Difio Adds Application History Tracking]]></title>
-    <link href="http://dif.io/blog/2012/11/27/difio-adds-application-history-tracking/"/>
-    <updated>2012-11-27T23:04:00+02:00</updated>
-    <id>http://dif.io/blog/2012/11/27/difio-adds-application-history-tracking</id>
-    <content type="html"><![CDATA[<p>Today <a href="http://www.dif.io">Difio</a> is pleased to announce
-support for tracking application history. Difio keeps track of application
-dependencies and tells you when they change. We let you inspect the
-changes and make informed decision when or what to upgrade.</p>
-
-<p>Our team has added a new feature to track changes in the list of
-dependencies used by applications. Every time you upgrade, add or remove a
-package from your application dependencies Difio creates a history record.
-As always, don't forget to re-run the registration script or to manually refresh
-your apps after changing the dependencies!</p>
-
-<p>Every application starts with a single history record, reflecting its latest state.
-Later you can review your app history and revert to previously used versions
-for example. Difio is planning to add more goodies to the history page in a future
-release. If you have an idea and want us to implement it, please post it on the
-<a href="http://www.dif.io/#ideas">ideas dashboard</a>!</p>
-
-<p>This new functionality is accessible on the application details view via the
-<em>Last check-in</em> hyperlink, as shown below.</p>
-
-<p><img src="/images/apphistory.png" title="Link to history page" alt="Link to history page" /></p>
-
-<p>We encourage developers from all backgrounds and languages to <a href="http://www.dif.io/register/">register</a>
-their applications and send us their feedback via <a href="https://github.com/difio/bugs/issues/new">GitHub</a>
 or <a href="https://twitter.com/DifioNews">Twitter</a>.</p>
 ]]></content>
   </entry>
