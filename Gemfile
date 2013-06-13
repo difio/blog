@@ -4,6 +4,7 @@ group :development do
   gem 'rake', '~> 0.9.2'
   gem 'rack'
   gem 'jekyll'
+  gem 'jekyll-s3'
   gem 'rdiscount'
   gem 'pygments.rb'
   gem 'RedCloth'
