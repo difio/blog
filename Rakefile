@@ -380,5 +380,5 @@ end
 desc "Deploy website via s3cmd"
 task :s3 do
   puts "## Deploying website via s3cmd"
-  ok_failed system("s3cmd sync -v --skip-existing --acl-public public/blog/* s3://#{s3_bucket}/blog/")
+  ok_failed system("s3cmd sync -v --acl-public public/blog/* s3://#{s3_bucket}/blog/")
 end
