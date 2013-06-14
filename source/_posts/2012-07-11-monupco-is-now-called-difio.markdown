@@ -26,4 +26,4 @@ We have updated our Twitter account as well. Please follow [@DifioNews](http://t
 for the latest updates.
 
 Along all these changes we have announced our public beta availability. For more information
-please go to <http://dif.io/blog/2012/07/11/difio-1.6-public-beta-release-announcement>
+[click here](/2012/07/11/difio-1.6-public-beta-release-announcement).

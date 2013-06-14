@@ -49,7 +49,7 @@ stored in database to the bare minimum.
 
 
 
-Difio has recently [announced](http://dif.io/blog/2012/02/06/difio-1.1-release-announcement/)
+Difio has recently [announced](/2012/02/06/difio-1.1-release-announcement/)
 its first Alpha release. The following weeks will see development for Ruby, PHP and Perl packages
 and the corresponding client side tools for these catridges on OpenShift. 
 Java and Node.js are also under investigation.
