@@ -7,8 +7,7 @@ comments: true
 categories: OpenShift
 ---
 
-[Difio](http://www.dif.io) stands for Monitor Updates In The Cloud.
-As the name suggests this is a service which provides updates information
+[Difio](http://www.dif.io) is a service which provides updates information
 for applications hosted in a PaaS environment. If you are a developer or
 a sysadmin knowing when and what to upgrade will make your life easier.
 
