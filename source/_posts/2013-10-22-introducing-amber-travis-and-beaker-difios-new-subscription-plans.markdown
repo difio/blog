@@ -9,7 +9,7 @@ categories: ['News']
 Today [Difio](http://www.dif.io) is pleased to announce our new subscription
 plans - *Amber*, *Travis* and *Beaker*.
 
-Starting today all [upgrade analytics](http://www.dif.io/analytics/) will be 
+Effective immediately all [upgrade analytics](http://www.dif.io/analytics/) will be 
 accessible to everyone with a cut-off based on the package release date.
 If you upgrade your apps frequently this will keep bugs away and not cost you a
 dime. On the other hand the older the packages you use, the more you will have
@@ -31,7 +31,7 @@ How It Works
 -------------
 
 Difio already color codes installed packages in App Details view. See our
-[previous post](/blog/2013/09/10/latest-changes-and-deprecated-functionality/)
+[previous post](/2013/09/10/latest-changes-and-deprecated-functionality/)
 about this. Subscription plans cut-off access based on the release date of the
 currently installed package.
 
@@ -61,7 +61,7 @@ What's Next
 -----------
 
 As
-[announced](/blog/2013/08/21/important-changes-to-difio-registration-subscriptions-open-source/)
+[announced](/2013/08/21/important-changes-to-difio-registration-subscriptions-open-source/)
 previously Difio will open source its code base. We have already started cleaning up
 and refactoring some internal code. Our plan is to have as much as possible of the code
 open until Christmas 2013 so stay tuned!
