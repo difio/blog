@@ -12,7 +12,7 @@ going around in our heads. Let us know what do you think.
 Tabular View
 -------------
 
-Currently when you log into the [application dashboard](https://difio-otb.rhcloud.com/applications/mine/)
+Currently when you log into the [application dashboard](https://difio-otb.rhcloud.com/dashboard/)
 and navigate to the details view of each application you see this:
 
 ![Tabular view](/images/appdetails.png "Tabular view")

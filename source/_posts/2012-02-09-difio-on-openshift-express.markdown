@@ -65,4 +65,4 @@ for other PaaS vendors will follow. On the radar are requests for:
 
 
 If you're already excited please follow @DifioNews on [Twitter](https://twitter.com/DifioNews) and
-[GitHub](https://github.com/difio) or [get started](https://difio-otb.rhcloud.com/applications/mine/) today!
+[GitHub](https://github.com/difio) or [get started](https://difio-otb.rhcloud.com/dashboard/) today!
