@@ -1,20 +1,18 @@
 ---
 layout: post
-title: "Difio Add-On Tests Are Available"
+title: "Difio Analytics Tests"
 date: 2013-05-07 15:03
 comments: true
 categories: ['News']
 ---
 
 Today [Difio](http://www.dif.io) is pleased to announce the general
-availability of [add-on tests](http://www.dif.io/add-on/) which are
+availability of multiple [tests](http://www.dif.io/analytics/) which are
 designed to test and verify potential issues or
-known bugs. Add-on tests are provided as a
-[subscription service](https://difio-otb.rhcloud.com/profiles/mine/)
-for 10 $ per month. First month is free.
+known bugs. 
 
-What add-on tests are available
--------------------------------
+What tests are available
+------------------------
 
 * **API diff** - Difio generates API definition from the package
 source code. Changes in API could be

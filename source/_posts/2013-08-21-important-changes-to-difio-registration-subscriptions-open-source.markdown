@@ -38,8 +38,8 @@ Changes To Subscription Model
 ------------------------------
 
 The present subscription model requires payment if you'd like to access
-[additional upgrade analytics](http://www.dif.io/add-on/). This will change.
-Add-ons will be accessible free of charge! 
+additional [upgrade analytics](http://www.dif.io/analytics//). This will change.
+Analytics tests will be accessible free of charge! 
 
 The paid subscription will cover
 access to analytics for older packages. 
@@ -55,7 +55,7 @@ Everyone involved with Difio (both users and developers) has their roots in
 the open source movement, myself included. We're going to open source as much as
 possible of our platform!
 
-At first all [add-on tests](http://www.dif.io/add-on/) will be refactored and
+At first all [analytics tests](http://www.dif.io/analytics/) will be refactored and
 made open. Our goal is this to coincide or closely follow the changes of the
 subscription model and have both open source and free of charge analytics.
 
