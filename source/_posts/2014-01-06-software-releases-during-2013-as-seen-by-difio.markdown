@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Software Releases During 2013 as Seen by Difio"
-date: 2014-01-04 22:05
+date: 2014-01-06 10:05
 comments: true
 categories: ['news']
 ---
