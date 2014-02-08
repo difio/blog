@@ -20,5 +20,5 @@ programming languages. Difio is working together with *cloudControl* to add supp
 for Java and PHP as well, so stay tuned!
 
 We encourage developers who use *cloudControl* to [register](http://www.dif.io/register/)
-their applications and send us their feedback via [GitHub](https://github.com/difio/bugs/issues/new)
+their applications and send us their feedback via [GitHub](https://github.com/difio/difio/issues/new)
 or [Twitter](https://twitter.com/DifioNews).

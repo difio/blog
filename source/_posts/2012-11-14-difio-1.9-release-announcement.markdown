@@ -72,5 +72,5 @@ We have also done lots of minor improvements and fixes to our website.
 They are invisible to the naked eye so no need to tell you more :).
 
 We encourage developers from all backgrounds and languages to [register](http://www.dif.io/register/)
-their applications and send us their feedback via [GitHub](https://github.com/difio/bugs/issues/new)
+their applications and send us their feedback via [GitHub](https://github.com/difio/difio/issues/new)
 or [Twitter](https://twitter.com/DifioNews).

@@ -21,7 +21,7 @@ for Python, Ruby, Perl and Node.js environments. See
 
 With this release Difio enters Public Beta and registration is open to everyone.
 We encourage developers of all backgrounds to [register](http://www.dif.io/register/)
-their applications and send us their feedback via [GitHub](https://github.com/difio/bugs/issues/new)
+their applications and send us their feedback via [GitHub](https://github.com/difio/difio/issues/new)
 or [Twitter](https://twitter.com/DifioNews).
 
 <a href="https://difio-otb.rhcloud.com/applications/mine/">Give it a try</a>

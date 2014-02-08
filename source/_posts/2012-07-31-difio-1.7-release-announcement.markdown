@@ -18,5 +18,5 @@ well as registration script for [OpenShift](http://openshift.redhat.com) JBoss c
 See [how to register applications](http://www.dif.io/register/) page for more information.
 
 We encourage developers from all backgrounds and languages to [register](http://www.dif.io/register/)
-their applications and send us their feedback via [GitHub](https://github.com/difio/bugs/issues/new)
+their applications and send us their feedback via [GitHub](https://github.com/difio/difio/issues/new)
 or [Twitter](https://twitter.com/DifioNews).

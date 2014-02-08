@@ -39,5 +39,5 @@ via the web interface or [RSS](http://feeds.feedburner.com/difio/updates).
 
 We encourage developers from all backgrounds and
 languages to [register](http://www.dif.io/register/) their applications and
-send us their feedback via [GitHub](https://github.com/difio/bugs/issues/new)
+send us their feedback via [GitHub](https://github.com/difio/difio/issues/new)
 or [Twitter](https://twitter.com/DifioNews).

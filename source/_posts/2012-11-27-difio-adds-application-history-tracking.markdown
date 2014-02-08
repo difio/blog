@@ -33,5 +33,5 @@ This new functionality is accessible on the application details view via the
 
 
 We encourage developers from all backgrounds and languages to [register](http://www.dif.io/register/)
-their applications and send us their feedback via [GitHub](https://github.com/difio/bugs/issues/new)
+their applications and send us their feedback via [GitHub](https://github.com/difio/difio/issues/new)
 or [Twitter](https://twitter.com/DifioNews).

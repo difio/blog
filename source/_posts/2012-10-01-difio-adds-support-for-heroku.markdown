@@ -22,5 +22,5 @@ manually but now this is automated and more convenient.
 
 
 We encourage developers who use *Heroku* to [register](http://www.dif.io/register/)
-their applications and send us their feedback via [GitHub](https://github.com/difio/bugs/issues/new)
+their applications and send us their feedback via [GitHub](https://github.com/difio/difio/issues/new)
 or [Twitter](https://twitter.com/DifioNews).

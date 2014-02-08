@@ -75,6 +75,6 @@ then severity will be VERIFY or FAIL.
 Difio is constantly working on improving the service. In the mean time
 [start following packages](https://difio-otb.rhcloud.com/dashboard/follow/),
 invite your friends and send us your feedback via
-[GitHub](https://github.com/difio/bugs/issues/new)
+[GitHub](https://github.com/difio/difio/issues/new)
 or [Twitter](https://twitter.com/DifioNews).
 

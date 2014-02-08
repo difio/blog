@@ -67,5 +67,5 @@ We do not keep track of these addresses nor send any spam to them.
 
 We encourage developers from all supported backgrounds and
 languages to [start following packages](https://difio-otb.rhcloud.com/dashboard/follow/)
-and send us their feedback via [GitHub](https://github.com/difio/bugs/issues/new)
+and send us their feedback via [GitHub](https://github.com/difio/difio/issues/new)
 or [Twitter](https://twitter.com/DifioNews).

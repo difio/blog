@@ -68,7 +68,7 @@ A breakdown of features will be posted in the comments below. Please vote up or 
 Features that get promoted will be implemented.
 
 If you have any other ideas or suggestions please let us know. You can use the comments form or submit them
-via [GitHub](https://github.com/difio/bugs/issues/new) or [Twitter](https://twitter.com/DifioNews).
+via [GitHub](https://github.com/difio/difio/issues/new) or [Twitter](https://twitter.com/DifioNews).
 
 
 
